@@ -13,8 +13,18 @@
 
 #include "user.h"
 #include "system.h"
+#include "data.h"
 
 
+
+bool buf[6][8] = {
+    0,0,1,0,0,1,0,0,
+    0,0,1,0,0,1,0,0,
+    0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,1,0,
+    0,0,1,1,1,1,0,0,
+    0,0,0,0,0,0,0,0
+};
 
 /******************************************************************************/
 /* User Functions                                                             */
@@ -62,3 +72,111 @@ void ClearDisplay()
     
 }
 
+int rowCount = 2;
+
+void AdvanceRow()
+{
+
+    if(rowCount >= 6)
+        {
+            ROW_SEL = 1;
+
+            rowCount = 0;
+        }
+        
+        ROW_CLK = 1;    
+        ROW_CLK = 0;
+        
+        rowCount++;
+    
+}
+
+void ReadyDisplay()
+{
+    ROW_EN = 1;
+    
+    ROW_SEL = 1;    //set select to high
+    
+    //Pulse the clock twice to set row A high
+    ROW_CLK = 1;    
+    ROW_CLK = 0;
+    ROW_CLK = 1;    
+    ROW_CLK = 0;  
+    
+    ROW_EN = 0;     //turn on display
+}
+
+int currentRow = 0;
+
+void PopulateColumns()
+{
+    ROW_EN = 1;     //Disable screen
+        
+        // Populate the columns
+        for(int i =7;i>=0;i--)
+        {
+            
+           
+            if(i==3)
+            {
+                COL_SEL = buf[currentRow][0];
+            }
+            else if(i==2)
+            {
+                COL_SEL = buf[currentRow][1];
+            }
+            else if(i==1)
+            {
+                COL_SEL = buf[currentRow][2];
+            }
+            else if(i==0)
+            {
+                COL_SEL = buf[currentRow][3];
+            }
+            else
+            {
+                COL_SEL = buf[currentRow][i];
+            }
+            
+            
+            COL_CLK = 1;
+            COL_CLK = 0;
+
+            
+            
+        }
+        
+        
+        // Enable screen
+        ROW_EN = 0;
+        
+        currentRow++;
+        if(currentRow == 6){
+            currentRow = 0;
+        }
+        
+}
+
+void PopulateColumns2()
+{
+    ROW_EN = 1;     //Disable screen
+        
+        // Populate the columns
+        for(int i =7;i==0;i--)
+        {
+            
+           
+            COL_SEL = 0;
+            
+            
+            COL_CLK = 1;
+            COL_CLK = 0;
+
+            //__delay_us(100000); 
+            
+        }
+        
+        
+        // Enable screen
+        ROW_EN = 0;
+}

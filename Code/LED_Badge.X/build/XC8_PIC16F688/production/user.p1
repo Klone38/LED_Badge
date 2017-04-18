@@ -885,47 +885,132 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;user.h: 21: void InitApp(void);
 [; ;user.h: 23: void ClearDisplay(void);
+[; ;user.h: 25: void AdvanceRow(void);
+[; ;user.h: 27: void ReadyDisplay(void);
+[; ;user.h: 29: void PopulateColumns(void);
 [; ;system.h: 20: void ConfigureOscillator(void);
-"25 user.c
-[v _InitApp `(v ~T0 @X0 1 ef ]
+[v F937 `uc ~T0 @X0 -> 8 `i t ]
+"20 user.c
+[v _buf `F937 ~T0 @X0 -> 6 `i e ]
+[i _buf
+:U ..
+:U ..
+"21
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+"22
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+"23
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+"24
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+"25
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
 "26
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+"27
+-> -> 0 `i `uc
+..
+..
+]
+[; ;user.c: 20: bool buf[6][8] = {
+[; ;user.c: 21: 0,0,1,0,0,1,0,0,
+[; ;user.c: 22: 0,0,1,0,0,1,0,0,
+[; ;user.c: 23: 0,0,0,0,0,0,0,0,
+[; ;user.c: 24: 0,1,0,0,0,0,1,0,
+[; ;user.c: 25: 0,0,1,1,1,1,0,0,
+[; ;user.c: 26: 0,0,0,0,0,0,0,0
+[; ;user.c: 27: };
+"35
+[v _InitApp `(v ~T0 @X0 1 ef ]
+"36
 {
-[; ;user.c: 25: void InitApp(void)
-[; ;user.c: 26: {
+[; ;user.c: 35: void InitApp(void)
+[; ;user.c: 36: {
 [e :U _InitApp ]
 [f ]
-[; ;user.c: 34: ANSEL = 0b00000000;
-"34
+[; ;user.c: 44: ANSEL = 0b00000000;
+"44
 [e = _ANSEL -> -> 0 `i `uc ]
-[; ;user.c: 36: TRISA = 0b11111111;
-"36
+[; ;user.c: 46: TRISA = 0b11111111;
+"46
 [e = _TRISA -> -> 255 `i `uc ]
-[; ;user.c: 37: TRISC = 0b11000000;
-"37
+[; ;user.c: 47: TRISC = 0b11000000;
+"47
 [e = _TRISC -> -> 192 `i `uc ]
-[; ;user.c: 40: }
-"40
+[; ;user.c: 50: }
+"50
 [e :UE 86 ]
 }
-"42
+"52
 [v _ClearDisplay `(v ~T0 @X0 1 ef ]
-"43
+"53
 {
-[; ;user.c: 42: void ClearDisplay()
-[; ;user.c: 43: {
+[; ;user.c: 52: void ClearDisplay()
+[; ;user.c: 53: {
 [e :U _ClearDisplay ]
 [f ]
-[; ;user.c: 47: PORTCbits.RC4 = 1;
-"47
+[; ;user.c: 57: PORTCbits.RC4 = 1;
+"57
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 49: PORTCbits.RC1 = 0;
-"49
+[; ;user.c: 59: PORTCbits.RC1 = 0;
+"59
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[; ;user.c: 50: PORTCbits.RC0 = 1;
-"50
+[; ;user.c: 60: PORTCbits.RC0 = 1;
+"60
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[; ;user.c: 52: for(int i = 0;i<8;i++){
-"52
+[; ;user.c: 62: for(int i = 0;i<8;i++){
+"62
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -933,34 +1018,292 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 89  ]
 [e :U 88 ]
 {
-[; ;user.c: 53: PORTCbits.RC3 = 1;
-"53
+[; ;user.c: 63: PORTCbits.RC3 = 1;
+"63
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 54: PORTCbits.RC2 = 1;
-"54
+[; ;user.c: 64: PORTCbits.RC2 = 1;
+"64
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 55: _delay((unsigned long)((10)*(8000000/4000000.0)));
-"55
+[; ;user.c: 65: _delay((unsigned long)((10)*(8000000/4000000.0)));
+"65
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-[; ;user.c: 57: PORTCbits.RC3 = 0;
-"57
+[; ;user.c: 67: PORTCbits.RC3 = 0;
+"67
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 58: PORTCbits.RC2 = 0;
-"58
+[; ;user.c: 68: PORTCbits.RC2 = 0;
+"68
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"59
+"69
 }
-"52
+"62
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 8 `i 88  ]
 [e :U 89 ]
-"59
+"69
 }
-[; ;user.c: 59: }
-[; ;user.c: 61: PORTCbits.RC4 = 0;
-"61
+[; ;user.c: 69: }
+[; ;user.c: 71: PORTCbits.RC4 = 0;
+"71
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 63: }
-"63
+[; ;user.c: 73: }
+"73
 [e :UE 87 ]
+}
+"75
+[v _rowCount `i ~T0 @X0 1 e ]
+[i _rowCount
+-> 2 `i
+]
+[; ;user.c: 75: int rowCount = 2;
+"77
+[v _AdvanceRow `(v ~T0 @X0 1 ef ]
+"78
+{
+[; ;user.c: 77: void AdvanceRow()
+[; ;user.c: 78: {
+[e :U _AdvanceRow ]
+[f ]
+[; ;user.c: 80: if(rowCount >= 6)
+"80
+[e $ ! >= _rowCount -> 6 `i 92  ]
+[; ;user.c: 81: {
+"81
+{
+[; ;user.c: 82: PORTCbits.RC1 = 1;
+"82
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 84: rowCount = 0;
+"84
+[e = _rowCount -> 0 `i ]
+"85
+}
+[e :U 92 ]
+[; ;user.c: 85: }
+[; ;user.c: 87: PORTCbits.RC3 = 1;
+"87
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 88: PORTCbits.RC3 = 0;
+"88
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 90: rowCount++;
+"90
+[e ++ _rowCount -> 1 `i ]
+[; ;user.c: 92: }
+"92
+[e :UE 91 ]
+}
+"94
+[v _ReadyDisplay `(v ~T0 @X0 1 ef ]
+"95
+{
+[; ;user.c: 94: void ReadyDisplay()
+[; ;user.c: 95: {
+[e :U _ReadyDisplay ]
+[f ]
+[; ;user.c: 96: PORTCbits.RC4 = 1;
+"96
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 98: PORTCbits.RC1 = 1;
+"98
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 101: PORTCbits.RC3 = 1;
+"101
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 102: PORTCbits.RC3 = 0;
+"102
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 103: PORTCbits.RC3 = 1;
+"103
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 104: PORTCbits.RC3 = 0;
+"104
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 106: PORTCbits.RC4 = 0;
+"106
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 107: }
+"107
+[e :UE 93 ]
+}
+"109
+[v _currentRow `i ~T0 @X0 1 e ]
+[i _currentRow
+-> 0 `i
+]
+[; ;user.c: 109: int currentRow = 0;
+"111
+[v _PopulateColumns `(v ~T0 @X0 1 ef ]
+"112
+{
+[; ;user.c: 111: void PopulateColumns()
+[; ;user.c: 112: {
+[e :U _PopulateColumns ]
+[f ]
+[; ;user.c: 113: PORTCbits.RC4 = 1;
+"113
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 116: for(int i =7;i>=0;i--)
+"116
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 7 `i ]
+[e $ >= _i -> 0 `i 95  ]
+[e $U 96  ]
+"117
+[e :U 95 ]
+[; ;user.c: 117: {
+{
+[; ;user.c: 120: if(i==3)
+"120
+[e $ ! == _i -> 3 `i 98  ]
+[; ;user.c: 121: {
+"121
+{
+[; ;user.c: 122: PORTCbits.RC0 = buf[currentRow][0];
+"122
+[e = . . _PORTCbits 0 0 *U + &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux ]
+"123
+}
+[; ;user.c: 123: }
+[e $U 99  ]
+"124
+[e :U 98 ]
+[; ;user.c: 124: else if(i==2)
+[e $ ! == _i -> 2 `i 100  ]
+[; ;user.c: 125: {
+"125
+{
+[; ;user.c: 126: PORTCbits.RC0 = buf[currentRow][1];
+"126
+[e = . . _PORTCbits 0 0 *U + &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux ]
+"127
+}
+[; ;user.c: 127: }
+[e $U 101  ]
+"128
+[e :U 100 ]
+[; ;user.c: 128: else if(i==1)
+[e $ ! == _i -> 1 `i 102  ]
+[; ;user.c: 129: {
+"129
+{
+[; ;user.c: 130: PORTCbits.RC0 = buf[currentRow][2];
+"130
+[e = . . _PORTCbits 0 0 *U + &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux ]
+"131
+}
+[; ;user.c: 131: }
+[e $U 103  ]
+"132
+[e :U 102 ]
+[; ;user.c: 132: else if(i==0)
+[e $ ! == _i -> 0 `i 104  ]
+[; ;user.c: 133: {
+"133
+{
+[; ;user.c: 134: PORTCbits.RC0 = buf[currentRow][3];
+"134
+[e = . . _PORTCbits 0 0 *U + &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux ]
+"135
+}
+[; ;user.c: 135: }
+[e $U 105  ]
+"136
+[e :U 104 ]
+[; ;user.c: 136: else
+[; ;user.c: 137: {
+"137
+{
+[; ;user.c: 138: PORTCbits.RC0 = buf[currentRow][i];
+"138
+[e = . . _PORTCbits 0 0 *U + &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _currentRow `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux ]
+"139
+}
+[e :U 105 ]
+[e :U 103 ]
+[e :U 101 ]
+[e :U 99 ]
+[; ;user.c: 139: }
+[; ;user.c: 142: PORTCbits.RC2 = 1;
+"142
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 143: PORTCbits.RC2 = 0;
+"143
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"147
+}
+"116
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 95  ]
+[e :U 96 ]
+"147
+}
+[; ;user.c: 147: }
+[; ;user.c: 151: PORTCbits.RC4 = 0;
+"151
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 153: currentRow++;
+"153
+[e ++ _currentRow -> 1 `i ]
+[; ;user.c: 154: if(currentRow == 6){
+"154
+[e $ ! == _currentRow -> 6 `i 106  ]
+{
+[; ;user.c: 155: currentRow = 0;
+"155
+[e = _currentRow -> 0 `i ]
+"156
+}
+[e :U 106 ]
+[; ;user.c: 156: }
+[; ;user.c: 158: }
+"158
+[e :UE 94 ]
+}
+"160
+[v _PopulateColumns2 `(v ~T0 @X0 1 ef ]
+"161
+{
+[; ;user.c: 160: void PopulateColumns2()
+[; ;user.c: 161: {
+[e :U _PopulateColumns2 ]
+[f ]
+[; ;user.c: 162: PORTCbits.RC4 = 1;
+"162
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 165: for(int i =7;i==0;i--)
+"165
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 7 `i ]
+[e $ == _i -> 0 `i 108  ]
+[e $U 109  ]
+"166
+[e :U 108 ]
+[; ;user.c: 166: {
+{
+[; ;user.c: 169: PORTCbits.RC0 = 0;
+"169
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[; ;user.c: 172: PORTCbits.RC2 = 1;
+"172
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 173: PORTCbits.RC2 = 0;
+"173
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"177
+}
+"165
+[e -- _i -> 1 `i ]
+[e $ == _i -> 0 `i 108  ]
+[e :U 109 ]
+"177
+}
+[; ;user.c: 177: }
+[; ;user.c: 181: PORTCbits.RC4 = 0;
+"181
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 182: }
+"182
+[e :UE 107 ]
 }

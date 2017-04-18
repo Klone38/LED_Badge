@@ -33,58 +33,20 @@ void main(void)
 
     ClearDisplay();
     
-    ROW_EN = 0;     //turn on display
-    ROW_SEL = 1;    //set select to high
-    
-    //Pulse the clock twice to set row A high
-    ROW_CLK = 1;    
-    ROW_CLK = 0;
-    ROW_CLK = 1;    
-    ROW_CLK = 0;
-    
-    int rowCount = 2;
-    
+    ReadyDisplay();
 
     while(1)
     {
-        ROW_EN = 1;     //Disable screen
         
-        // Populate the columns
-        for(int i =0;i<8;i++)
-        {
-            
-           
-            COL_SEL = 0;
-            
-            
-            COL_CLK = 1;
-            COL_CLK = 0;
-
-            //__delay_us(100000); 
-            
-        }
-        // Enable screen
-        ROW_EN = 0;
+        PopulateColumns();
         
         // Display each row for this ammount of time
         __delay_us(1000); 
         
         ROW_EN = 1;     //Disable screen
         
-        // Advance to the next row
-        if(rowCount >= 6)
-        {
-            ROW_SEL = 1;
-
-            rowCount = 0;
-        }
         
-        ROW_CLK = 1;    
-        ROW_CLK = 0;
-        
-        rowCount++;
-
-        
+        AdvanceRow();
         
     }
 
