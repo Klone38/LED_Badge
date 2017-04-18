@@ -836,3 +836,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
+"40 configuration_bits.c
+[p x FOSC=INTOSCIO ]
+"41
+[p x WDTE=OFF ]
+"42
+[p x PWRTE=OFF ]
+"43
+[p x MCLRE=ON ]
+"44
+[p x CP=OFF ]
+"45
+[p x CPD=OFF ]
+"46
+[p x BOREN=OFF ]
+"47
+[p x IESO=ON ]
+"48
+[p x FCMEN=ON ]

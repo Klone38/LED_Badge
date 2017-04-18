@@ -12,6 +12,9 @@
 #include <stdbool.h>        /* For true/false definition */
 
 #include "user.h"
+#include "system.h"
+
+
 
 /******************************************************************************/
 /* User Functions                                                             */
@@ -28,5 +31,34 @@ void InitApp(void)
     /* Initialize peripherals */
 
     /* Enable interrupts */
+    ANSEL = 0b00000000;
+    
+    TRISA = 0b11111111;
+    TRISC = 0b11000000;
+
+    
+}
+
+void ClearDisplay()
+{
+    //Rows control the positive pins
+    //Cols control the negative pins
+    
+    ROW_EN = 1; //turn off display
+    
+    ROW_SEL = 0;
+    COL_SEL = 1;
+    
+    for(int i = 0;i<8;i++){
+        ROW_CLK = 1;
+        COL_CLK = 1;
+        __delay_us(10);
+                
+        ROW_CLK = 0;
+        COL_CLK = 0;
+    }
+    
+    ROW_EN = 0; 
+    
 }
 

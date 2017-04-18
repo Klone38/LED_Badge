@@ -1266,13 +1266,47 @@ typedef uint16_t uintptr_t;
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdbool.h"
 typedef unsigned char bool;
 
-# 13 "user.h"
+# 21 "user.h"
 void InitApp(void);
 
-# 22 "user.c"
+void ClearDisplay(void);
+
+# 20 "system.h"
+void ConfigureOscillator(void);
+
+# 25 "user.c"
 void InitApp(void)
 {
 
-# 31
+# 34
+ANSEL = 0b00000000;
+
+TRISA = 0b11111111;
+TRISC = 0b11000000;
+
+
+}
+
+void ClearDisplay()
+{
+
+
+
+PORTCbits.RC4 = 1;
+
+PORTCbits.RC1 = 0;
+PORTCbits.RC0 = 1;
+
+for(int i = 0;i<8;i++){
+PORTCbits.RC3 = 1;
+PORTCbits.RC2 = 1;
+_delay((unsigned long)((10)*(8000000/4000000.0)));
+
+PORTCbits.RC3 = 0;
+PORTCbits.RC2 = 0;
+}
+
+PORTCbits.RC4 = 0;
+
 }
 

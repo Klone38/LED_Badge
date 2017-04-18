@@ -1,4 +1,22 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"1357 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic16f688.h
+[v _ANSEL `Vuc ~T0 @X0 0 e@145 ]
+"1029
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1078
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"213
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RC0 RC1 RC2 RC3 RC4 RC5 ]
+"212
+[u S7 `S8 1 ]
+[n S7 . . ]
+"222
+[v _PORTCbits `VS7 ~T0 @X0 0 e@7 ]
+[v F888 `(v ~T0 @X0 1 tf1`ul ]
+"152 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic.h
+[v __delay `JF888 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -865,16 +883,84 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;user.h: 13: void InitApp(void);
-"22 user.c
+[; ;user.h: 21: void InitApp(void);
+[; ;user.h: 23: void ClearDisplay(void);
+[; ;system.h: 20: void ConfigureOscillator(void);
+"25 user.c
 [v _InitApp `(v ~T0 @X0 1 ef ]
-"23
+"26
 {
-[; ;user.c: 22: void InitApp(void)
-[; ;user.c: 23: {
+[; ;user.c: 25: void InitApp(void)
+[; ;user.c: 26: {
 [e :U _InitApp ]
 [f ]
-[; ;user.c: 31: }
-"31
+[; ;user.c: 34: ANSEL = 0b00000000;
+"34
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;user.c: 36: TRISA = 0b11111111;
+"36
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;user.c: 37: TRISC = 0b11000000;
+"37
+[e = _TRISC -> -> 192 `i `uc ]
+[; ;user.c: 40: }
+"40
 [e :UE 86 ]
+}
+"42
+[v _ClearDisplay `(v ~T0 @X0 1 ef ]
+"43
+{
+[; ;user.c: 42: void ClearDisplay()
+[; ;user.c: 43: {
+[e :U _ClearDisplay ]
+[f ]
+[; ;user.c: 47: PORTCbits.RC4 = 1;
+"47
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 49: PORTCbits.RC1 = 0;
+"49
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 50: PORTCbits.RC0 = 1;
+"50
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[; ;user.c: 52: for(int i = 0;i<8;i++){
+"52
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 88  ]
+[e $U 89  ]
+[e :U 88 ]
+{
+[; ;user.c: 53: PORTCbits.RC3 = 1;
+"53
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 54: PORTCbits.RC2 = 1;
+"54
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 55: _delay((unsigned long)((10)*(8000000/4000000.0)));
+"55
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;user.c: 57: PORTCbits.RC3 = 0;
+"57
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 58: PORTCbits.RC2 = 0;
+"58
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"59
+}
+"52
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 88  ]
+[e :U 89 ]
+"59
+}
+[; ;user.c: 59: }
+[; ;user.c: 61: PORTCbits.RC4 = 0;
+"61
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 63: }
+"63
+[e :UE 87 ]
 }

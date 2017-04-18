@@ -1,9 +1,23 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"19 system.h
+"20 system.h
 [v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"13 user.h
+"21 user.h
 [v _InitApp `(v ~T0 @X0 0 ef ]
+"23
+[v _ClearDisplay `(v ~T0 @X0 0 ef ]
+"213 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic16f688.h
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RC0 RC1 RC2 RC3 RC4 RC5 ]
+"212
+[u S7 `S8 1 ]
+[n S7 . . ]
+"222
+[v _PORTCbits `VS7 ~T0 @X0 0 e@7 ]
+[v F888 `(v ~T0 @X0 1 tf1`ul ]
+"152 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic.h
+[v __delay `JF888 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -870,8 +884,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-[; ;user.h: 13: void InitApp(void);
+[; ;system.h: 20: void ConfigureOscillator(void);
+[; ;user.h: 21: void InitApp(void);
+[; ;user.h: 23: void ClearDisplay(void);
 "26 main.c
 [v _main `(v ~T0 @X0 1 ef ]
 "27
@@ -886,20 +901,111 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 32: InitApp();
 "32
 [e ( _InitApp ..  ]
-[; ;main.c: 35: while(1)
-"35
-[e :U 88 ]
-[; ;main.c: 36: {
+[; ;main.c: 34: ClearDisplay();
+"34
+[e ( _ClearDisplay ..  ]
+[; ;main.c: 36: PORTCbits.RC4 = 0;
 "36
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 37: PORTCbits.RC1 = 1;
+"37
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 40: PORTCbits.RC3 = 1;
+"40
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 41: PORTCbits.RC3 = 0;
+"41
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 42: PORTCbits.RC3 = 1;
+"42
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 43: PORTCbits.RC3 = 0;
+"43
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+"45
+[v _rowCount `i ~T0 @X0 1 a ]
+[; ;main.c: 45: int rowCount = 2;
+[e = _rowCount -> 2 `i ]
+[; ;main.c: 48: while(1)
+"48
+[e :U 88 ]
+[; ;main.c: 49: {
+"49
 {
-"38
+[; ;main.c: 50: PORTCbits.RC4 = 1;
+"50
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 53: for(int i =0;i<8;i++)
+"53
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 90  ]
+[e $U 91  ]
+"54
+[e :U 90 ]
+[; ;main.c: 54: {
+{
+[; ;main.c: 57: PORTCbits.RC0 = 0;
+"57
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 60: PORTCbits.RC2 = 1;
+"60
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 61: PORTCbits.RC2 = 0;
+"61
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"65
+}
+"53
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 90  ]
+[e :U 91 ]
+"65
+}
+[; ;main.c: 65: }
+[; ;main.c: 67: PORTCbits.RC4 = 0;
+"67
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 70: _delay((unsigned long)((1000)*(8000000/4000000.0)));
+"70
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 72: PORTCbits.RC4 = 1;
+"72
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 75: if(rowCount >= 6)
+"75
+[e $ ! >= _rowCount -> 6 `i 93  ]
+[; ;main.c: 76: {
+"76
+{
+[; ;main.c: 77: PORTCbits.RC1 = 1;
+"77
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 79: rowCount = 0;
+"79
+[e = _rowCount -> 0 `i ]
+"80
+}
+[e :U 93 ]
+[; ;main.c: 80: }
+[; ;main.c: 82: PORTCbits.RC3 = 1;
+"82
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 83: PORTCbits.RC3 = 0;
+"83
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 85: rowCount++;
+"85
+[e ++ _rowCount -> 1 `i ]
+"89
 }
 [e :U 87 ]
-"35
+"48
 [e $U 88  ]
 [e :U 89 ]
-[; ;main.c: 38: }
-[; ;main.c: 40: }
-"40
+[; ;main.c: 89: }
+[; ;main.c: 91: }
+"91
 [e :UE 86 ]
 }

@@ -1266,11 +1266,13 @@ typedef uint16_t uintptr_t;
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdbool.h"
 typedef unsigned char bool;
 
-# 19 "system.h"
+# 20 "system.h"
 void ConfigureOscillator(void);
 
-# 13 "user.h"
+# 21 "user.h"
 void InitApp(void);
+
+void ClearDisplay(void);
 
 # 26 "main.c"
 void main(void)
@@ -1281,9 +1283,60 @@ ConfigureOscillator();
 
 InitApp();
 
+ClearDisplay();
+
+PORTCbits.RC4 = 0;
+PORTCbits.RC1 = 1;
+
+
+PORTCbits.RC3 = 1;
+PORTCbits.RC3 = 0;
+PORTCbits.RC3 = 1;
+PORTCbits.RC3 = 0;
+
+int rowCount = 2;
+
 
 while(1)
 {
+PORTCbits.RC4 = 1;
+
+
+for(int i =0;i<8;i++)
+{
+
+
+PORTCbits.RC0 = 0;
+
+
+PORTCbits.RC2 = 1;
+PORTCbits.RC2 = 0;
+
+
+
+}
+
+PORTCbits.RC4 = 0;
+
+
+_delay((unsigned long)((1000)*(8000000/4000000.0)));
+
+PORTCbits.RC4 = 1;
+
+
+if(rowCount >= 6)
+{
+PORTCbits.RC1 = 1;
+
+rowCount = 0;
+}
+
+PORTCbits.RC3 = 1;
+PORTCbits.RC3 = 0;
+
+rowCount++;
+
+
 
 }
 
