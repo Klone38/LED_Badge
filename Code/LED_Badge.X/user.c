@@ -26,6 +26,20 @@ bool buf[6][8] = {
     0,0,0,0,0,0,0,0
 };
 
+const unsigned int test[] = {36, 36, 0, 66, 60, 128, 36, 36, 0, 66, 60, 64, 36, 
+                             36, 0, 66, 60, 32, 36, 36, 0, 66, 60, 16, 36, 36, 
+                             0, 66, 60, 8, 36, 36, 0, 66, 60, 4, 36, 36, 0, 66, 
+                             60, 2, 36, 36, 0, 66, 60, 1, 36, 36, 0, 66, 61, 0, 
+                             36, 36, 0, 67, 60, 0, 36, 36, 1, 66, 60, 0, 36, 37,
+                             0, 66, 60, 0, 37, 36, 0, 66, 60, 0, 38, 36, 0, 66, 
+                             60, 0, 36, 36, 0, 66, 60, 0, 44, 36, 0, 66, 60, 0, 
+                             52, 36, 0, 66, 60, 0, 36, 36, 0, 66, 60, 0, 100, 
+                             36, 0, 66, 60, 0, 164, 36, 0, 66, 60, 0, 36, 164, 
+                             0, 66, 60, 0, 36, 36, 128, 66, 60, 0, 36, 36, 0, 
+                             194, 60, 0, 36, 36, 0, 66, 188, 0} ;
+
+
+
 /******************************************************************************/
 /* User Functions                                                             */
 /******************************************************************************/
@@ -106,7 +120,7 @@ void ReadyDisplay()
     ROW_EN = 0;     //turn on display
 }
 
-int currentRow = 0;
+uint8_t currentRow = 0;
 
 void PopulateColumns()
 {
@@ -119,23 +133,23 @@ void PopulateColumns()
            
             if(i==3)
             {
-                COL_SEL = buf[currentRow][0];
+               COL_SEL = !buf[currentRow][0];
             }
             else if(i==2)
             {
-                COL_SEL = buf[currentRow][1];
+               COL_SEL = !buf[currentRow][1];
             }
             else if(i==1)
             {
-                COL_SEL = buf[currentRow][2];
+                COL_SEL = !buf[currentRow][2];
             }
             else if(i==0)
             {
-                COL_SEL = buf[currentRow][3];
+               COL_SEL = !buf[currentRow][3];
             }
             else
             {
-                COL_SEL = buf[currentRow][i];
+                COL_SEL = !buf[currentRow][i];
             }
             
             

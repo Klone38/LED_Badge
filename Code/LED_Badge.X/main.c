@@ -41,7 +41,7 @@ void main(void)
         PopulateColumns();
         
         // Display each row for this ammount of time
-        __delay_us(1000); 
+        __delay_us(500); 
         
         ROW_EN = 1;     //Disable screen
         
