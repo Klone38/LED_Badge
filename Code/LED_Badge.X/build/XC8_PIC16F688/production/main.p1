@@ -896,6 +896,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;user.h: 25: void AdvanceRow(void);
 [; ;user.h: 27: void ReadyDisplay(void);
 [; ;user.h: 29: void PopulateColumns(void);
+[; ;user.h: 31: void advanceAnimation(void);
 [v $root$_main `(v ~T0 @X0 0 e ]
 "26 main.c
 [v _main `(v ~T0 @X0 1 ef ]

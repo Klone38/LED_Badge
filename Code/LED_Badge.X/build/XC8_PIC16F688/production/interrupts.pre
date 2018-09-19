@@ -1282,10 +1282,34 @@ typedef uint16_t uintptr_t;
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.44\include\stdbool.h"
 typedef unsigned char bool;
 
-# 23 "interrupts.c"
+# 21 "user.h"
+void InitApp(void);
+
+void ClearDisplay(void);
+
+void AdvanceRow(void);
+
+void ReadyDisplay(void);
+
+void PopulateColumns(void);
+
+void advanceAnimation(void);
+
+# 24 "interrupts.c"
 void interrupt isr(void)
 {
 
-# 50
+# 35
+if(T0IF == 1)
+{
+advanceAnimation();
+T0IF = 0;
+}
+else
+{
+
+}
+
+
 }
 

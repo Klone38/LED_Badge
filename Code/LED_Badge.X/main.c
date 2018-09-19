@@ -32,7 +32,7 @@ void main(void)
     InitApp();
 
     ClearDisplay();
-    
+    InitAnimation();
     ReadyDisplay();
 
     while(1)
@@ -40,7 +40,7 @@ void main(void)
         
         PopulateColumns();
         
-        // Display each row for this ammount of time
+        // Display each row for this amount of time
         __delay_us(500); 
         
         ROW_EN = 1;     //Disable screen

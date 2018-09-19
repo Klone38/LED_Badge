@@ -5,10 +5,13 @@
         <group>
             <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/data.h</file>
             <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/main.c</file>
+            <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/system.h</file>
             <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/interrupts.c</file>
             <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/user.c</file>
+            <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/system.c</file>
             <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/data.c</file>
             <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/user.h</file>
+            <file>file:/C:/Users/Karl/Desktop/LED_Badge/Code/LED_Badge.X/configuration_bits.c</file>
         </group>
     </open-files>
 </project-private>

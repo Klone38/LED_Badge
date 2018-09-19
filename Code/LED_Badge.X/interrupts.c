@@ -10,6 +10,7 @@
 
 #include <stdint.h>         /* For uint8_t definition */
 #include <stdbool.h>        /* For true/false definition */
+#include "user.h"
 
 /******************************************************************************/
 /* Interrupt Routines                                                         */
@@ -27,25 +28,20 @@ void interrupt isr(void)
     Do not use a seperate if block for each interrupt flag to avoid run
     time errors. */
 
-#if 0
     
-    /* TODO Add interrupt routine code here. */
+    //TODO Add interrupt routine code here.
 
-    /* Determine which flag generated the interrupt */
-    if(<Interrupt Flag 1>)
+     //Determine which flag generated the interrupt 
+    if(T0IF == 1)
     {
-        <Interrupt Flag 1=0>; /* Clear Interrupt Flag 1 */
-    }
-    else if (<Interrupt Flag 2>)
-    {
-        <Interrupt Flag 2=0>; /* Clear Interrupt Flag 2 */
+        advanceAnimation();
+        T0IF = 0;
     }
     else
     {
-        /* Unhandled interrupts */
+        
     }
 
-#endif
 
 }
 #endif

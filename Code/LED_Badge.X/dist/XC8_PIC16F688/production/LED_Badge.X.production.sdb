@@ -11,23 +11,25 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"23 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\interrupts.c
+"24 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\interrupts.c
 [v _isr isr `II(v  1 e 1 0 ]
 "26 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "18 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
-"49 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+"39 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
 [v _InitApp InitApp `(v  1 e 1 0 ]
-"66
+"58
 [v _ClearDisplay ClearDisplay `(v  1 e 1 0 ]
-"91
+"83
 [v _AdvanceRow AdvanceRow `(v  1 e 1 0 ]
-"108
+"100
 [v _ReadyDisplay ReadyDisplay `(v  1 e 1 0 ]
-"125
+"117
 [v _PopulateColumns PopulateColumns `(v  1 e 1 0 ]
-[s S51 . 1 `uc 1 RC0 1 0 :1:0 
+"166
+[v _advanceAnimation advanceAnimation `(v  1 e 1 0 ]
+[s S56 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -35,61 +37,70 @@
 `uc 1 RC5 1 0 :1:5 
 ]
 "229 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f688.h
-[u S58 . 1 `S51 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES58  1 e 1 @7 ]
+[u S63 . 1 `S56 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES63  1 e 1 @7 ]
 "1057
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1107
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1391
 [v _ANSEL ANSEL `VEuc  1 e 1 @145 ]
+"2224
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"2226
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
 "20 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
-[v _buf buf `DC[6][8]uc  1 e 48 0 ]
-"89
+[v _buf buf `[6][8]uc  1 e 48 0 ]
+"81
 [v _rowCount rowCount `i  1 e 2 0 ]
-"123
+"115
 [v _currentRow currentRow `uc  1 e 1 0 ]
 "26 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "53
 } 0
-"108 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+"100 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
 [v _ReadyDisplay ReadyDisplay `(v  1 e 1 0 ]
 {
-"121
+"113
 } 0
-"125
+"117
 [v _PopulateColumns PopulateColumns `(v  1 e 1 0 ]
 {
-"130
-[v PopulateColumns@i i `i  1 a 2 0 ]
-"172
+"122
+[v PopulateColumns@i i `i  1 a 2 7 ]
+"164
 } 0
-"49
+"39
 [v _InitApp InitApp `(v  1 e 1 0 ]
 {
-"64
+"56
 } 0
 "18 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
 {
 "25
 } 0
-"66 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+"58 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
 [v _ClearDisplay ClearDisplay `(v  1 e 1 0 ]
 {
-"76
+"68
 [v ClearDisplay@i i `i  1 a 2 5 ]
-"87
+"79
 } 0
-"91
+"83
 [v _AdvanceRow AdvanceRow `(v  1 e 1 0 ]
 {
-"106
+"98
 } 0
-"23 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\interrupts.c
+"24 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\interrupts.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"50
+"46
+} 0
+"166 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+[v _advanceAnimation advanceAnimation `(v  1 e 1 0 ]
+{
+"168
 } 0

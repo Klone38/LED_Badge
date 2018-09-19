@@ -1296,6 +1296,8 @@ void ReadyDisplay(void);
 
 void PopulateColumns(void);
 
+void advanceAnimation(void);
+
 # 26 "main.c"
 void main(void)
 {

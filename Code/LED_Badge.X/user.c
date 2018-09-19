@@ -26,17 +26,9 @@ bool buf[6][8] = {
     0,0,0,0,0,0,0,0
 };
 
-const unsigned int test[] = {36, 36, 0, 66, 60, 128, 36, 36, 0, 66, 60, 64, 36, 
-                             36, 0, 66, 60, 32, 36, 36, 0, 66, 60, 16, 36, 36, 
-                             0, 66, 60, 8, 36, 36, 0, 66, 60, 4, 36, 36, 0, 66, 
-                             60, 2, 36, 36, 0, 66, 60, 1, 36, 36, 0, 66, 61, 0, 
-                             36, 36, 0, 67, 60, 0, 36, 36, 1, 66, 60, 0, 36, 37,
-                             0, 66, 60, 0, 37, 36, 0, 66, 60, 0, 38, 36, 0, 66, 
-                             60, 0, 36, 36, 0, 66, 60, 0, 44, 36, 0, 66, 60, 0, 
-                             52, 36, 0, 66, 60, 0, 36, 36, 0, 66, 60, 0, 100, 
-                             36, 0, 66, 60, 0, 164, 36, 0, 66, 60, 0, 36, 164, 
-                             0, 66, 60, 0, 36, 36, 128, 66, 60, 0, 36, 36, 0, 
-                             194, 60, 0, 36, 36, 0, 66, 188, 0} ;
+int frame = 0;
+int maxFrames = 24;
+
 
 
 
@@ -59,8 +51,23 @@ void InitApp(void)
     
     TRISA = 0b11111111;
     TRISC = 0b11000000;
+    
+    T0IE = 0;
 
     
+}
+
+void InitAnimation()
+{
+    //Everything here is wrong
+    for(int y =0;y<6;y++)
+    {
+        for(int x=0;x<8;x++)
+        {
+            buf[y][x] = animation[x+(y*8)];
+        }
+    }
+    frame = 1;
 }
 
 void ClearDisplay()
@@ -169,6 +176,18 @@ void PopulateColumns()
             currentRow = 0;
         }
         
+}
+
+void advanceAnimation(){
+    
+    //Everything here is wrong
+    for(int y =(frame*48);y<(frame+6);y++)
+    {
+        for(int x=0;x<8;x++)
+        {
+            buf[y][x] = animation[x+(y*8)];
+        }
+    }
 }
 
 void PopulateColumns2()
