@@ -886,440 +886,744 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;user.h: 21: void InitApp(void);
-[; ;user.h: 23: void ClearDisplay(void);
-[; ;user.h: 25: void AdvanceRow(void);
-[; ;user.h: 27: void ReadyDisplay(void);
-[; ;user.h: 29: void PopulateColumns(void);
-[; ;user.h: 31: void advanceAnimation(void);
+[; ;user.h: 23: void InitAnimation(void);
+[; ;user.h: 25: void ClearDisplay(void);
+[; ;user.h: 27: void AdvanceRow(void);
+[; ;user.h: 29: void ReadyDisplay(void);
+[; ;user.h: 31: void PopulateColumns(void);
+[; ;user.h: 33: void AdvanceAnimation(void);
 [; ;system.h: 20: void ConfigureOscillator(void);
-[v F939 `uc ~T0 @X0 -> 8 `i t ]
+"9 data.h
+[v _animation `Cui ~T0 @X0 -> 0 `x e ]
+[i _animation
+:U ..
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 128 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 64 `i `ui
+-> -> 36 `i `ui
+"10
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 32 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 16 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+"11
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 8 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 4 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+"12
+-> -> 60 `i `ui
+-> -> 2 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 1 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 61 `i `ui
+-> -> 0 `i `ui
+"13
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 67 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 1 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 37 `i `ui
+"14
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 37 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 38 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+"15
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 44 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+"16
+-> -> 52 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 100 `i `ui
+"17
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 164 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 164 `i `ui
+"18
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 128 `i `ui
+-> -> 66 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+"19
+-> -> 194 `i `ui
+-> -> 60 `i `ui
+-> -> 0 `i `ui
+-> -> 36 `i `ui
+-> -> 36 `i `ui
+-> -> 0 `i `ui
+-> -> 66 `i `ui
+-> -> 188 `i `ui
+-> -> 0 `i `ui
+..
+]
+[; ;data.h: 9: const unsigned int animation[] = {36, 36, 0, 66, 60, 128, 36, 36, 0, 66, 60, 64, 36,
+[; ;data.h: 10: 36, 0, 66, 60, 32, 36, 36, 0, 66, 60, 16, 36, 36,
+[; ;data.h: 11: 0, 66, 60, 8, 36, 36, 0, 66, 60, 4, 36, 36, 0, 66,
+[; ;data.h: 12: 60, 2, 36, 36, 0, 66, 60, 1, 36, 36, 0, 66, 61, 0,
+[; ;data.h: 13: 36, 36, 0, 67, 60, 0, 36, 36, 1, 66, 60, 0, 36, 37,
+[; ;data.h: 14: 0, 66, 60, 0, 37, 36, 0, 66, 60, 0, 38, 36, 0, 66,
+[; ;data.h: 15: 60, 0, 36, 36, 0, 66, 60, 0, 44, 36, 0, 66, 60, 0,
+[; ;data.h: 16: 52, 36, 0, 66, 60, 0, 36, 36, 0, 66, 60, 0, 100,
+[; ;data.h: 17: 36, 0, 66, 60, 0, 164, 36, 0, 66, 60, 0, 36, 164,
+[; ;data.h: 18: 0, 66, 60, 0, 36, 36, 128, 66, 60, 0, 36, 36, 0,
+[; ;data.h: 19: 194, 60, 0, 36, 36, 0, 66, 188, 0} ;
+[v F942 `uc ~T0 @X0 -> 8 `i t ]
 "20 user.c
-[v _buf `F939 ~T0 @X0 -> 6 `i e ]
+[v _buf `F942 ~T0 @X0 -> 6 `i e ]
 [i _buf
 :U ..
 :U ..
 "21
--> -> 0 `i `uc
--> -> 0 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 ..
 :U ..
 "22
--> -> 0 `i `uc
--> -> 0 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 ..
 :U ..
 "23
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 ..
 :U ..
 "24
--> -> 0 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 ..
 :U ..
 "25
--> -> 0 `i `uc
--> -> 0 `i `uc
 -> -> 1 `i `uc
 -> -> 1 `i `uc
 -> -> 1 `i `uc
 -> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 ..
 :U ..
 "26
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
 "27
--> -> 0 `i `uc
+-> -> 1 `i `uc
 ..
 ..
 ]
 [; ;user.c: 20: bool buf[6][8] = {
-[; ;user.c: 21: 0,0,1,0,0,1,0,0,
-[; ;user.c: 22: 0,0,1,0,0,1,0,0,
-[; ;user.c: 23: 0,0,0,0,0,0,0,0,
-[; ;user.c: 24: 0,1,0,0,0,0,1,0,
-[; ;user.c: 25: 0,0,1,1,1,1,0,0,
-[; ;user.c: 26: 0,0,0,0,0,0,0,0
+[; ;user.c: 21: 1,1,1,1,1,1,1,1,
+[; ;user.c: 22: 1,1,1,1,1,1,1,1,
+[; ;user.c: 23: 1,1,1,1,1,1,1,1,
+[; ;user.c: 24: 1,1,1,1,1,1,1,1,
+[; ;user.c: 25: 1,1,1,1,1,1,1,1,
+[; ;user.c: 26: 1,1,1,1,1,1,1,1
 [; ;user.c: 27: };
-"39
+"29
+[v _frame `i ~T0 @X0 1 e ]
+[i _frame
+-> 0 `i
+]
+[; ;user.c: 29: int frame = 0;
+"30
+[v _maxFrames `i ~T0 @X0 1 e ]
+[i _maxFrames
+-> 24 `i
+]
+[; ;user.c: 30: int maxFrames = 24;
+"31
+[v _frameSize `i ~T0 @X0 1 e ]
+[i _frameSize
+-> 8 `i
+]
+[; ;user.c: 31: int frameSize = 8;
+"42
 [v _InitApp `(v ~T0 @X0 1 ef ]
-"40
+"43
 {
-[; ;user.c: 39: void InitApp(void)
-[; ;user.c: 40: {
+[; ;user.c: 42: void InitApp(void)
+[; ;user.c: 43: {
 [e :U _InitApp ]
 [f ]
-[; ;user.c: 48: ANSEL = 0b00000000;
-"48
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;user.c: 50: TRISA = 0b11111111;
-"50
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;user.c: 51: TRISC = 0b11000000;
+[; ;user.c: 51: ANSEL = 0b00000000;
 "51
-[e = _TRISC -> -> 192 `i `uc ]
-[; ;user.c: 53: T0IE = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;user.c: 53: TRISA = 0b11111111;
 "53
-[e = _T0IE -> -> 0 `i `b ]
-[; ;user.c: 56: }
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;user.c: 54: TRISC = 0b11000000;
+"54
+[e = _TRISC -> -> 192 `i `uc ]
+[; ;user.c: 56: T0IE = 0;
 "56
+[e = _T0IE -> -> 0 `i `b ]
+[; ;user.c: 59: }
+"59
 [e :UE 86 ]
 }
-"58
-[v _ClearDisplay `(v ~T0 @X0 1 ef ]
-"59
+"61
+[v _InitAnimation `(v ~T0 @X0 1 ef ]
+"62
 {
-[; ;user.c: 58: void ClearDisplay()
-[; ;user.c: 59: {
-[e :U _ClearDisplay ]
+[; ;user.c: 61: void InitAnimation()
+[; ;user.c: 62: {
+[e :U _InitAnimation ]
 [f ]
-[; ;user.c: 63: PORTCbits.RC4 = 1;
-"63
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 65: PORTCbits.RC1 = 0;
-"65
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[; ;user.c: 66: PORTCbits.RC0 = 1;
-"66
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[; ;user.c: 68: for(int i = 0;i<8;i++){
-"68
+[; ;user.c: 64: for(int y = 0;y<6;y++){
+"64
 {
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 88  ]
+[v _y `i ~T0 @X0 1 a ]
+[e = _y -> 0 `i ]
+[e $ < _y -> 6 `i 88  ]
 [e $U 89  ]
 [e :U 88 ]
 {
-[; ;user.c: 69: PORTCbits.RC3 = 1;
-"69
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 70: PORTCbits.RC2 = 1;
-"70
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 71: _delay((unsigned long)((10)*(8000000/4000000.0)));
-"71
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-[; ;user.c: 73: PORTCbits.RC3 = 0;
-"73
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 74: PORTCbits.RC2 = 0;
-"74
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"75
+[; ;user.c: 65: for(int x =0,k = 7;x<8;x++,k--){
+"65
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 7 `i ]
+[e $ < _x -> 8 `i 91  ]
+[e $U 92  ]
+[e :U 91 ]
+{
+[; ;user.c: 66: buf[y][x] = (animation[y] >> k) & 1;
+"66
+[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _animation * -> -> _y `ui `ux -> -> # *U &U _animation `ui `ux _k -> -> 1 `i `ui `uc ]
+"67
+}
+"65
+[e ; ++ _x -> 1 `i -- _k -> 1 `i ]
+[e $ < _x -> 8 `i 91  ]
+[e :U 92 ]
+"67
 }
 "68
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 88  ]
-[e :U 89 ]
-"75
 }
-[; ;user.c: 75: }
-[; ;user.c: 77: PORTCbits.RC4 = 0;
-"77
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 79: }
-"79
+"64
+[e ++ _y -> 1 `i ]
+[e $ < _y -> 6 `i 88  ]
+[e :U 89 ]
+"68
+}
+[; ;user.c: 67: }
+[; ;user.c: 68: }
+[; ;user.c: 70: }
+"70
 [e :UE 87 ]
 }
-"81
+"72
+[v _ClearDisplay `(v ~T0 @X0 1 ef ]
+"73
+{
+[; ;user.c: 72: void ClearDisplay()
+[; ;user.c: 73: {
+[e :U _ClearDisplay ]
+[f ]
+[; ;user.c: 77: PORTCbits.RC4 = 1;
+"77
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 79: PORTCbits.RC1 = 0;
+"79
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 80: PORTCbits.RC0 = 1;
+"80
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[; ;user.c: 82: for(int i = 0;i<8;i++){
+"82
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 95  ]
+[e $U 96  ]
+[e :U 95 ]
+{
+[; ;user.c: 83: PORTCbits.RC3 = 1;
+"83
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 84: PORTCbits.RC2 = 1;
+"84
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 85: _delay((unsigned long)((10)*(8000000/4000000.0)));
+"85
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;user.c: 87: PORTCbits.RC3 = 0;
+"87
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 88: PORTCbits.RC2 = 0;
+"88
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"89
+}
+"82
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 95  ]
+[e :U 96 ]
+"89
+}
+[; ;user.c: 89: }
+[; ;user.c: 91: PORTCbits.RC4 = 0;
+"91
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 93: }
+"93
+[e :UE 94 ]
+}
+"95
 [v _rowCount `i ~T0 @X0 1 e ]
 [i _rowCount
 -> 2 `i
 ]
-[; ;user.c: 81: int rowCount = 2;
-"83
+[; ;user.c: 95: int rowCount = 2;
+"97
 [v _AdvanceRow `(v ~T0 @X0 1 ef ]
-"84
+"98
 {
-[; ;user.c: 83: void AdvanceRow()
-[; ;user.c: 84: {
+[; ;user.c: 97: void AdvanceRow()
+[; ;user.c: 98: {
 [e :U _AdvanceRow ]
 [f ]
-[; ;user.c: 86: if(rowCount >= 6)
-"86
-[e $ ! >= _rowCount -> 6 `i 92  ]
-[; ;user.c: 87: {
-"87
-{
-[; ;user.c: 88: PORTCbits.RC1 = 1;
-"88
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-[; ;user.c: 90: rowCount = 0;
-"90
-[e = _rowCount -> 0 `i ]
-"91
-}
-[e :U 92 ]
-[; ;user.c: 91: }
-[; ;user.c: 93: PORTCbits.RC3 = 1;
-"93
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 94: PORTCbits.RC3 = 0;
-"94
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 96: rowCount++;
-"96
-[e ++ _rowCount -> 1 `i ]
-[; ;user.c: 98: }
-"98
-[e :UE 91 ]
-}
+[; ;user.c: 100: if(rowCount >= 6)
 "100
-[v _ReadyDisplay `(v ~T0 @X0 1 ef ]
+[e $ ! >= _rowCount -> 6 `i 99  ]
+[; ;user.c: 101: {
 "101
 {
-[; ;user.c: 100: void ReadyDisplay()
-[; ;user.c: 101: {
-[e :U _ReadyDisplay ]
-[f ]
-[; ;user.c: 102: PORTCbits.RC4 = 1;
+[; ;user.c: 102: PORTCbits.RC1 = 1;
 "102
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 104: PORTCbits.RC1 = 1;
-"104
 [e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 104: rowCount = 0;
+"104
+[e = _rowCount -> 0 `i ]
+"105
+}
+[e :U 99 ]
+[; ;user.c: 105: }
 [; ;user.c: 107: PORTCbits.RC3 = 1;
 "107
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
 [; ;user.c: 108: PORTCbits.RC3 = 0;
 "108
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 109: PORTCbits.RC3 = 1;
-"109
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 110: PORTCbits.RC3 = 0;
+[; ;user.c: 110: rowCount++;
 "110
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 112: PORTCbits.RC4 = 0;
+[e ++ _rowCount -> 1 `i ]
+[; ;user.c: 112: }
 "112
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 113: }
-"113
-[e :UE 93 ]
+[e :UE 98 ]
 }
+"114
+[v _ReadyDisplay `(v ~T0 @X0 1 ef ]
 "115
+{
+[; ;user.c: 114: void ReadyDisplay()
+[; ;user.c: 115: {
+[e :U _ReadyDisplay ]
+[f ]
+[; ;user.c: 116: PORTCbits.RC4 = 1;
+"116
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 118: PORTCbits.RC1 = 1;
+"118
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 121: PORTCbits.RC3 = 1;
+"121
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 122: PORTCbits.RC3 = 0;
+"122
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 123: PORTCbits.RC3 = 1;
+"123
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 124: PORTCbits.RC3 = 0;
+"124
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 126: PORTCbits.RC4 = 0;
+"126
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 127: }
+"127
+[e :UE 100 ]
+}
+"129
 [v _currentRow `uc ~T0 @X0 1 e ]
 [i _currentRow
 -> -> 0 `i `uc
 ]
-[; ;user.c: 115: uint8_t currentRow = 0;
-"117
+[; ;user.c: 129: uint8_t currentRow = 0;
+"131
 [v _PopulateColumns `(v ~T0 @X0 1 ef ]
-"118
+"132
 {
-[; ;user.c: 117: void PopulateColumns()
-[; ;user.c: 118: {
+[; ;user.c: 131: void PopulateColumns()
+[; ;user.c: 132: {
 [e :U _PopulateColumns ]
 [f ]
-[; ;user.c: 119: PORTCbits.RC4 = 1;
-"119
+[; ;user.c: 133: PORTCbits.RC4 = 1;
+"133
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 122: for(int i =7;i>=0;i--)
-"122
+[; ;user.c: 136: for(int i =7;i>=0;i--)
+"136
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 7 `i ]
-[e $ >= _i -> 0 `i 95  ]
-[e $U 96  ]
-"123
-[e :U 95 ]
-[; ;user.c: 123: {
-{
-[; ;user.c: 126: if(i==3)
-"126
-[e $ ! == _i -> 3 `i 98  ]
-[; ;user.c: 127: {
-"127
-{
-[; ;user.c: 128: PORTCbits.RC0 = !buf[currentRow][0];
-"128
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
-"129
-}
-[; ;user.c: 129: }
-[e $U 99  ]
-"130
-[e :U 98 ]
-[; ;user.c: 130: else if(i==2)
-[e $ ! == _i -> 2 `i 100  ]
-[; ;user.c: 131: {
-"131
-{
-[; ;user.c: 132: PORTCbits.RC0 = !buf[currentRow][1];
-"132
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
-"133
-}
-[; ;user.c: 133: }
-[e $U 101  ]
-"134
-[e :U 100 ]
-[; ;user.c: 134: else if(i==1)
-[e $ ! == _i -> 1 `i 102  ]
-[; ;user.c: 135: {
-"135
-{
-[; ;user.c: 136: PORTCbits.RC0 = !buf[currentRow][2];
-"136
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
-"137
-}
-[; ;user.c: 137: }
+[e $ >= _i -> 0 `i 102  ]
 [e $U 103  ]
-"138
+"137
 [e :U 102 ]
-[; ;user.c: 138: else if(i==0)
-[e $ ! == _i -> 0 `i 104  ]
-[; ;user.c: 139: {
-"139
+[; ;user.c: 137: {
 {
-[; ;user.c: 140: PORTCbits.RC0 = !buf[currentRow][3];
+[; ;user.c: 140: if(i==3)
 "140
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+[e $ ! == _i -> 3 `i 105  ]
+[; ;user.c: 141: {
 "141
-}
-[; ;user.c: 141: }
-[e $U 105  ]
+{
+[; ;user.c: 142: PORTCbits.RC0 = !buf[currentRow][0];
 "142
-[e :U 104 ]
-[; ;user.c: 142: else
-[; ;user.c: 143: {
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
 "143
-{
-[; ;user.c: 144: PORTCbits.RC0 = !buf[currentRow][i];
+}
+[; ;user.c: 143: }
+[e $U 106  ]
 "144
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
-"145
-}
 [e :U 105 ]
-[e :U 103 ]
-[e :U 101 ]
-[e :U 99 ]
-[; ;user.c: 145: }
-[; ;user.c: 148: PORTCbits.RC2 = 1;
+[; ;user.c: 144: else if(i==2)
+[e $ ! == _i -> 2 `i 107  ]
+[; ;user.c: 145: {
+"145
+{
+[; ;user.c: 146: PORTCbits.RC0 = !buf[currentRow][1];
+"146
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+"147
+}
+[; ;user.c: 147: }
+[e $U 108  ]
 "148
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 149: PORTCbits.RC2 = 0;
+[e :U 107 ]
+[; ;user.c: 148: else if(i==1)
+[e $ ! == _i -> 1 `i 109  ]
+[; ;user.c: 149: {
 "149
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"153
+{
+[; ;user.c: 150: PORTCbits.RC0 = !buf[currentRow][2];
+"150
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+"151
 }
-"122
-[e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 95  ]
-[e :U 96 ]
+[; ;user.c: 151: }
+[e $U 110  ]
+"152
+[e :U 109 ]
+[; ;user.c: 152: else if(i==0)
+[e $ ! == _i -> 0 `i 111  ]
+[; ;user.c: 153: {
 "153
+{
+[; ;user.c: 154: PORTCbits.RC0 = !buf[currentRow][3];
+"154
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+"155
 }
-[; ;user.c: 153: }
-[; ;user.c: 157: PORTCbits.RC4 = 0;
+[; ;user.c: 155: }
+[e $U 112  ]
+"156
+[e :U 111 ]
+[; ;user.c: 156: else
+[; ;user.c: 157: {
 "157
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 159: currentRow++;
+{
+[; ;user.c: 158: PORTCbits.RC0 = !buf[currentRow][i];
+"158
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
 "159
-[e ++ _currentRow -> -> 1 `i `uc ]
-[; ;user.c: 160: if(currentRow == 6){
-"160
-[e $ ! == -> _currentRow `i -> 6 `i 106  ]
-{
-[; ;user.c: 161: currentRow = 0;
-"161
-[e = _currentRow -> -> 0 `i `uc ]
-"162
 }
+[e :U 112 ]
+[e :U 110 ]
+[e :U 108 ]
 [e :U 106 ]
-[; ;user.c: 162: }
-[; ;user.c: 164: }
-"164
-[e :UE 94 ]
+[; ;user.c: 159: }
+[; ;user.c: 162: PORTCbits.RC2 = 1;
+"162
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 163: PORTCbits.RC2 = 0;
+"163
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"167
 }
-"166
-[v _advanceAnimation `(v ~T0 @X0 1 ef ]
-{
-[; ;user.c: 166: void advanceAnimation(){
-[e :U _advanceAnimation ]
-[f ]
-[; ;user.c: 168: }
-"168
-[e :UE 107 ]
+"136
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 102  ]
+[e :U 103 ]
+"167
 }
-"170
-[v _PopulateColumns2 `(v ~T0 @X0 1 ef ]
+[; ;user.c: 167: }
+[; ;user.c: 171: PORTCbits.RC4 = 0;
 "171
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 173: currentRow++;
+"173
+[e ++ _currentRow -> -> 1 `i `uc ]
+[; ;user.c: 174: if(currentRow == 6){
+"174
+[e $ ! == -> _currentRow `i -> 6 `i 113  ]
 {
-[; ;user.c: 170: void PopulateColumns2()
-[; ;user.c: 171: {
+[; ;user.c: 175: currentRow = 0;
+"175
+[e = _currentRow -> -> 0 `i `uc ]
+"176
+}
+[e :U 113 ]
+[; ;user.c: 176: }
+[; ;user.c: 178: }
+"178
+[e :UE 101 ]
+}
+"180
+[v _AdvanceAnimation `(v ~T0 @X0 1 ef ]
+{
+[; ;user.c: 180: void AdvanceAnimation(){
+[e :U _AdvanceAnimation ]
+[f ]
+[; ;user.c: 182: for(int y = 0;y<6;y++){
+"182
+{
+[v _y `i ~T0 @X0 1 a ]
+[e = _y -> 0 `i ]
+[e $ < _y -> 6 `i 115  ]
+[e $U 116  ]
+[e :U 115 ]
+{
+[; ;user.c: 184: for(int x =0,k = 7;x<8;x++,k--){
+"184
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 7 `i ]
+[e $ < _x -> 8 `i 118  ]
+[e $U 119  ]
+[e :U 118 ]
+{
+[; ;user.c: 185: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
+"185
+[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _animation * -> -> + * _frame _frameSize _y `ui `ux -> -> # *U &U _animation `ui `ux _k -> -> 1 `i `ui `uc ]
+"186
+}
+"184
+[e ; ++ _x -> 1 `i -- _k -> 1 `i ]
+[e $ < _x -> 8 `i 118  ]
+[e :U 119 ]
+"186
+}
+"188
+}
+"182
+[e ++ _y -> 1 `i ]
+[e $ < _y -> 6 `i 115  ]
+[e :U 116 ]
+"188
+}
+[; ;user.c: 186: }
+[; ;user.c: 188: }
+[; ;user.c: 190: if(frame >= maxFrames){
+"190
+[e $ ! >= _frame _maxFrames 121  ]
+{
+[; ;user.c: 191: frame = 0;
+"191
+[e = _frame -> 0 `i ]
+"192
+}
+[; ;user.c: 192: } else {
+[e $U 122  ]
+[e :U 121 ]
+{
+[; ;user.c: 193: frame++;
+"193
+[e ++ _frame -> 1 `i ]
+"194
+}
+[e :U 122 ]
+[; ;user.c: 194: }
+[; ;user.c: 195: }
+"195
+[e :UE 114 ]
+}
+"197
+[v _PopulateColumns2 `(v ~T0 @X0 1 ef ]
+"198
+{
+[; ;user.c: 197: void PopulateColumns2()
+[; ;user.c: 198: {
 [e :U _PopulateColumns2 ]
 [f ]
-[; ;user.c: 172: PORTCbits.RC4 = 1;
-"172
+[; ;user.c: 199: PORTCbits.RC4 = 1;
+"199
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 175: for(int i =7;i==0;i--)
-"175
+[; ;user.c: 202: for(int i =7;i==0;i--)
+"202
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 7 `i ]
-[e $ == _i -> 0 `i 109  ]
-[e $U 110  ]
-"176
-[e :U 109 ]
-[; ;user.c: 176: {
+[e $ == _i -> 0 `i 124  ]
+[e $U 125  ]
+"203
+[e :U 124 ]
+[; ;user.c: 203: {
 {
-[; ;user.c: 179: PORTCbits.RC0 = 0;
-"179
+[; ;user.c: 206: PORTCbits.RC0 = 0;
+"206
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[; ;user.c: 182: PORTCbits.RC2 = 1;
-"182
+[; ;user.c: 209: PORTCbits.RC2 = 1;
+"209
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 183: PORTCbits.RC2 = 0;
-"183
+[; ;user.c: 210: PORTCbits.RC2 = 0;
+"210
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"187
+"214
 }
-"175
+"202
 [e -- _i -> 1 `i ]
-[e $ == _i -> 0 `i 109  ]
-[e :U 110 ]
-"187
+[e $ == _i -> 0 `i 124  ]
+[e :U 125 ]
+"214
 }
-[; ;user.c: 187: }
-[; ;user.c: 191: PORTCbits.RC4 = 0;
-"191
+[; ;user.c: 214: }
+[; ;user.c: 218: PORTCbits.RC4 = 0;
+"218
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 192: }
-"192
-[e :UE 108 ]
+[; ;user.c: 219: }
+"219
+[e :UE 123 ]
 }

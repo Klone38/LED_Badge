@@ -35,6 +35,8 @@ void main(void)
     InitAnimation();
     ReadyDisplay();
 
+    int counter = 0;
+    
     while(1)
     {
         
@@ -47,6 +49,13 @@ void main(void)
         
         
         AdvanceRow();
+        
+        counter++;
+        
+        if(counter > 1000){
+            AdvanceAnimation();
+            counter = 0;
+        }
         
     }
 

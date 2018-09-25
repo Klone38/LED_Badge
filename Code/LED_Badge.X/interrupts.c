@@ -34,7 +34,7 @@ void interrupt isr(void)
      //Determine which flag generated the interrupt 
     if(T0IF == 1)
     {
-        advanceAnimation();
+        AdvanceAnimation();
         T0IF = 0;
     }
     else

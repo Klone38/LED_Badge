@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/XC8_PIC16F688/production\LED_Badge.X.production.hex">
+  <executable name="dist/XC8_PIC16F688/debug\LED_Badge.X.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>4096</length>
-      <used>1264</used>
-      <free>2832</free>
+      <used>1238</used>
+      <free>2858</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

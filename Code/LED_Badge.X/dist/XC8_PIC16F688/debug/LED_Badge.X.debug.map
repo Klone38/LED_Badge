@@ -3,10 +3,10 @@ Microchip MPLAB XC8 Compiler V1.44 ()
 Linker command line:
 
 -W-2 --edf=C:\Program Files (x86)\Microchip\xc8\v1.44\dat\en_msgs.txt -cs \
-  -h+dist/XC8_PIC16F688/production\LED_Badge.X.production.sym \
-  --cmf=dist/XC8_PIC16F688/production\LED_Badge.X.production.cmf -z \
-  -Q16F688 -oC:\Users\Karl\AppData\Local\Temp\sasg.2 \
-  -Mdist/XC8_PIC16F688/production/LED_Badge.X.production.map -E1 -ver=XC8 \
+  -h+dist/XC8_PIC16F688/debug\LED_Badge.X.debug.sym \
+  --cmf=dist/XC8_PIC16F688/debug\LED_Badge.X.debug.cmf -z -Q16F688 \
+  -oC:\Users\Karl\AppData\Local\Temp\sc1g.2 \
+  -Mdist/XC8_PIC16F688/debug/LED_Badge.X.debug.map -E1 -ver=XC8 \
   -ASTACK=0120h-016fh -pstack=STACK -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh \
   -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 -AENTRY=00h-0FFhx16 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -17,8 +17,8 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Karl\AppData\Local\Temp\sasg.obj \
-  dist/XC8_PIC16F688/production\LED_Badge.X.production.obj 
+  -DENTRY=2 -k C:\Users\Karl\AppData\Local\Temp\sc1g.obj \
+  dist/XC8_PIC16F688/debug\LED_Badge.X.debug.obj 
 
 Object code version is 3.11
 
@@ -27,35 +27,35 @@ Machine type is 16F688
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Karl\AppData\Local\Temp\sasg.obj
+C:\Users\Karl\AppData\Local\Temp\sc1g.obj
                 end_init                             11       11        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        1     400E       0
-dist/XC8_PIC16F688/production\LED_Badge.X.production.obj
+dist/XC8_PIC16F688/debug\LED_Badge.X.debug.obj
                 cinit                                13       13       1C        8       0
                 intentry                              4        4        D        8       0
-                text12                              54A      54A       21      464       0
-                text11                              2E2      2E2       B0      464       0
-                text10                              588      588       13      464       0
-                text9                               527      527       23      464       0
-                text8                               232      232       B0      464       0
-                text7                               56B      56B       1D      464       0
-                text6                               4C2      4C2       35      464       0
-                text5                               5C4      5C4        1      464       0
-                text4                               40D      40D       79      464       0
-                text3                               5B5      5B5        9      464       0
-                text2                               392      392       7B      464       0
-                text1                               5AB      5AB        A      464       0
-                maintext                            486      486       3C      464       0
+                text12                              530      530       21      464       0
+                text11                              2D5      2D5       A3      464       0
+                text10                              56E      56E       13      464       0
+                text9                               50D      50D       23      464       0
+                text8                               232      232       A3      464       0
+                text7                               551      551       1D      464       0
+                text6                               4A8      4A8       35      464       0
+                text5                               5AA      5AA        1      464       0
+                text4                               3F3      3F3       79      464       0
+                text3                               59B      59B        9      464       0
+                text2                               378      378       7B      464       0
+                text1                               591      591        A      464       0
+                maintext                            46C      46C       3C      464       0
                 cstackBANK0                          20       20       21       20       1
                 cstackCOMMON                         70       70        E       70       1
-                inittext                            59B      59B       10      464       0
+                inittext                            581      581       10      464       0
                 dataBANK1                            A0       A0       30       A0       1
                 dataBANK0                            41       41        6       20       1
                 bssBANK0                             47       47        3       20       1
                 stringtext                          100      100      132        2       0
-                idataBANK1                          4F7      4F7       30      464       0
-                idataBANK0                          5BE      5BE        6      464       0
+                idataBANK1                          4DD      4DD       30      464       0
+                idataBANK0                          5A4      5A4        6      464       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -65,22 +65,22 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                13       13       1C         0
                 intentry                              4        4        D         0
                 reset_vec                             0        0        2         0
-                text12                              54A      54A       21         0
-                text11                              2E2      2E2       B0         0
-                text10                              588      588       13         0
-                text9                               527      527       23         0
-                text8                               232      232       B0         0
-                text7                               56B      56B       1D         0
-                text6                               4C2      4C2       35         0
-                text5                               5C4      5C4        1         0
-                text4                               40D      40D       79         0
-                text3                               5B5      5B5        9         0
-                text2                               392      392       7B         0
-                text1                               5AB      5AB        A         0
-                maintext                            486      486       3C         0
-                inittext                            59B      59B       10         0
-                idataBANK1                          4F7      4F7       30         0
-                idataBANK0                          5BE      5BE        6         0
+                text12                              530      530       21         0
+                text11                              2D5      2D5       A3         0
+                text10                              56E      56E       13         0
+                text9                               50D      50D       23         0
+                text8                               232      232       A3         0
+                text7                               551      551       1D         0
+                text6                               4A8      4A8       35         0
+                text5                               5AA      5AA        1         0
+                text4                               3F3      3F3       79         0
+                text3                               59B      59B        9         0
+                text2                               378      378       7B         0
+                text1                               591      591        A         0
+                maintext                            46C      46C       3C         0
+                inittext                            581      581       10         0
+                idataBANK1                          4DD      4DD       30         0
+                idataBANK0                          5A4      5A4        6         0
 
         CLASS   STRCODE        
                 stringtext                          100      100      132         0
@@ -136,7 +136,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 dataBANK1                      0000A0  000030  0000D0        A0       1  BANK1       1
                 stringtext                     000100  000132  000232         2       0  STRCODE     2
-                text8                          000232  000393  0005C5       464       0  CODE        2
+                text8                          000232  000379  0005AB       464       0  CODE        2
                 config                         002007  000001  002008      400E       0  CONFIG      2
 
 
@@ -148,14 +148,14 @@ UNUSED ADDRESS RANGES
         BANK2            0120-016F             50           1
         CODE             0002-0003              2           2
                          002F-00FF             D1
-                         05C5-0FFF            23B
+                         05AB-0FFF            255
         CONST            0002-0003              2           2
                          002F-00FF             D1
-                         05C5-0FFF            100
+                         05AB-0FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0002-0003              2           2
                          002F-00FF             D1
-                         05C5-0FFF            100
+                         05AB-0FFF            100
         IDLOC            2000-2003              4           2
         RAM              004A-006F             26           1
                          00D0-00EF             20
@@ -167,10 +167,10 @@ UNUSED ADDRESS RANGES
         STACK            0120-016F             50           1
         STRCODE          0002-0003              2           2
                          002F-00FF             D1
-                         05C5-0FFF            A3B
+                         05AB-0FFF            A55
         STRING           0002-0003              2           2
                          002F-00FF             D1
-                         05C5-0FFF            100
+                         05AB-0FFF            100
 
                                   Symbol Table
 
@@ -186,14 +186,14 @@ InitAnimation@y               cstackBANK0  0036
 PopulateColumns@i             cstackBANK0  002D
 _ANSEL                        (abs)        0091
 _AdvanceAnimation             text8        0232
-_AdvanceRow                   text7        056B
-_ClearDisplay                 text6        04C2
-_ConfigureOscillator          text5        05C4
-_InitAnimation                text4        040D
-_InitApp                      text3        05B5
+_AdvanceRow                   text7        0551
+_ClearDisplay                 text6        04A8
+_ConfigureOscillator          text5        05AA
+_InitAnimation                text4        03F3
+_InitApp                      text3        059B
 _PORTCbits                    (abs)        0007
-_PopulateColumns              text2        0392
-_ReadyDisplay                 text1        05AB
+_PopulateColumns              text2        0378
+_ReadyDisplay                 text1        0591
 _T0IE                         (abs)        005D
 _T0IF                         (abs)        005A
 _TRISA                        (abs)        0085
@@ -294,49 +294,49 @@ __S3                          (abs)        0000
 ___int_sp                     stack        0000
 ___latbits                    (abs)        0001
 ___sp                         stack        0000
-___wmul                       text9        0527
+___wmul                       text9        050D
 ___wmul@multiplicand          cstackBANK0  002C
 ___wmul@multiplier            cstackBANK0  002A
 ___wmul@product               cstackBANK0  002E
-__end_of_AdvanceAnimation     text8        02E2
-__end_of_AdvanceRow           text7        0588
-__end_of_ClearDisplay         text6        04F7
-__end_of_ConfigureOscillator  text5        05C5
-__end_of_InitAnimation        text4        0486
-__end_of_InitApp              text3        05BE
-__end_of_PopulateColumns      text2        040D
-__end_of_ReadyDisplay         text1        05B5
-__end_of___wmul               text9        054A
+__end_of_AdvanceAnimation     text8        02D5
+__end_of_AdvanceRow           text7        056E
+__end_of_ClearDisplay         text6        04DD
+__end_of_ConfigureOscillator  text5        05AB
+__end_of_InitAnimation        text4        046C
+__end_of_InitApp              text3        05A4
+__end_of_PopulateColumns      text2        03F3
+__end_of_ReadyDisplay         text1        059B
+__end_of___wmul               text9        0530
 __end_of__initialization      cinit        002C
 __end_of__stringtab           stringtext   0112
 __end_of_animation            stringtext   0232
-__end_of_isr                  text10       059B
-__end_of_main                 maintext     04C2
-__end_ofi1_AdvanceAnimation   text11       0392
-__end_ofi1___wmul             text12       056B
+__end_of_isr                  text10       0581
+__end_of_main                 maintext     04A8
+__end_ofi1_AdvanceAnimation   text11       0378
+__end_ofi1___wmul             text12       0551
 __initialization              cinit        0013
 __pbssBANK0                   bssBANK0     0047
 __pcstackBANK0                cstackBANK0  0020
 __pcstackCOMMON               cstackCOMMON 0070
 __pdataBANK0                  dataBANK0    0041
 __pdataBANK1                  dataBANK1    00A0
-__pidataBANK0                 idataBANK0   05BE
-__pidataBANK1                 idataBANK1   04F7
+__pidataBANK0                 idataBANK0   05A4
+__pidataBANK1                 idataBANK1   04DD
 __pintentry                   intentry     0004
-__pmaintext                   maintext     0486
+__pmaintext                   maintext     046C
 __pstringtext                 stringtext   0100
-__ptext1                      text1        05AB
-__ptext10                     text10       0588
-__ptext11                     text11       02E2
-__ptext12                     text12       054A
-__ptext2                      text2        0392
-__ptext3                      text3        05B5
-__ptext4                      text4        040D
-__ptext5                      text5        05C4
-__ptext6                      text6        04C2
-__ptext7                      text7        056B
+__ptext1                      text1        0591
+__ptext10                     text10       056E
+__ptext11                     text11       02D5
+__ptext12                     text12       0530
+__ptext2                      text2        0378
+__ptext3                      text3        059B
+__ptext4                      text4        03F3
+__ptext5                      text5        05AA
+__ptext6                      text6        04A8
+__ptext7                      text7        0551
 __ptext8                      text8        0232
-__ptext9                      text9        0527
+__ptext9                      text9        050D
 __size_of_AdvanceAnimation    (abs)        0000
 __size_of_AdvanceRow          (abs)        0000
 __size_of_ClearDisplay        (abs)        0000
@@ -357,8 +357,8 @@ _buf                          dataBANK1    00A0
 _currentRow                   bssBANK0     0049
 _frame                        bssBANK0     0047
 _frameSize                    dataBANK0    0043
-_isr                          text10       0588
-_main                         maintext     0486
+_isr                          text10       056E
+_main                         maintext     046C
 _maxFrames                    dataBANK0    0045
 _rowCount                     dataBANK0    0041
 btemp                         (abs)        007E
@@ -366,13 +366,13 @@ end_of_initialization         cinit        002C
 i1AdvanceAnimation@k          cstackBANK0  0020
 i1AdvanceAnimation@x          cstackBANK0  0022
 i1AdvanceAnimation@y          cstackBANK0  0024
-i1_AdvanceAnimation           text11       02E2
-i1___wmul                     text12       054A
+i1_AdvanceAnimation           text11       02D5
+i1___wmul                     text12       0530
 i1___wmul@multiplicand        cstackCOMMON 0072
 i1___wmul@multiplier          cstackCOMMON 0070
 i1___wmul@product             cstackCOMMON 0074
-init_fetch0                   inittext     059B
-init_ram0                     inittext     059F
+init_fetch0                   inittext     0581
+init_ram0                     inittext     0585
 interrupt_function            intentry     0004
 intlevel0                     functab      0000
 intlevel1                     functab      0000
@@ -800,42 +800,42 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 interrupts.c
-		_isr           		CODE           	0588	0000	20
+		_isr           		CODE           	056E	0000	20
 
 interrupts.c estimated size: 20
 
 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
-		___wmul        		CODE           	0527	0000	36
+		___wmul        		CODE           	050D	0000	36
 
 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c estimated size: 36
 
 shared
 		__stringtab    		STRCODE        	0100	0000	19
-		i1_AdvanceAnimation		CODE           	02E2	0000	177
+		i1_AdvanceAnimation		CODE           	02D5	0000	164
 		_animation     		STRCODE        	0112	0000	289
-		i1___wmul      		CODE           	054A	0000	34
+		i1___wmul      		CODE           	0530	0000	34
 		__initialization		CODE           	0013	0000	26
 
-shared estimated size: 545
+shared estimated size: 532
 
 user.c
-		_ClearDisplay  		CODE           	04C2	0000	54
-		_InitAnimation 		CODE           	040D	0000	122
-		_ReadyDisplay  		CODE           	05AB	0000	11
-		_InitApp       		CODE           	05B5	0000	10
-		_PopulateColumns		CODE           	0392	0000	124
-		_AdvanceRow    		CODE           	056B	0000	30
-		_AdvanceAnimation		CODE           	0232	0000	177
+		_ClearDisplay  		CODE           	04A8	0000	54
+		_InitAnimation 		CODE           	03F3	0000	122
+		_ReadyDisplay  		CODE           	0591	0000	11
+		_InitApp       		CODE           	059B	0000	10
+		_PopulateColumns		CODE           	0378	0000	124
+		_AdvanceRow    		CODE           	0551	0000	30
+		_AdvanceAnimation		CODE           	0232	0000	164
 
-user.c estimated size: 528
+user.c estimated size: 515
 
 main.c
-		_main          		CODE           	0486	0000	61
+		_main          		CODE           	046C	0000	61
 
 main.c estimated size: 61
 
 system.c
-		_ConfigureOscillator		CODE           	05C4	0000	2
+		_ConfigureOscillator		CODE           	05AA	0000	2
 
 system.c estimated size: 2
 

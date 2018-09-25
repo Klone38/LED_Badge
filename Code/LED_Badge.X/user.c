@@ -18,16 +18,17 @@
 
 
 bool buf[6][8] = {
-    0,0,1,0,0,1,0,0,
-    0,0,1,0,0,1,0,0,
-    0,0,0,0,0,0,0,0,
-    0,1,0,0,0,0,1,0,
-    0,0,1,1,1,1,0,0,
-    0,0,0,0,0,0,0,0
+    1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1
 };
 
 int frame = 0;
 int maxFrames = 24;
+int frameSize = 6;
 
 
 
@@ -59,15 +60,13 @@ void InitApp(void)
 
 void InitAnimation()
 {
-    //Everything here is wrong
-    for(int y =0;y<6;y++)
-    {
-        for(int x=0;x<8;x++)
-        {
-            buf[y][x] = animation[x+(y*8)];
+    
+    for(int y = 0;y<6;y++){
+        for(int x =0,k = 7;x<8;x++,k--){
+            buf[y][x] = (animation[y] >> k) & 1;
         }
     }
-    frame = 1;
+    
 }
 
 void ClearDisplay()
@@ -178,16 +177,23 @@ void PopulateColumns()
         
 }
 
-void advanceAnimation(){
-    
-    //Everything here is wrong
-    for(int y =(frame*48);y<(frame+6);y++)
-    {
-        for(int x=0;x<8;x++)
-        {
-            buf[y][x] = animation[x+(y*8)];
-        }
+void AdvanceAnimation(){
+    if(frame >= maxFrames){
+        frame = 0;
+    } else {
+        frame++;
     }
+    
+    
+    for(int y = 0;y<6;y++){
+        
+            for(int x =0,k = 7;x<8;x++,k--){
+                buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
+            }
+        
+    }
+    
+    
 }
 
 void PopulateColumns2()
