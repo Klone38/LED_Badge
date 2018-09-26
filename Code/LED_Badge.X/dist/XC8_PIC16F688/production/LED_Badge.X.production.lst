@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.44 build -154322312 
-                                                                                               Tue Sep 25 10:34:15 2018
+                                                                                               Tue Sep 25 22:26:43 2018
 
 Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140600
      1                           	processor	16F688
@@ -365,72 +365,72 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    351  009F                     	;# 
    352                           
    353                           	psect	idataBANK0
-   354  05BE                     __pidataBANK0:	
+   354  05A4                     __pidataBANK0:	
    355                           
    356                           ;initializer for _rowCount
-   357  05BE  3402               	retlw	2
-   358  05BF  3400               	retlw	0
+   357  05A4  3402               	retlw	2
+   358  05A5  3400               	retlw	0
    359                           
    360                           ;initializer for _frameSize
-   361  05C0  3408               	retlw	8
-   362  05C1  3400               	retlw	0
+   361  05A6  3406               	retlw	6
+   362  05A7  3400               	retlw	0
    363                           
    364                           ;initializer for _maxFrames
-   365  05C2  3418               	retlw	24
-   366  05C3  3400               	retlw	0
+   365  05A8  3418               	retlw	24
+   366  05A9  3400               	retlw	0
    367                           
    368                           	psect	idataBANK1
-   369  04F7                     __pidataBANK1:	
+   369  04DD                     __pidataBANK1:	
    370                           
    371                           ;initializer for _buf
-   372  04F7  3401               	retlw	1
-   373  04F8  3401               	retlw	1
-   374  04F9  3401               	retlw	1
-   375  04FA  3401               	retlw	1
-   376  04FB  3401               	retlw	1
-   377  04FC  3401               	retlw	1
-   378  04FD  3401               	retlw	1
-   379  04FE  3401               	retlw	1
-   380  04FF  3401               	retlw	1
-   381  0500  3401               	retlw	1
-   382  0501  3401               	retlw	1
-   383  0502  3401               	retlw	1
-   384  0503  3401               	retlw	1
-   385  0504  3401               	retlw	1
-   386  0505  3401               	retlw	1
-   387  0506  3401               	retlw	1
-   388  0507  3401               	retlw	1
-   389  0508  3401               	retlw	1
-   390  0509  3401               	retlw	1
-   391  050A  3401               	retlw	1
-   392  050B  3401               	retlw	1
-   393  050C  3401               	retlw	1
-   394  050D  3401               	retlw	1
-   395  050E  3401               	retlw	1
-   396  050F  3401               	retlw	1
-   397  0510  3401               	retlw	1
-   398  0511  3401               	retlw	1
-   399  0512  3401               	retlw	1
-   400  0513  3401               	retlw	1
-   401  0514  3401               	retlw	1
-   402  0515  3401               	retlw	1
-   403  0516  3401               	retlw	1
-   404  0517  3401               	retlw	1
-   405  0518  3401               	retlw	1
-   406  0519  3401               	retlw	1
-   407  051A  3401               	retlw	1
-   408  051B  3401               	retlw	1
-   409  051C  3401               	retlw	1
-   410  051D  3401               	retlw	1
-   411  051E  3401               	retlw	1
-   412  051F  3401               	retlw	1
-   413  0520  3401               	retlw	1
-   414  0521  3401               	retlw	1
-   415  0522  3401               	retlw	1
-   416  0523  3401               	retlw	1
-   417  0524  3401               	retlw	1
-   418  0525  3401               	retlw	1
-   419  0526  3401               	retlw	1
+   372  04DD  3401               	retlw	1
+   373  04DE  3401               	retlw	1
+   374  04DF  3401               	retlw	1
+   375  04E0  3401               	retlw	1
+   376  04E1  3401               	retlw	1
+   377  04E2  3401               	retlw	1
+   378  04E3  3401               	retlw	1
+   379  04E4  3401               	retlw	1
+   380  04E5  3401               	retlw	1
+   381  04E6  3401               	retlw	1
+   382  04E7  3401               	retlw	1
+   383  04E8  3401               	retlw	1
+   384  04E9  3401               	retlw	1
+   385  04EA  3401               	retlw	1
+   386  04EB  3401               	retlw	1
+   387  04EC  3401               	retlw	1
+   388  04ED  3401               	retlw	1
+   389  04EE  3401               	retlw	1
+   390  04EF  3401               	retlw	1
+   391  04F0  3401               	retlw	1
+   392  04F1  3401               	retlw	1
+   393  04F2  3401               	retlw	1
+   394  04F3  3401               	retlw	1
+   395  04F4  3401               	retlw	1
+   396  04F5  3401               	retlw	1
+   397  04F6  3401               	retlw	1
+   398  04F7  3401               	retlw	1
+   399  04F8  3401               	retlw	1
+   400  04F9  3401               	retlw	1
+   401  04FA  3401               	retlw	1
+   402  04FB  3401               	retlw	1
+   403  04FC  3401               	retlw	1
+   404  04FD  3401               	retlw	1
+   405  04FE  3401               	retlw	1
+   406  04FF  3401               	retlw	1
+   407  0500  3401               	retlw	1
+   408  0501  3401               	retlw	1
+   409  0502  3401               	retlw	1
+   410  0503  3401               	retlw	1
+   411  0504  3401               	retlw	1
+   412  0505  3401               	retlw	1
+   413  0506  3401               	retlw	1
+   414  0507  3401               	retlw	1
+   415  0508  3401               	retlw	1
+   416  0509  3401               	retlw	1
+   417  050A  3401               	retlw	1
+   418  050B  3401               	retlw	1
+   419  050C  3401               	retlw	1
    420                           
    421                           	psect	stringtext
    422  0100                     __pstringtext:	
@@ -768,22 +768,22 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    754  0015  00FD               	movwf	btemp+-1
    755  0016  3004               	movlw	high __pidataBANK1
    756  0017  00FE               	movwf	btemp
-   757  0018  30F7               	movlw	low __pidataBANK1
+   757  0018  30DD               	movlw	low __pidataBANK1
    758  0019  00FF               	movwf	btemp+1
    759  001A  30A0               	movlw	low __pdataBANK1
    760  001B  0084               	movwf	4
-   761  001C  118A  259F  118A   	fcall	init_ram0
+   761  001C  118A  2585  118A   	fcall	init_ram0
    762                           
    763                           ; Initialize objects allocated to BANK0
    764  001F  3047               	movlw	low (__pdataBANK0+6)
    765  0020  00FD               	movwf	btemp+-1
    766  0021  3005               	movlw	high __pidataBANK0
    767  0022  00FE               	movwf	btemp
-   768  0023  30BE               	movlw	low __pidataBANK0
+   768  0023  30A4               	movlw	low __pidataBANK0
    769  0024  00FF               	movwf	btemp+1
    770  0025  3041               	movlw	low __pdataBANK0
    771  0026  0084               	movwf	4
-   772  0027  118A  259F         	fcall	init_ram0
+   772  0027  118A  2585         	fcall	init_ram0
    773                           
    774                           ; Clear objects allocated to BANK0
    775  0029  01C7               	clrf	__pbssBANK0& (0+127)
@@ -794,7 +794,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    780                           
    781  002C                     __end_of__initialization:	
    782  002C  0183               	clrf	3
-   783  002D  118A  2C86         	ljmp	_main	;jump to C main() function
+   783  002D  118A  2C6C         	ljmp	_main	;jump to C main() function
    784                           
    785                           	psect	bssBANK0
    786  0047                     __pbssBANK0:	
@@ -818,31 +818,31 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    804  00A0                     	ds	48
    805                           
    806                           	psect	inittext
-   807  059B                     init_fetch0:	
+   807  0581                     init_fetch0:	
    808                           ;	Called with low address in FSR and high address in W
    809                           
-   810  059B  087E               	movf	126,w
-   811  059C  008A               	movwf	10
-   812  059D  087F               	movf	127,w
-   813  059E  0082               	movwf	2
-   814  059F                     init_ram0:	
+   810  0581  087E               	movf	126,w
+   811  0582  008A               	movwf	10
+   812  0583  087F               	movf	127,w
+   813  0584  0082               	movwf	2
+   814  0585                     init_ram0:	
    815                           ;Called with:
    816                           ;	high address of idata address in btemp 
    817                           ;	low address of idata address in btemp+1 
    818                           ;	low address of data in FSR
    819                           ;	high address + 1 of data in btemp-1
    820                           
-   821  059F  259B  118A         	fcall	init_fetch0
-   822  05A1  0080               	movwf	0
-   823  05A2  0A84               	incf	4,f
-   824  05A3  0804               	movf	4,w
-   825  05A4  067D               	xorwf	125,w
-   826  05A5  1903               	btfsc	3,2
-   827  05A6  3400               	retlw	0
-   828  05A7  0AFF               	incf	127,f
-   829  05A8  1903               	btfsc	3,2
-   830  05A9  0AFE               	incf	126,f
-   831  05AA  2D9F               	goto	init_ram0
+   821  0585  2581  118A         	fcall	init_fetch0
+   822  0587  0080               	movwf	0
+   823  0588  0A84               	incf	4,f
+   824  0589  0804               	movf	4,w
+   825  058A  067D               	xorwf	125,w
+   826  058B  1903               	btfsc	3,2
+   827  058C  3400               	retlw	0
+   828  058D  0AFF               	incf	127,f
+   829  058E  1903               	btfsc	3,2
+   830  058F  0AFE               	incf	126,f
+   831  0590  2D85               	goto	init_ram0
    832                           
    833                           	psect	cstackCOMMON
    834  0070                     __pcstackCOMMON:	
@@ -1005,7 +1005,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    991  003F                     	ds	2
    992                           
    993                           	psect	maintext
-   994  0486                     __pmaintext:	
+   994  046C                     __pmaintext:	
    995 ;;
    996 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
    997 ;;
@@ -1047,93 +1047,93 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1033                           
   1034                           
   1035                           ;psect for function _main
-  1036  0486                     _main:	
+  1036  046C                     _main:	
   1037                           
   1038                           ;main.c: 29: ConfigureOscillator();
   1039                           
   1040                           ;incstack = 0
   1041                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-  1042  0486  118A  25C4  118A   	fcall	_ConfigureOscillator
+  1042  046C  118A  25AA  118A   	fcall	_ConfigureOscillator
   1043                           
   1044                           ;main.c: 32: InitApp();
-  1045  0489  118A  25B5  118A   	fcall	_InitApp
+  1045  046F  118A  259B  118A   	fcall	_InitApp
   1046                           
   1047                           ;main.c: 34: ClearDisplay();
-  1048  048C  118A  24C2  118A   	fcall	_ClearDisplay
+  1048  0472  118A  24A8  118A   	fcall	_ClearDisplay
   1049                           
   1050                           ;main.c: 35: InitAnimation();
-  1051  048F  118A  240D  118A   	fcall	_InitAnimation
+  1051  0475  118A  23F3  118A   	fcall	_InitAnimation
   1052                           
   1053                           ;main.c: 36: ReadyDisplay();
-  1054  0492  118A  25AB  118A   	fcall	_ReadyDisplay
-  1055  0495                     L1:	
+  1054  0478  118A  2591  118A   	fcall	_ReadyDisplay
+  1055  047B                     L1:	
   1056                           
   1057                           ;main.c: 38: int counter = 0;
-  1058  0495  1283               	bcf	3,5	;RP0=0, select bank0
-  1059  0496  1303               	bcf	3,6	;RP1=0, select bank0
-  1060  0497  01BF               	clrf	main@counter
-  1061  0498  01C0               	clrf	main@counter+1
-  1062  0499                     l1035:	
+  1058  047B  1283               	bcf	3,5	;RP0=0, select bank0
+  1059  047C  1303               	bcf	3,6	;RP1=0, select bank0
+  1060  047D  01BF               	clrf	main@counter
+  1061  047E  01C0               	clrf	main@counter+1
+  1062  047F                     l1035:	
   1063                           ;main.c: 40: while(1)
   1064                           
   1065                           
   1066                           ;main.c: 41: {
   1067                           ;main.c: 43: PopulateColumns();
-  1068  0499  118A  2392  118A   	fcall	_PopulateColumns
+  1068  047F  118A  2378  118A   	fcall	_PopulateColumns
   1069                           
   1070                           ;main.c: 46: _delay((unsigned long)((500)*(8000000/4000000.0)));
-  1071  049C  30C7               	movlw	199
-  1072  049D  1283               	bcf	3,5	;RP0=0, select bank0
-  1073  049E  1303               	bcf	3,6	;RP1=0, select bank0
-  1074  049F  00BE               	movwf	??_main
-  1075  04A0                     u1137:	
-  1076  04A0  2CA1               	nop2
-  1077  04A1  0BBE               	decfsz	??_main,f
-  1078  04A2  2CA0               	goto	u1137
-  1079  04A3  2CA4               	nop2
-  1080  04A4  0000               	nop
+  1071  0482  30C7               	movlw	199
+  1072  0483  1283               	bcf	3,5	;RP0=0, select bank0
+  1073  0484  1303               	bcf	3,6	;RP1=0, select bank0
+  1074  0485  00BE               	movwf	??_main
+  1075  0486                     u1137:	
+  1076  0486  2C87               	nop2
+  1077  0487  0BBE               	decfsz	??_main,f
+  1078  0488  2C86               	goto	u1137
+  1079  0489  2C8A               	nop2
+  1080  048A  0000               	nop
   1081                           
   1082                           ;main.c: 48: PORTCbits.RC4 = 1;
-  1083  04A5  1283               	bcf	3,5	;RP0=0, select bank0
-  1084  04A6  1303               	bcf	3,6	;RP1=0, select bank0
-  1085  04A7  1607               	bsf	7,4	;volatile
+  1083  048B  1283               	bcf	3,5	;RP0=0, select bank0
+  1084  048C  1303               	bcf	3,6	;RP1=0, select bank0
+  1085  048D  1607               	bsf	7,4	;volatile
   1086                           
   1087                           ;main.c: 51: AdvanceRow();
-  1088  04A8  118A  256B  118A   	fcall	_AdvanceRow
+  1088  048E  118A  2551  118A   	fcall	_AdvanceRow
   1089                           
   1090                           ;main.c: 53: counter++;
-  1091  04AB  3001               	movlw	1
-  1092  04AC  1283               	bcf	3,5	;RP0=0, select bank0
-  1093  04AD  1303               	bcf	3,6	;RP1=0, select bank0
-  1094  04AE  07BF               	addwf	main@counter,f
-  1095  04AF  1803               	skipnc
-  1096  04B0  0AC0               	incf	main@counter+1,f
-  1097  04B1  3000               	movlw	0
-  1098  04B2  07C0               	addwf	main@counter+1,f
+  1091  0491  3001               	movlw	1
+  1092  0492  1283               	bcf	3,5	;RP0=0, select bank0
+  1093  0493  1303               	bcf	3,6	;RP1=0, select bank0
+  1094  0494  07BF               	addwf	main@counter,f
+  1095  0495  1803               	skipnc
+  1096  0496  0AC0               	incf	main@counter+1,f
+  1097  0497  3000               	movlw	0
+  1098  0498  07C0               	addwf	main@counter+1,f
   1099                           
-  1100                           ;main.c: 55: if(counter > 1000){
-  1101  04B3  0840               	movf	main@counter+1,w
-  1102  04B4  3A80               	xorlw	128
-  1103  04B5  00FF               	movwf	127
-  1104  04B6  3083               	movlw	131
-  1105  04B7  027F               	subwf	127,w
-  1106  04B8  1D03               	skipz
-  1107  04B9  2CBC               	goto	u1125
-  1108  04BA  30E9               	movlw	233
-  1109  04BB  023F               	subwf	main@counter,w
-  1110  04BC                     u1125:	
-  1111  04BC  1C03               	skipc
-  1112  04BD  2C99               	goto	l1035
+  1100                           ;main.c: 55: if(counter > 500){
+  1101  0499  0840               	movf	main@counter+1,w
+  1102  049A  3A80               	xorlw	128
+  1103  049B  00FF               	movwf	127
+  1104  049C  3081               	movlw	129
+  1105  049D  027F               	subwf	127,w
+  1106  049E  1D03               	skipz
+  1107  049F  2CA2               	goto	u1125
+  1108  04A0  30F5               	movlw	245
+  1109  04A1  023F               	subwf	main@counter,w
+  1110  04A2                     u1125:	
+  1111  04A2  1C03               	skipc
+  1112  04A3  2C7F               	goto	l1035
   1113                           
   1114                           ;main.c: 56: AdvanceAnimation();
-  1115  04BE  118A  2232  118A   	fcall	_AdvanceAnimation
-  1116  04C1  2C95               	goto	L1
-  1117  04C2                     __end_of_main:	
+  1115  04A4  118A  2232  118A   	fcall	_AdvanceAnimation
+  1116  04A7  2C7B               	goto	L1
+  1117  04A8                     __end_of_main:	
   1118                           ;main.c: 57: counter = 0;
   1119                           
   1120                           
   1121                           	psect	text1
-  1122  05AB                     __ptext1:	
+  1122  0591                     __ptext1:	
   1123 ;; *************** function _ReadyDisplay *****************
   1124 ;; Defined at:
   1125 ;;		line 114 in file "user.c"
@@ -1166,38 +1166,38 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1152                           
   1153                           
   1154                           ;psect for function _ReadyDisplay
-  1155  05AB                     _ReadyDisplay:	
+  1155  0591                     _ReadyDisplay:	
   1156                           
   1157                           ;user.c: 116: PORTCbits.RC4 = 1;
   1158                           
   1159                           ;incstack = 0
   1160                           ; Regs used in _ReadyDisplay: []
-  1161  05AB  1283               	bcf	3,5	;RP0=0, select bank0
-  1162  05AC  1303               	bcf	3,6	;RP1=0, select bank0
-  1163  05AD  1607               	bsf	7,4	;volatile
+  1161  0591  1283               	bcf	3,5	;RP0=0, select bank0
+  1162  0592  1303               	bcf	3,6	;RP1=0, select bank0
+  1163  0593  1607               	bsf	7,4	;volatile
   1164                           
   1165                           ;user.c: 118: PORTCbits.RC1 = 1;
-  1166  05AE  1487               	bsf	7,1	;volatile
+  1166  0594  1487               	bsf	7,1	;volatile
   1167                           
   1168                           ;user.c: 121: PORTCbits.RC3 = 1;
-  1169  05AF  1587               	bsf	7,3	;volatile
+  1169  0595  1587               	bsf	7,3	;volatile
   1170                           
   1171                           ;user.c: 122: PORTCbits.RC3 = 0;
-  1172  05B0  1187               	bcf	7,3	;volatile
+  1172  0596  1187               	bcf	7,3	;volatile
   1173                           
   1174                           ;user.c: 123: PORTCbits.RC3 = 1;
-  1175  05B1  1587               	bsf	7,3	;volatile
+  1175  0597  1587               	bsf	7,3	;volatile
   1176                           
   1177                           ;user.c: 124: PORTCbits.RC3 = 0;
-  1178  05B2  1187               	bcf	7,3	;volatile
+  1178  0598  1187               	bcf	7,3	;volatile
   1179                           
   1180                           ;user.c: 126: PORTCbits.RC4 = 0;
-  1181  05B3  1207               	bcf	7,4	;volatile
-  1182  05B4  0008               	return
-  1183  05B5                     __end_of_ReadyDisplay:	
+  1181  0599  1207               	bcf	7,4	;volatile
+  1182  059A  0008               	return
+  1183  059B                     __end_of_ReadyDisplay:	
   1184                           
   1185                           	psect	text2
-  1186  0392                     __ptext2:	
+  1186  0378                     __ptext2:	
   1187 ;; *************** function _PopulateColumns *****************
   1188 ;; Defined at:
   1189 ;;		line 131 in file "user.c"
@@ -1230,203 +1230,203 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1216                           
   1217                           
   1218                           ;psect for function _PopulateColumns
-  1219  0392                     _PopulateColumns:	
+  1219  0378                     _PopulateColumns:	
   1220                           
   1221                           ;user.c: 133: PORTCbits.RC4 = 1;
   1222                           
   1223                           ;incstack = 0
   1224                           ; Regs used in _PopulateColumns: [wreg-fsr0h+status,2+status,0]
-  1225  0392  1283               	bcf	3,5	;RP0=0, select bank0
-  1226  0393  1303               	bcf	3,6	;RP1=0, select bank0
-  1227  0394  1607               	bsf	7,4	;volatile
+  1225  0378  1283               	bcf	3,5	;RP0=0, select bank0
+  1226  0379  1303               	bcf	3,6	;RP1=0, select bank0
+  1227  037A  1607               	bsf	7,4	;volatile
   1228                           
   1229                           ;user.c: 136: for(int i =7;i>=0;i--)
-  1230  0395  3007               	movlw	7
-  1231  0396  00AD               	movwf	PopulateColumns@i
-  1232  0397  3000               	movlw	0
-  1233  0398  00AE               	movwf	PopulateColumns@i+1
-  1234  0399  1BAE               	btfsc	PopulateColumns@i+1,7
-  1235  039A  2C02               	goto	l95
-  1236  039B                     l943:	
+  1230  037B  3007               	movlw	7
+  1231  037C  00AD               	movwf	PopulateColumns@i
+  1232  037D  3000               	movlw	0
+  1233  037E  00AE               	movwf	PopulateColumns@i+1
+  1234  037F  1BAE               	btfsc	PopulateColumns@i+1,7
+  1235  0380  2BE8               	goto	l95
+  1236  0381                     l943:	
   1237                           
   1238                           ;user.c: 137: {
   1239                           ;user.c: 140: if(i==3)
-  1240  039B  3003               	movlw	3
-  1241  039C  062D               	xorwf	PopulateColumns@i,w
-  1242  039D  042E               	iorwf	PopulateColumns@i+1,w
-  1243  039E  1D03               	btfss	3,2
-  1244  039F  2BAB               	goto	l947
+  1240  0381  3003               	movlw	3
+  1241  0382  062D               	xorwf	PopulateColumns@i,w
+  1242  0383  042E               	iorwf	PopulateColumns@i+1,w
+  1243  0384  1D03               	btfss	3,2
+  1244  0385  2B91               	goto	l947
   1245                           
   1246                           ;user.c: 141: {
   1247                           ;user.c: 142: PORTCbits.RC0 = !buf[currentRow][0];
-  1248  03A0  0849               	movf	_currentRow,w
-  1249  03A1  00AA               	movwf	??_PopulateColumns
-  1250  03A2  3002               	movlw	2
-  1251  03A3                     u835:	
-  1252  03A3  1003               	clrc
-  1253  03A4  0DAA               	rlf	??_PopulateColumns,f
-  1254  03A5  3EFF               	addlw	-1
-  1255  03A6  1D03               	skipz
-  1256  03A7  2BA3               	goto	u835
-  1257  03A8  1003               	clrc
-  1258  03A9  0D2A               	rlf	??_PopulateColumns,w
-  1259  03AA  2BDB               	goto	L9
-  1260  03AB                     l947:	
+  1248  0386  0849               	movf	_currentRow,w
+  1249  0387  00AA               	movwf	??_PopulateColumns
+  1250  0388  3002               	movlw	2
+  1251  0389                     u835:	
+  1252  0389  1003               	clrc
+  1253  038A  0DAA               	rlf	??_PopulateColumns,f
+  1254  038B  3EFF               	addlw	-1
+  1255  038C  1D03               	skipz
+  1256  038D  2B89               	goto	u835
+  1257  038E  1003               	clrc
+  1258  038F  0D2A               	rlf	??_PopulateColumns,w
+  1259  0390  2BC1               	goto	L9
+  1260  0391                     l947:	
   1261                           ;user.c: 143: }
   1262                           
   1263                           
   1264                           ;user.c: 144: else if(i==2)
-  1265  03AB  3002               	movlw	2
-  1266  03AC  062D               	xorwf	PopulateColumns@i,w
-  1267  03AD  042E               	iorwf	PopulateColumns@i+1,w
-  1268  03AE  1D03               	btfss	3,2
-  1269  03AF  2BBC               	goto	l951
+  1265  0391  3002               	movlw	2
+  1266  0392  062D               	xorwf	PopulateColumns@i,w
+  1267  0393  042E               	iorwf	PopulateColumns@i+1,w
+  1268  0394  1D03               	btfss	3,2
+  1269  0395  2BA2               	goto	l951
   1270                           
   1271                           ;user.c: 145: {
   1272                           ;user.c: 146: PORTCbits.RC0 = !buf[currentRow][1];
-  1273  03B0  0849               	movf	_currentRow,w
-  1274  03B1  00AA               	movwf	??_PopulateColumns
-  1275  03B2  3002               	movlw	2
-  1276  03B3                     u875:	
-  1277  03B3  1003               	clrc
-  1278  03B4  0DAA               	rlf	??_PopulateColumns,f
-  1279  03B5  3EFF               	addlw	-1
-  1280  03B6  1D03               	skipz
-  1281  03B7  2BB3               	goto	u875
-  1282  03B8  1003               	clrc
-  1283  03B9  0D2A               	rlf	??_PopulateColumns,w
-  1284  03BA  3E01               	addlw	1
-  1285  03BB  2BDB               	goto	L9
-  1286  03BC                     l951:	
+  1273  0396  0849               	movf	_currentRow,w
+  1274  0397  00AA               	movwf	??_PopulateColumns
+  1275  0398  3002               	movlw	2
+  1276  0399                     u875:	
+  1277  0399  1003               	clrc
+  1278  039A  0DAA               	rlf	??_PopulateColumns,f
+  1279  039B  3EFF               	addlw	-1
+  1280  039C  1D03               	skipz
+  1281  039D  2B99               	goto	u875
+  1282  039E  1003               	clrc
+  1283  039F  0D2A               	rlf	??_PopulateColumns,w
+  1284  03A0  3E01               	addlw	1
+  1285  03A1  2BC1               	goto	L9
+  1286  03A2                     l951:	
   1287                           ;user.c: 147: }
   1288                           
   1289                           
   1290                           ;user.c: 148: else if(i==1)
-  1291  03BC  032D               	decf	PopulateColumns@i,w
-  1292  03BD  042E               	iorwf	PopulateColumns@i+1,w
-  1293  03BE  1D03               	btfss	3,2
-  1294  03BF  2BCC               	goto	l955
+  1291  03A2  032D               	decf	PopulateColumns@i,w
+  1292  03A3  042E               	iorwf	PopulateColumns@i+1,w
+  1293  03A4  1D03               	btfss	3,2
+  1294  03A5  2BB2               	goto	l955
   1295                           
   1296                           ;user.c: 149: {
   1297                           ;user.c: 150: PORTCbits.RC0 = !buf[currentRow][2];
-  1298  03C0  0849               	movf	_currentRow,w
-  1299  03C1  00AA               	movwf	??_PopulateColumns
-  1300  03C2  3002               	movlw	2
-  1301  03C3                     u915:	
-  1302  03C3  1003               	clrc
-  1303  03C4  0DAA               	rlf	??_PopulateColumns,f
-  1304  03C5  3EFF               	addlw	-1
-  1305  03C6  1D03               	skipz
-  1306  03C7  2BC3               	goto	u915
-  1307  03C8  1003               	clrc
-  1308  03C9  0D2A               	rlf	??_PopulateColumns,w
-  1309  03CA  3E02               	addlw	2
-  1310  03CB  2BDB               	goto	L9
-  1311  03CC                     l955:	
+  1298  03A6  0849               	movf	_currentRow,w
+  1299  03A7  00AA               	movwf	??_PopulateColumns
+  1300  03A8  3002               	movlw	2
+  1301  03A9                     u915:	
+  1302  03A9  1003               	clrc
+  1303  03AA  0DAA               	rlf	??_PopulateColumns,f
+  1304  03AB  3EFF               	addlw	-1
+  1305  03AC  1D03               	skipz
+  1306  03AD  2BA9               	goto	u915
+  1307  03AE  1003               	clrc
+  1308  03AF  0D2A               	rlf	??_PopulateColumns,w
+  1309  03B0  3E02               	addlw	2
+  1310  03B1  2BC1               	goto	L9
+  1311  03B2                     l955:	
   1312                           ;user.c: 151: }
   1313                           
   1314                           
   1315                           ;user.c: 152: else if(i==0)
-  1316  03CC  082D               	movf	PopulateColumns@i,w
-  1317  03CD  042E               	iorwf	PopulateColumns@i+1,w
-  1318  03CE  1D03               	btfss	3,2
-  1319  03CF  2BDD               	goto	l959
+  1316  03B2  082D               	movf	PopulateColumns@i,w
+  1317  03B3  042E               	iorwf	PopulateColumns@i+1,w
+  1318  03B4  1D03               	btfss	3,2
+  1319  03B5  2BC3               	goto	l959
   1320                           
   1321                           ;user.c: 153: {
   1322                           ;user.c: 154: PORTCbits.RC0 = !buf[currentRow][3];
-  1323  03D0  0849               	movf	_currentRow,w
-  1324  03D1  00AA               	movwf	??_PopulateColumns
-  1325  03D2  3002               	movlw	2
-  1326  03D3                     u955:	
-  1327  03D3  1003               	clrc
-  1328  03D4  0DAA               	rlf	??_PopulateColumns,f
-  1329  03D5  3EFF               	addlw	-1
-  1330  03D6  1D03               	skipz
-  1331  03D7  2BD3               	goto	u955
-  1332  03D8  1003               	clrc
-  1333  03D9  0D2A               	rlf	??_PopulateColumns,w
-  1334  03DA  3E03               	addlw	3
-  1335  03DB                     L9:	
-  1336  03DB  3EA0               	addlw	(low (_buf| 0))& (0+255)
-  1337  03DC  2BEC               	goto	L8
-  1338  03DD                     l959:	
+  1323  03B6  0849               	movf	_currentRow,w
+  1324  03B7  00AA               	movwf	??_PopulateColumns
+  1325  03B8  3002               	movlw	2
+  1326  03B9                     u955:	
+  1327  03B9  1003               	clrc
+  1328  03BA  0DAA               	rlf	??_PopulateColumns,f
+  1329  03BB  3EFF               	addlw	-1
+  1330  03BC  1D03               	skipz
+  1331  03BD  2BB9               	goto	u955
+  1332  03BE  1003               	clrc
+  1333  03BF  0D2A               	rlf	??_PopulateColumns,w
+  1334  03C0  3E03               	addlw	3
+  1335  03C1                     L9:	
+  1336  03C1  3EA0               	addlw	(low (_buf| 0))& (0+255)
+  1337  03C2  2BD2               	goto	L8
+  1338  03C3                     l959:	
   1339                           ;user.c: 155: }
   1340                           
   1341                           
   1342                           ;user.c: 156: else
   1343                           ;user.c: 157: {
   1344                           ;user.c: 158: PORTCbits.RC0 = !buf[currentRow][i];
-  1345  03DD  0849               	movf	_currentRow,w
-  1346  03DE  00AA               	movwf	??_PopulateColumns
-  1347  03DF  3003               	movlw	3
-  1348  03E0                     u985:	
-  1349  03E0  1003               	clrc
-  1350  03E1  0DAA               	rlf	??_PopulateColumns,f
-  1351  03E2  3EFF               	addlw	-1
-  1352  03E3  1D03               	skipz
-  1353  03E4  2BE0               	goto	u985
-  1354  03E5  30A0               	movlw	(low (_buf| 0))& (0+255)
-  1355  03E6  072A               	addwf	??_PopulateColumns,w
-  1356  03E7  00AB               	movwf	??_PopulateColumns+1
-  1357  03E8  082D               	movf	PopulateColumns@i,w
-  1358  03E9  072B               	addwf	??_PopulateColumns+1,w
-  1359  03EA  00AC               	movwf	??_PopulateColumns+2
-  1360  03EB  082C               	movf	??_PopulateColumns+2,w
-  1361  03EC                     L8:	
-  1362  03EC  0084               	movwf	4
-  1363  03ED  1383               	bcf	3,7	;select IRP bank1
-  1364  03EE  0800               	movf	0,w
-  1365  03EF  1D03               	btfss	3,2
-  1366  03F0  2BF5               	goto	u990
-  1367  03F1  1283               	bcf	3,5	;RP0=0, select bank0
-  1368  03F2  1303               	bcf	3,6	;RP1=0, select bank0
-  1369  03F3  1407               	bsf	7,0	;volatile
-  1370  03F4  2BF8               	goto	l961
-  1371  03F5                     u990:	
-  1372  03F5  1283               	bcf	3,5	;RP0=0, select bank0
-  1373  03F6  1303               	bcf	3,6	;RP1=0, select bank0
-  1374  03F7  1007               	bcf	7,0	;volatile
-  1375  03F8                     l961:	
+  1345  03C3  0849               	movf	_currentRow,w
+  1346  03C4  00AA               	movwf	??_PopulateColumns
+  1347  03C5  3003               	movlw	3
+  1348  03C6                     u985:	
+  1349  03C6  1003               	clrc
+  1350  03C7  0DAA               	rlf	??_PopulateColumns,f
+  1351  03C8  3EFF               	addlw	-1
+  1352  03C9  1D03               	skipz
+  1353  03CA  2BC6               	goto	u985
+  1354  03CB  30A0               	movlw	(low (_buf| 0))& (0+255)
+  1355  03CC  072A               	addwf	??_PopulateColumns,w
+  1356  03CD  00AB               	movwf	??_PopulateColumns+1
+  1357  03CE  082D               	movf	PopulateColumns@i,w
+  1358  03CF  072B               	addwf	??_PopulateColumns+1,w
+  1359  03D0  00AC               	movwf	??_PopulateColumns+2
+  1360  03D1  082C               	movf	??_PopulateColumns+2,w
+  1361  03D2                     L8:	
+  1362  03D2  0084               	movwf	4
+  1363  03D3  1383               	bcf	3,7	;select IRP bank1
+  1364  03D4  0800               	movf	0,w
+  1365  03D5  1D03               	btfss	3,2
+  1366  03D6  2BDB               	goto	u990
+  1367  03D7  1283               	bcf	3,5	;RP0=0, select bank0
+  1368  03D8  1303               	bcf	3,6	;RP1=0, select bank0
+  1369  03D9  1407               	bsf	7,0	;volatile
+  1370  03DA  2BDE               	goto	l961
+  1371  03DB                     u990:	
+  1372  03DB  1283               	bcf	3,5	;RP0=0, select bank0
+  1373  03DC  1303               	bcf	3,6	;RP1=0, select bank0
+  1374  03DD  1007               	bcf	7,0	;volatile
+  1375  03DE                     l961:	
   1376                           
   1377                           ;user.c: 159: }
   1378                           ;user.c: 162: PORTCbits.RC2 = 1;
-  1379  03F8  1507               	bsf	7,2	;volatile
+  1379  03DE  1507               	bsf	7,2	;volatile
   1380                           
   1381                           ;user.c: 163: PORTCbits.RC2 = 0;
-  1382  03F9  1107               	bcf	7,2	;volatile
-  1383  03FA  30FF               	movlw	255
-  1384  03FB  07AD               	addwf	PopulateColumns@i,f
-  1385  03FC  1803               	skipnc
-  1386  03FD  0AAE               	incf	PopulateColumns@i+1,f
-  1387  03FE  30FF               	movlw	255
-  1388  03FF  07AE               	addwf	PopulateColumns@i+1,f
-  1389  0400  1FAE               	btfss	PopulateColumns@i+1,7
-  1390  0401  2B9B               	goto	l943
-  1391  0402                     l95:	
+  1382  03DF  1107               	bcf	7,2	;volatile
+  1383  03E0  30FF               	movlw	255
+  1384  03E1  07AD               	addwf	PopulateColumns@i,f
+  1385  03E2  1803               	skipnc
+  1386  03E3  0AAE               	incf	PopulateColumns@i+1,f
+  1387  03E4  30FF               	movlw	255
+  1388  03E5  07AE               	addwf	PopulateColumns@i+1,f
+  1389  03E6  1FAE               	btfss	PopulateColumns@i+1,7
+  1390  03E7  2B81               	goto	l943
+  1391  03E8                     l95:	
   1392                           
   1393                           ;user.c: 167: }
   1394                           ;user.c: 171: PORTCbits.RC4 = 0;
-  1395  0402  1207               	bcf	7,4	;volatile
+  1395  03E8  1207               	bcf	7,4	;volatile
   1396                           
   1397                           ;user.c: 173: currentRow++;
-  1398  0403  3001               	movlw	1
-  1399  0404  00AA               	movwf	??_PopulateColumns
-  1400  0405  082A               	movf	??_PopulateColumns,w
-  1401  0406  07C9               	addwf	_currentRow,f
+  1398  03E9  3001               	movlw	1
+  1399  03EA  00AA               	movwf	??_PopulateColumns
+  1400  03EB  082A               	movf	??_PopulateColumns,w
+  1401  03EC  07C9               	addwf	_currentRow,f
   1402                           
   1403                           ;user.c: 174: if(currentRow == 6){
-  1404  0407  3006               	movlw	6
-  1405  0408  0649               	xorwf	_currentRow,w
-  1406  0409  1D03               	btfss	3,2
-  1407  040A  0008               	return
+  1404  03ED  3006               	movlw	6
+  1405  03EE  0649               	xorwf	_currentRow,w
+  1406  03EF  1D03               	btfss	3,2
+  1407  03F0  0008               	return
   1408                           
   1409                           ;user.c: 175: currentRow = 0;
-  1410  040B  01C9               	clrf	_currentRow
-  1411  040C  0008               	return
-  1412  040D                     __end_of_PopulateColumns:	
+  1410  03F1  01C9               	clrf	_currentRow
+  1411  03F2  0008               	return
+  1412  03F3                     __end_of_PopulateColumns:	
   1413                           
   1414                           	psect	text3
-  1415  05B5                     __ptext3:	
+  1415  059B                     __ptext3:	
   1416 ;; *************** function _InitApp *****************
   1417 ;; Defined at:
   1418 ;;		line 42 in file "user.c"
@@ -1459,31 +1459,31 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1445                           
   1446                           
   1447                           ;psect for function _InitApp
-  1448  05B5                     _InitApp:	
+  1448  059B                     _InitApp:	
   1449                           
   1450                           ;user.c: 51: ANSEL = 0b00000000;
   1451                           
   1452                           ;incstack = 0
   1453                           ; Regs used in _InitApp: [wreg+status,2]
-  1454  05B5  1683               	bsf	3,5	;RP0=1, select bank1
-  1455  05B6  1303               	bcf	3,6	;RP1=0, select bank1
-  1456  05B7  0191               	clrf	17	;volatile
+  1454  059B  1683               	bsf	3,5	;RP0=1, select bank1
+  1455  059C  1303               	bcf	3,6	;RP1=0, select bank1
+  1456  059D  0191               	clrf	17	;volatile
   1457                           
   1458                           ;user.c: 53: TRISA = 0b11111111;
-  1459  05B8  30FF               	movlw	255
-  1460  05B9  0085               	movwf	5	;volatile
+  1459  059E  30FF               	movlw	255
+  1460  059F  0085               	movwf	5	;volatile
   1461                           
   1462                           ;user.c: 54: TRISC = 0b11000000;
-  1463  05BA  30C0               	movlw	192
-  1464  05BB  0087               	movwf	7	;volatile
+  1463  05A0  30C0               	movlw	192
+  1464  05A1  0087               	movwf	7	;volatile
   1465                           
   1466                           ;user.c: 56: T0IE = 0;
-  1467  05BC  128B               	bcf	11,5	;volatile
-  1468  05BD  0008               	return
-  1469  05BE                     __end_of_InitApp:	
+  1467  05A2  128B               	bcf	11,5	;volatile
+  1468  05A3  0008               	return
+  1469  05A4                     __end_of_InitApp:	
   1470                           
   1471                           	psect	text4
-  1472  040D                     __ptext4:	
+  1472  03F3                     __ptext4:	
   1473 ;; *************** function _InitAnimation *****************
   1474 ;; Defined at:
   1475 ;;		line 61 in file "user.c"
@@ -1518,146 +1518,146 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1504                           
   1505                           
   1506                           ;psect for function _InitAnimation
-  1507  040D                     _InitAnimation:	
+  1507  03F3                     _InitAnimation:	
   1508                           
   1509                           ;user.c: 64: for(int y = 0;y<6;y++){
   1510                           
   1511                           ;incstack = 0
   1512                           ; Regs used in _InitAnimation: [wreg-fsr0h+status,2+status,0+btemp+1+pclath]
-  1513  040D  1283               	bcf	3,5	;RP0=0, select bank0
-  1514  040E  1303               	bcf	3,6	;RP1=0, select bank0
-  1515  040F  01B6               	clrf	InitAnimation@y
-  1516  0410  01B7               	clrf	InitAnimation@y+1
-  1517  0411                     L10:	
-  1518  0411  0837               	movf	InitAnimation@y+1,w
-  1519  0412  3A80               	xorlw	128
-  1520  0413  00FF               	movwf	127
-  1521  0414  3080               	movlw	128
-  1522  0415  027F               	subwf	127,w
-  1523  0416  1D03               	skipz
-  1524  0417  2C1A               	goto	u755
-  1525  0418  3006               	movlw	6
-  1526  0419  0236               	subwf	InitAnimation@y,w
-  1527  041A                     u755:	
-  1528  041A  1803               	btfsc	3,0
-  1529  041B  0008               	return
+  1513  03F3  1283               	bcf	3,5	;RP0=0, select bank0
+  1514  03F4  1303               	bcf	3,6	;RP1=0, select bank0
+  1515  03F5  01B6               	clrf	InitAnimation@y
+  1516  03F6  01B7               	clrf	InitAnimation@y+1
+  1517  03F7                     L10:	
+  1518  03F7  0837               	movf	InitAnimation@y+1,w
+  1519  03F8  3A80               	xorlw	128
+  1520  03F9  00FF               	movwf	127
+  1521  03FA  3080               	movlw	128
+  1522  03FB  027F               	subwf	127,w
+  1523  03FC  1D03               	skipz
+  1524  03FD  2C00               	goto	u755
+  1525  03FE  3006               	movlw	6
+  1526  03FF  0236               	subwf	InitAnimation@y,w
+  1527  0400                     u755:	
+  1528  0400  1803               	btfsc	3,0
+  1529  0401  0008               	return
   1530                           
   1531                           ;user.c: 65: for(int x =0,k = 7;x<8;x++,k--){
-  1532  041C  1283               	bcf	3,5	;RP0=0, select bank0
-  1533  041D  1303               	bcf	3,6	;RP1=0, select bank0
-  1534  041E  01B4               	clrf	InitAnimation@x
-  1535  041F  01B5               	clrf	InitAnimation@x+1
-  1536  0420  3007               	movlw	7
-  1537  0421  00B2               	movwf	InitAnimation@k
-  1538  0422  3000               	movlw	0
-  1539  0423  00B3               	movwf	InitAnimation@k+1
-  1540  0424  0835               	movf	InitAnimation@x+1,w
-  1541  0425  3A80               	xorlw	128
-  1542  0426  00FF               	movwf	127
-  1543  0427  3080               	movlw	128
-  1544  0428  027F               	subwf	127,w
-  1545  0429  1D03               	skipz
-  1546  042A  2C2D               	goto	u765
-  1547  042B  3008               	movlw	8
-  1548  042C  0234               	subwf	InitAnimation@x,w
-  1549  042D                     u765:	
-  1550  042D  1803               	btfsc	3,0
-  1551  042E  2C7D               	goto	l929
-  1552  042F                     l921:	
+  1532  0402  1283               	bcf	3,5	;RP0=0, select bank0
+  1533  0403  1303               	bcf	3,6	;RP1=0, select bank0
+  1534  0404  01B4               	clrf	InitAnimation@x
+  1535  0405  01B5               	clrf	InitAnimation@x+1
+  1536  0406  3007               	movlw	7
+  1537  0407  00B2               	movwf	InitAnimation@k
+  1538  0408  3000               	movlw	0
+  1539  0409  00B3               	movwf	InitAnimation@k+1
+  1540  040A  0835               	movf	InitAnimation@x+1,w
+  1541  040B  3A80               	xorlw	128
+  1542  040C  00FF               	movwf	127
+  1543  040D  3080               	movlw	128
+  1544  040E  027F               	subwf	127,w
+  1545  040F  1D03               	skipz
+  1546  0410  2C13               	goto	u765
+  1547  0411  3008               	movlw	8
+  1548  0412  0234               	subwf	InitAnimation@x,w
+  1549  0413                     u765:	
+  1550  0413  1803               	btfsc	3,0
+  1551  0414  2C63               	goto	l929
+  1552  0415                     l921:	
   1553                           
   1554                           ;user.c: 66: buf[y][x] = (animation[y] >> k) & 1;
-  1555  042F  1283               	bcf	3,5	;RP0=0, select bank0
-  1556  0430  1303               	bcf	3,6	;RP1=0, select bank0
-  1557  0431  0837               	movf	InitAnimation@y+1,w
-  1558  0432  00AB               	movwf	??_InitAnimation+1
-  1559  0433  0836               	movf	InitAnimation@y,w
-  1560  0434  00AA               	movwf	??_InitAnimation
-  1561  0435  1003               	clrc
-  1562  0436  0DAA               	rlf	??_InitAnimation,f
-  1563  0437  0DAB               	rlf	??_InitAnimation+1,f
-  1564  0438  3081               	movlw	high (_animation| (0+32768))
-  1565  0439  072B               	addwf	??_InitAnimation+1,w
-  1566  043A  00FF               	movwf	127
-  1567  043B  3012               	movlw	low (_animation| (0+32768))
-  1568  043C  072A               	addwf	??_InitAnimation,w
-  1569  043D  0084               	movwf	4
-  1570  043E  1803               	skipnc
-  1571  043F  0AFF               	incf	127,f
-  1572  0440  118A  2100  118A   	fcall	stringtab
-  1573  0443  00AC               	movwf	??_InitAnimation+2
-  1574  0444  118A  2100  118A   	fcall	stringtab
-  1575  0447  00AD               	movwf	??_InitAnimation+3
-  1576  0448  0A32               	incf	InitAnimation@k,w
-  1577  0449  2C4D               	goto	u774
-  1578  044A                     u775:	
-  1579  044A  1003               	clrc
-  1580  044B  0CAD               	rrf	??_InitAnimation+3,f
-  1581  044C  0CAC               	rrf	??_InitAnimation+2,f
-  1582  044D                     u774:	
-  1583  044D  3EFF               	addlw	-1
-  1584  044E  1D03               	skipz
-  1585  044F  2C4A               	goto	u775
-  1586  0450  082C               	movf	??_InitAnimation+2,w
-  1587  0451  3901               	andlw	1
-  1588  0452  00AE               	movwf	??_InitAnimation+4
-  1589  0453  0836               	movf	InitAnimation@y,w
-  1590  0454  00AF               	movwf	??_InitAnimation+5
-  1591  0455  3003               	movlw	3
-  1592  0456                     u785:	
-  1593  0456  1003               	clrc
-  1594  0457  0DAF               	rlf	??_InitAnimation+5,f
-  1595  0458  3EFF               	addlw	-1
-  1596  0459  1D03               	skipz
-  1597  045A  2C56               	goto	u785
-  1598  045B  30A0               	movlw	(low (_buf| 0))& (0+255)
-  1599  045C  072F               	addwf	??_InitAnimation+5,w
-  1600  045D  00B0               	movwf	??_InitAnimation+6
-  1601  045E  0834               	movf	InitAnimation@x,w
-  1602  045F  0730               	addwf	??_InitAnimation+6,w
-  1603  0460  00B1               	movwf	??_InitAnimation+7
-  1604  0461  0831               	movf	??_InitAnimation+7,w
-  1605  0462  0084               	movwf	4
-  1606  0463  082E               	movf	??_InitAnimation+4,w
-  1607  0464  1383               	bcf	3,7	;select IRP bank1
-  1608  0465  0080               	movwf	0
-  1609  0466  3001               	movlw	1
-  1610  0467  07B4               	addwf	InitAnimation@x,f
-  1611  0468  1803               	skipnc
-  1612  0469  0AB5               	incf	InitAnimation@x+1,f
-  1613  046A  3000               	movlw	0
-  1614  046B  07B5               	addwf	InitAnimation@x+1,f
-  1615  046C  30FF               	movlw	255
-  1616  046D  07B2               	addwf	InitAnimation@k,f
-  1617  046E  1803               	skipnc
-  1618  046F  0AB3               	incf	InitAnimation@k+1,f
-  1619  0470  30FF               	movlw	255
-  1620  0471  07B3               	addwf	InitAnimation@k+1,f
-  1621  0472  0835               	movf	InitAnimation@x+1,w
-  1622  0473  3A80               	xorlw	128
-  1623  0474  00FF               	movwf	127
-  1624  0475  3080               	movlw	128
-  1625  0476  027F               	subwf	127,w
-  1626  0477  1D03               	skipz
-  1627  0478  2C7B               	goto	u795
-  1628  0479  3008               	movlw	8
-  1629  047A  0234               	subwf	InitAnimation@x,w
-  1630  047B                     u795:	
-  1631  047B  1C03               	skipc
-  1632  047C  2C2F               	goto	l921
-  1633  047D                     l929:	
-  1634  047D  3001               	movlw	1
-  1635  047E  1283               	bcf	3,5	;RP0=0, select bank0
-  1636  047F  1303               	bcf	3,6	;RP1=0, select bank0
-  1637  0480  07B6               	addwf	InitAnimation@y,f
-  1638  0481  1803               	skipnc
-  1639  0482  0AB7               	incf	InitAnimation@y+1,f
-  1640  0483  3000               	movlw	0
-  1641  0484  07B7               	addwf	InitAnimation@y+1,f
-  1642  0485  2C11               	goto	L10
-  1643  0486                     __end_of_InitAnimation:	
+  1555  0415  1283               	bcf	3,5	;RP0=0, select bank0
+  1556  0416  1303               	bcf	3,6	;RP1=0, select bank0
+  1557  0417  0837               	movf	InitAnimation@y+1,w
+  1558  0418  00AB               	movwf	??_InitAnimation+1
+  1559  0419  0836               	movf	InitAnimation@y,w
+  1560  041A  00AA               	movwf	??_InitAnimation
+  1561  041B  1003               	clrc
+  1562  041C  0DAA               	rlf	??_InitAnimation,f
+  1563  041D  0DAB               	rlf	??_InitAnimation+1,f
+  1564  041E  3081               	movlw	high (_animation| (0+32768))
+  1565  041F  072B               	addwf	??_InitAnimation+1,w
+  1566  0420  00FF               	movwf	127
+  1567  0421  3012               	movlw	low (_animation| (0+32768))
+  1568  0422  072A               	addwf	??_InitAnimation,w
+  1569  0423  0084               	movwf	4
+  1570  0424  1803               	skipnc
+  1571  0425  0AFF               	incf	127,f
+  1572  0426  118A  2100  118A   	fcall	stringtab
+  1573  0429  00AC               	movwf	??_InitAnimation+2
+  1574  042A  118A  2100  118A   	fcall	stringtab
+  1575  042D  00AD               	movwf	??_InitAnimation+3
+  1576  042E  0A32               	incf	InitAnimation@k,w
+  1577  042F  2C33               	goto	u774
+  1578  0430                     u775:	
+  1579  0430  1003               	clrc
+  1580  0431  0CAD               	rrf	??_InitAnimation+3,f
+  1581  0432  0CAC               	rrf	??_InitAnimation+2,f
+  1582  0433                     u774:	
+  1583  0433  3EFF               	addlw	-1
+  1584  0434  1D03               	skipz
+  1585  0435  2C30               	goto	u775
+  1586  0436  082C               	movf	??_InitAnimation+2,w
+  1587  0437  3901               	andlw	1
+  1588  0438  00AE               	movwf	??_InitAnimation+4
+  1589  0439  0836               	movf	InitAnimation@y,w
+  1590  043A  00AF               	movwf	??_InitAnimation+5
+  1591  043B  3003               	movlw	3
+  1592  043C                     u785:	
+  1593  043C  1003               	clrc
+  1594  043D  0DAF               	rlf	??_InitAnimation+5,f
+  1595  043E  3EFF               	addlw	-1
+  1596  043F  1D03               	skipz
+  1597  0440  2C3C               	goto	u785
+  1598  0441  30A0               	movlw	(low (_buf| 0))& (0+255)
+  1599  0442  072F               	addwf	??_InitAnimation+5,w
+  1600  0443  00B0               	movwf	??_InitAnimation+6
+  1601  0444  0834               	movf	InitAnimation@x,w
+  1602  0445  0730               	addwf	??_InitAnimation+6,w
+  1603  0446  00B1               	movwf	??_InitAnimation+7
+  1604  0447  0831               	movf	??_InitAnimation+7,w
+  1605  0448  0084               	movwf	4
+  1606  0449  082E               	movf	??_InitAnimation+4,w
+  1607  044A  1383               	bcf	3,7	;select IRP bank1
+  1608  044B  0080               	movwf	0
+  1609  044C  3001               	movlw	1
+  1610  044D  07B4               	addwf	InitAnimation@x,f
+  1611  044E  1803               	skipnc
+  1612  044F  0AB5               	incf	InitAnimation@x+1,f
+  1613  0450  3000               	movlw	0
+  1614  0451  07B5               	addwf	InitAnimation@x+1,f
+  1615  0452  30FF               	movlw	255
+  1616  0453  07B2               	addwf	InitAnimation@k,f
+  1617  0454  1803               	skipnc
+  1618  0455  0AB3               	incf	InitAnimation@k+1,f
+  1619  0456  30FF               	movlw	255
+  1620  0457  07B3               	addwf	InitAnimation@k+1,f
+  1621  0458  0835               	movf	InitAnimation@x+1,w
+  1622  0459  3A80               	xorlw	128
+  1623  045A  00FF               	movwf	127
+  1624  045B  3080               	movlw	128
+  1625  045C  027F               	subwf	127,w
+  1626  045D  1D03               	skipz
+  1627  045E  2C61               	goto	u795
+  1628  045F  3008               	movlw	8
+  1629  0460  0234               	subwf	InitAnimation@x,w
+  1630  0461                     u795:	
+  1631  0461  1C03               	skipc
+  1632  0462  2C15               	goto	l921
+  1633  0463                     l929:	
+  1634  0463  3001               	movlw	1
+  1635  0464  1283               	bcf	3,5	;RP0=0, select bank0
+  1636  0465  1303               	bcf	3,6	;RP1=0, select bank0
+  1637  0466  07B6               	addwf	InitAnimation@y,f
+  1638  0467  1803               	skipnc
+  1639  0468  0AB7               	incf	InitAnimation@y+1,f
+  1640  0469  3000               	movlw	0
+  1641  046A  07B7               	addwf	InitAnimation@y+1,f
+  1642  046B  2BF7               	goto	L10
+  1643  046C                     __end_of_InitAnimation:	
   1644                           
   1645                           	psect	text5
-  1646  05C4                     __ptext5:	
+  1646  05AA                     __ptext5:	
   1647 ;; *************** function _ConfigureOscillator *****************
   1648 ;; Defined at:
   1649 ;;		line 18 in file "system.c"
@@ -1690,15 +1690,15 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1676                           
   1677                           
   1678                           ;psect for function _ConfigureOscillator
-  1679  05C4                     _ConfigureOscillator:	
+  1679  05AA                     _ConfigureOscillator:	
   1680                           
   1681                           ;incstack = 0
   1682                           ; Regs used in _ConfigureOscillator: []
-  1683  05C4  0008               	return
-  1684  05C5                     __end_of_ConfigureOscillator:	
+  1683  05AA  0008               	return
+  1684  05AB                     __end_of_ConfigureOscillator:	
   1685                           
   1686                           	psect	text6
-  1687  04C2                     __ptext6:	
+  1687  04A8                     __ptext6:	
   1688 ;; *************** function _ClearDisplay *****************
   1689 ;; Defined at:
   1690 ;;		line 72 in file "user.c"
@@ -1731,93 +1731,93 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1717                           
   1718                           
   1719                           ;psect for function _ClearDisplay
-  1720  04C2                     _ClearDisplay:	
+  1720  04A8                     _ClearDisplay:	
   1721                           
   1722                           ;user.c: 77: PORTCbits.RC4 = 1;
   1723                           
   1724                           ;incstack = 0
   1725                           ; Regs used in _ClearDisplay: [wreg+status,2+btemp+1]
-  1726  04C2  1283               	bcf	3,5	;RP0=0, select bank0
-  1727  04C3  1303               	bcf	3,6	;RP1=0, select bank0
-  1728  04C4  1607               	bsf	7,4	;volatile
+  1726  04A8  1283               	bcf	3,5	;RP0=0, select bank0
+  1727  04A9  1303               	bcf	3,6	;RP1=0, select bank0
+  1728  04AA  1607               	bsf	7,4	;volatile
   1729                           
   1730                           ;user.c: 79: PORTCbits.RC1 = 0;
-  1731  04C5  1087               	bcf	7,1	;volatile
+  1731  04AB  1087               	bcf	7,1	;volatile
   1732                           
   1733                           ;user.c: 80: PORTCbits.RC0 = 1;
-  1734  04C6  1407               	bsf	7,0	;volatile
+  1734  04AC  1407               	bsf	7,0	;volatile
   1735                           
   1736                           ;user.c: 82: for(int i = 0;i<8;i++){
-  1737  04C7  01AB               	clrf	ClearDisplay@i
-  1738  04C8  01AC               	clrf	ClearDisplay@i+1
-  1739  04C9  082C               	movf	ClearDisplay@i+1,w
-  1740  04CA  3A80               	xorlw	128
-  1741  04CB  00FF               	movwf	127
-  1742  04CC  3080               	movlw	128
-  1743  04CD  027F               	subwf	127,w
-  1744  04CE  1D03               	skipz
-  1745  04CF  2CD2               	goto	u735
-  1746  04D0  3008               	movlw	8
-  1747  04D1  022B               	subwf	ClearDisplay@i,w
-  1748  04D2                     u735:	
-  1749  04D2  1803               	btfsc	3,0
-  1750  04D3  2CF3               	goto	l79
-  1751  04D4                     l78:	
+  1737  04AD  01AB               	clrf	ClearDisplay@i
+  1738  04AE  01AC               	clrf	ClearDisplay@i+1
+  1739  04AF  082C               	movf	ClearDisplay@i+1,w
+  1740  04B0  3A80               	xorlw	128
+  1741  04B1  00FF               	movwf	127
+  1742  04B2  3080               	movlw	128
+  1743  04B3  027F               	subwf	127,w
+  1744  04B4  1D03               	skipz
+  1745  04B5  2CB8               	goto	u735
+  1746  04B6  3008               	movlw	8
+  1747  04B7  022B               	subwf	ClearDisplay@i,w
+  1748  04B8                     u735:	
+  1749  04B8  1803               	btfsc	3,0
+  1750  04B9  2CD9               	goto	l79
+  1751  04BA                     l78:	
   1752                           
   1753                           ;user.c: 83: PORTCbits.RC3 = 1;
-  1754  04D4  1283               	bcf	3,5	;RP0=0, select bank0
-  1755  04D5  1303               	bcf	3,6	;RP1=0, select bank0
-  1756  04D6  1587               	bsf	7,3	;volatile
+  1754  04BA  1283               	bcf	3,5	;RP0=0, select bank0
+  1755  04BB  1303               	bcf	3,6	;RP1=0, select bank0
+  1756  04BC  1587               	bsf	7,3	;volatile
   1757                           
   1758                           ;user.c: 84: PORTCbits.RC2 = 1;
-  1759  04D7  1507               	bsf	7,2	;volatile
+  1759  04BD  1507               	bsf	7,2	;volatile
   1760                           
   1761                           ;user.c: 85: _delay((unsigned long)((10)*(8000000/4000000.0)));
-  1762  04D8  3006               	movlw	6
-  1763  04D9  1283               	bcf	3,5	;RP0=0, select bank0
-  1764  04DA  1303               	bcf	3,6	;RP1=0, select bank0
-  1765  04DB  00AA               	movwf	??_ClearDisplay
-  1766  04DC                     u1147:	
-  1767  04DC  0BAA               	decfsz	??_ClearDisplay,f
-  1768  04DD  2CDC               	goto	u1147
+  1762  04BE  3006               	movlw	6
+  1763  04BF  1283               	bcf	3,5	;RP0=0, select bank0
+  1764  04C0  1303               	bcf	3,6	;RP1=0, select bank0
+  1765  04C1  00AA               	movwf	??_ClearDisplay
+  1766  04C2                     u1147:	
+  1767  04C2  0BAA               	decfsz	??_ClearDisplay,f
+  1768  04C3  2CC2               	goto	u1147
   1769                           
   1770                           ;user.c: 87: PORTCbits.RC3 = 0;
-  1771  04DE  1283               	bcf	3,5	;RP0=0, select bank0
-  1772  04DF  1303               	bcf	3,6	;RP1=0, select bank0
-  1773  04E0  1187               	bcf	7,3	;volatile
+  1771  04C4  1283               	bcf	3,5	;RP0=0, select bank0
+  1772  04C5  1303               	bcf	3,6	;RP1=0, select bank0
+  1773  04C6  1187               	bcf	7,3	;volatile
   1774                           
   1775                           ;user.c: 88: PORTCbits.RC2 = 0;
-  1776  04E1  1107               	bcf	7,2	;volatile
-  1777  04E2  3001               	movlw	1
-  1778  04E3  07AB               	addwf	ClearDisplay@i,f
-  1779  04E4  1803               	skipnc
-  1780  04E5  0AAC               	incf	ClearDisplay@i+1,f
-  1781  04E6  3000               	movlw	0
-  1782  04E7  07AC               	addwf	ClearDisplay@i+1,f
-  1783  04E8  082C               	movf	ClearDisplay@i+1,w
-  1784  04E9  3A80               	xorlw	128
-  1785  04EA  00FF               	movwf	127
-  1786  04EB  3080               	movlw	128
-  1787  04EC  027F               	subwf	127,w
-  1788  04ED  1D03               	skipz
-  1789  04EE  2CF1               	goto	u745
-  1790  04EF  3008               	movlw	8
-  1791  04F0  022B               	subwf	ClearDisplay@i,w
-  1792  04F1                     u745:	
-  1793  04F1  1C03               	skipc
-  1794  04F2  2CD4               	goto	l78
-  1795  04F3                     l79:	
+  1776  04C7  1107               	bcf	7,2	;volatile
+  1777  04C8  3001               	movlw	1
+  1778  04C9  07AB               	addwf	ClearDisplay@i,f
+  1779  04CA  1803               	skipnc
+  1780  04CB  0AAC               	incf	ClearDisplay@i+1,f
+  1781  04CC  3000               	movlw	0
+  1782  04CD  07AC               	addwf	ClearDisplay@i+1,f
+  1783  04CE  082C               	movf	ClearDisplay@i+1,w
+  1784  04CF  3A80               	xorlw	128
+  1785  04D0  00FF               	movwf	127
+  1786  04D1  3080               	movlw	128
+  1787  04D2  027F               	subwf	127,w
+  1788  04D3  1D03               	skipz
+  1789  04D4  2CD7               	goto	u745
+  1790  04D5  3008               	movlw	8
+  1791  04D6  022B               	subwf	ClearDisplay@i,w
+  1792  04D7                     u745:	
+  1793  04D7  1C03               	skipc
+  1794  04D8  2CBA               	goto	l78
+  1795  04D9                     l79:	
   1796                           
   1797                           ;user.c: 89: }
   1798                           ;user.c: 91: PORTCbits.RC4 = 0;
-  1799  04F3  1283               	bcf	3,5	;RP0=0, select bank0
-  1800  04F4  1303               	bcf	3,6	;RP1=0, select bank0
-  1801  04F5  1207               	bcf	7,4	;volatile
-  1802  04F6  0008               	return
-  1803  04F7                     __end_of_ClearDisplay:	
+  1799  04D9  1283               	bcf	3,5	;RP0=0, select bank0
+  1800  04DA  1303               	bcf	3,6	;RP1=0, select bank0
+  1801  04DB  1207               	bcf	7,4	;volatile
+  1802  04DC  0008               	return
+  1803  04DD                     __end_of_ClearDisplay:	
   1804                           
   1805                           	psect	text7
-  1806  056B                     __ptext7:	
+  1806  0551                     __ptext7:	
   1807 ;; *************** function _AdvanceRow *****************
   1808 ;; Defined at:
   1809 ;;		line 97 in file "user.c"
@@ -1850,56 +1850,56 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1836                           
   1837                           
   1838                           ;psect for function _AdvanceRow
-  1839  056B                     _AdvanceRow:	
+  1839  0551                     _AdvanceRow:	
   1840                           
   1841                           ;user.c: 100: if(rowCount >= 6)
   1842                           
   1843                           ;incstack = 0
   1844                           ; Regs used in _AdvanceRow: [wreg+status,2+btemp+1]
-  1845  056B  1283               	bcf	3,5	;RP0=0, select bank0
-  1846  056C  1303               	bcf	3,6	;RP1=0, select bank0
-  1847  056D  0842               	movf	_rowCount+1,w
-  1848  056E  3A80               	xorlw	128
-  1849  056F  00FF               	movwf	127
-  1850  0570  3080               	movlw	128
-  1851  0571  027F               	subwf	127,w
-  1852  0572  1D03               	skipz
-  1853  0573  2D76               	goto	u1035
-  1854  0574  3006               	movlw	6
-  1855  0575  0241               	subwf	_rowCount,w
-  1856  0576                     u1035:	
-  1857  0576  1C03               	skipc
-  1858  0577  2D7D               	goto	l979
+  1845  0551  1283               	bcf	3,5	;RP0=0, select bank0
+  1846  0552  1303               	bcf	3,6	;RP1=0, select bank0
+  1847  0553  0842               	movf	_rowCount+1,w
+  1848  0554  3A80               	xorlw	128
+  1849  0555  00FF               	movwf	127
+  1850  0556  3080               	movlw	128
+  1851  0557  027F               	subwf	127,w
+  1852  0558  1D03               	skipz
+  1853  0559  2D5C               	goto	u1035
+  1854  055A  3006               	movlw	6
+  1855  055B  0241               	subwf	_rowCount,w
+  1856  055C                     u1035:	
+  1857  055C  1C03               	skipc
+  1858  055D  2D63               	goto	l979
   1859                           
   1860                           ;user.c: 101: {
   1861                           ;user.c: 102: PORTCbits.RC1 = 1;
-  1862  0578  1283               	bcf	3,5	;RP0=0, select bank0
-  1863  0579  1303               	bcf	3,6	;RP1=0, select bank0
-  1864  057A  1487               	bsf	7,1	;volatile
+  1862  055E  1283               	bcf	3,5	;RP0=0, select bank0
+  1863  055F  1303               	bcf	3,6	;RP1=0, select bank0
+  1864  0560  1487               	bsf	7,1	;volatile
   1865                           
   1866                           ;user.c: 104: rowCount = 0;
-  1867  057B  01C1               	clrf	_rowCount
-  1868  057C  01C2               	clrf	_rowCount+1
-  1869  057D                     l979:	
+  1867  0561  01C1               	clrf	_rowCount
+  1868  0562  01C2               	clrf	_rowCount+1
+  1869  0563                     l979:	
   1870                           
   1871                           ;user.c: 105: }
   1872                           ;user.c: 107: PORTCbits.RC3 = 1;
-  1873  057D  1283               	bcf	3,5	;RP0=0, select bank0
-  1874  057E  1303               	bcf	3,6	;RP1=0, select bank0
-  1875  057F  1587               	bsf	7,3	;volatile
+  1873  0563  1283               	bcf	3,5	;RP0=0, select bank0
+  1874  0564  1303               	bcf	3,6	;RP1=0, select bank0
+  1875  0565  1587               	bsf	7,3	;volatile
   1876                           
   1877                           ;user.c: 108: PORTCbits.RC3 = 0;
-  1878  0580  1187               	bcf	7,3	;volatile
+  1878  0566  1187               	bcf	7,3	;volatile
   1879                           
   1880                           ;user.c: 110: rowCount++;
-  1881  0581  3001               	movlw	1
-  1882  0582  07C1               	addwf	_rowCount,f
-  1883  0583  1803               	skipnc
-  1884  0584  0AC2               	incf	_rowCount+1,f
-  1885  0585  3000               	movlw	0
-  1886  0586  07C2               	addwf	_rowCount+1,f
-  1887  0587  0008               	return
-  1888  0588                     __end_of_AdvanceRow:	
+  1881  0567  3001               	movlw	1
+  1882  0568  07C1               	addwf	_rowCount,f
+  1883  0569  1803               	skipnc
+  1884  056A  0AC2               	incf	_rowCount+1,f
+  1885  056B  3000               	movlw	0
+  1886  056C  07C2               	addwf	_rowCount+1,f
+  1887  056D  0008               	return
+  1888  056E                     __end_of_AdvanceRow:	
   1889                           
   1890                           	psect	text8
   1891  0232                     __ptext8:	
@@ -1939,695 +1939,665 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1925                           ;psect for function _AdvanceAnimation
   1926  0232                     _AdvanceAnimation:	
   1927                           
-  1928                           ;user.c: 182: for(int y = 0;y<6;y++){
+  1928                           ;user.c: 181: if(frame >= maxFrames){
   1929                           
   1930                           ;incstack = 0
   1931                           ; Regs used in _AdvanceAnimation: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
   1932  0232  1283               	bcf	3,5	;RP0=0, select bank0
   1933  0233  1303               	bcf	3,6	;RP1=0, select bank0
-  1934  0234  01BC               	clrf	AdvanceAnimation@y
-  1935  0235  01BD               	clrf	AdvanceAnimation@y+1
-  1936  0236  083D               	movf	AdvanceAnimation@y+1,w
-  1937  0237  3A80               	xorlw	128
-  1938  0238  00FF               	movwf	127
-  1939  0239  3080               	movlw	128
-  1940  023A  027F               	subwf	127,w
-  1941  023B  1D03               	skipz
-  1942  023C  2A3F               	goto	u665
-  1943  023D  3006               	movlw	6
-  1944  023E  023C               	subwf	AdvanceAnimation@y,w
-  1945  023F                     u665:	
-  1946  023F  1803               	btfsc	3,0
-  1947  0240  2AC6               	goto	l877
-  1948  0241                     l857:	
-  1949                           
-  1950                           ;user.c: 184: for(int x =0,k = 7;x<8;x++,k--){
-  1951  0241  1283               	bcf	3,5	;RP0=0, select bank0
-  1952  0242  1303               	bcf	3,6	;RP1=0, select bank0
-  1953  0243  01BA               	clrf	AdvanceAnimation@x
-  1954  0244  01BB               	clrf	AdvanceAnimation@x+1
-  1955  0245  3007               	movlw	7
-  1956  0246  00B8               	movwf	AdvanceAnimation@k
-  1957  0247  3000               	movlw	0
-  1958  0248  00B9               	movwf	AdvanceAnimation@k+1
-  1959  0249  083B               	movf	AdvanceAnimation@x+1,w
-  1960  024A  3A80               	xorlw	128
-  1961  024B  00FF               	movwf	127
-  1962  024C  3080               	movlw	128
-  1963  024D  027F               	subwf	127,w
-  1964  024E  1D03               	skipz
-  1965  024F  2A52               	goto	u675
-  1966  0250  3008               	movlw	8
-  1967  0251  023A               	subwf	AdvanceAnimation@x,w
-  1968  0252                     u675:	
-  1969  0252  1803               	btfsc	3,0
-  1970  0253  2AB3               	goto	l873
-  1971  0254                     l865:	
-  1972                           
-  1973                           ;user.c: 185: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
-  1974  0254  1283               	bcf	3,5	;RP0=0, select bank0
-  1975  0255  1303               	bcf	3,6	;RP1=0, select bank0
-  1976  0256  0848               	movf	_frame+1,w
-  1977  0257  00AB               	movwf	___wmul@multiplier+1
-  1978  0258  0847               	movf	_frame,w
-  1979  0259  00AA               	movwf	___wmul@multiplier
-  1980  025A  0844               	movf	_frameSize+1,w
-  1981  025B  00AD               	movwf	___wmul@multiplicand+1
-  1982  025C  0843               	movf	_frameSize,w
-  1983  025D  00AC               	movwf	___wmul@multiplicand
-  1984  025E  118A  2527  118A   	fcall	___wmul
-  1985  0261  1283               	bcf	3,5	;RP0=0, select bank0
-  1986  0262  1303               	bcf	3,6	;RP1=0, select bank0
-  1987  0263  083C               	movf	AdvanceAnimation@y,w
-  1988  0264  072A               	addwf	?___wmul,w
-  1989  0265  00B0               	movwf	??_AdvanceAnimation
-  1990  0266  083D               	movf	AdvanceAnimation@y+1,w
-  1991  0267  1803               	skipnc
-  1992  0268  0A3D               	incf	AdvanceAnimation@y+1,w
-  1993  0269  072B               	addwf	?___wmul+1,w
-  1994  026A  00B1               	movwf	??_AdvanceAnimation+1
-  1995  026B  1003               	clrc
-  1996  026C  0DB0               	rlf	??_AdvanceAnimation,f
-  1997  026D  0DB1               	rlf	??_AdvanceAnimation+1,f
-  1998  026E  3081               	movlw	high (_animation| (0+32768))
-  1999  026F  0731               	addwf	??_AdvanceAnimation+1,w
-  2000  0270  00FF               	movwf	127
-  2001  0271  3012               	movlw	low (_animation| (0+32768))
-  2002  0272  0730               	addwf	??_AdvanceAnimation,w
-  2003  0273  0084               	movwf	4
-  2004  0274  1803               	skipnc
-  2005  0275  0AFF               	incf	127,f
-  2006  0276  118A  2100  118A   	fcall	stringtab
-  2007  0279  00B2               	movwf	??_AdvanceAnimation+2
-  2008  027A  118A  2100  118A   	fcall	stringtab
-  2009  027D  00B3               	movwf	??_AdvanceAnimation+3
-  2010  027E  0A38               	incf	AdvanceAnimation@k,w
-  2011  027F  2A83               	goto	u684
-  2012  0280                     u685:	
-  2013  0280  1003               	clrc
-  2014  0281  0CB3               	rrf	??_AdvanceAnimation+3,f
-  2015  0282  0CB2               	rrf	??_AdvanceAnimation+2,f
-  2016  0283                     u684:	
-  2017  0283  3EFF               	addlw	-1
-  2018  0284  1D03               	skipz
-  2019  0285  2A80               	goto	u685
-  2020  0286  0832               	movf	??_AdvanceAnimation+2,w
-  2021  0287  3901               	andlw	1
-  2022  0288  00B4               	movwf	??_AdvanceAnimation+4
-  2023  0289  083C               	movf	AdvanceAnimation@y,w
-  2024  028A  00B5               	movwf	??_AdvanceAnimation+5
-  2025  028B  3003               	movlw	3
-  2026  028C                     u695:	
-  2027  028C  1003               	clrc
-  2028  028D  0DB5               	rlf	??_AdvanceAnimation+5,f
-  2029  028E  3EFF               	addlw	-1
-  2030  028F  1D03               	skipz
-  2031  0290  2A8C               	goto	u695
-  2032  0291  30A0               	movlw	(low (_buf| 0))& (0+255)
-  2033  0292  0735               	addwf	??_AdvanceAnimation+5,w
-  2034  0293  00B6               	movwf	??_AdvanceAnimation+6
-  2035  0294  083A               	movf	AdvanceAnimation@x,w
-  2036  0295  0736               	addwf	??_AdvanceAnimation+6,w
-  2037  0296  00B7               	movwf	??_AdvanceAnimation+7
-  2038  0297  0837               	movf	??_AdvanceAnimation+7,w
-  2039  0298  0084               	movwf	4
-  2040  0299  0834               	movf	??_AdvanceAnimation+4,w
-  2041  029A  1383               	bcf	3,7	;select IRP bank1
-  2042  029B  0080               	movwf	0
-  2043  029C  3001               	movlw	1
-  2044  029D  07BA               	addwf	AdvanceAnimation@x,f
-  2045  029E  1803               	skipnc
-  2046  029F  0ABB               	incf	AdvanceAnimation@x+1,f
-  2047  02A0  3000               	movlw	0
-  2048  02A1  07BB               	addwf	AdvanceAnimation@x+1,f
-  2049  02A2  30FF               	movlw	255
-  2050  02A3  07B8               	addwf	AdvanceAnimation@k,f
-  2051  02A4  1803               	skipnc
-  2052  02A5  0AB9               	incf	AdvanceAnimation@k+1,f
-  2053  02A6  30FF               	movlw	255
-  2054  02A7  07B9               	addwf	AdvanceAnimation@k+1,f
-  2055  02A8  083B               	movf	AdvanceAnimation@x+1,w
-  2056  02A9  3A80               	xorlw	128
-  2057  02AA  00FF               	movwf	127
-  2058  02AB  3080               	movlw	128
-  2059  02AC  027F               	subwf	127,w
-  2060  02AD  1D03               	skipz
-  2061  02AE  2AB1               	goto	u705
-  2062  02AF  3008               	movlw	8
-  2063  02B0  023A               	subwf	AdvanceAnimation@x,w
-  2064  02B1                     u705:	
-  2065  02B1  1C03               	skipc
-  2066  02B2  2A54               	goto	l865
-  2067  02B3                     l873:	
-  2068  02B3  3001               	movlw	1
-  2069  02B4  1283               	bcf	3,5	;RP0=0, select bank0
-  2070  02B5  1303               	bcf	3,6	;RP1=0, select bank0
-  2071  02B6  07BC               	addwf	AdvanceAnimation@y,f
-  2072  02B7  1803               	skipnc
-  2073  02B8  0ABD               	incf	AdvanceAnimation@y+1,f
-  2074  02B9  3000               	movlw	0
-  2075  02BA  07BD               	addwf	AdvanceAnimation@y+1,f
-  2076  02BB  083D               	movf	AdvanceAnimation@y+1,w
-  2077  02BC  3A80               	xorlw	128
-  2078  02BD  00FF               	movwf	127
-  2079  02BE  3080               	movlw	128
-  2080  02BF  027F               	subwf	127,w
-  2081  02C0  1D03               	skipz
-  2082  02C1  2AC4               	goto	u715
-  2083  02C2  3006               	movlw	6
-  2084  02C3  023C               	subwf	AdvanceAnimation@y,w
-  2085  02C4                     u715:	
-  2086  02C4  1C03               	skipc
-  2087  02C5  2A41               	goto	l857
-  2088  02C6                     l877:	
-  2089                           
-  2090                           ;user.c: 186: }
-  2091                           ;user.c: 188: }
-  2092                           ;user.c: 190: if(frame >= maxFrames){
-  2093  02C6  1283               	bcf	3,5	;RP0=0, select bank0
-  2094  02C7  1303               	bcf	3,6	;RP1=0, select bank0
-  2095  02C8  0848               	movf	_frame+1,w
-  2096  02C9  3A80               	xorlw	128
-  2097  02CA  00B0               	movwf	??_AdvanceAnimation
-  2098  02CB  0846               	movf	_maxFrames+1,w
-  2099  02CC  3A80               	xorlw	128
-  2100  02CD  0230               	subwf	??_AdvanceAnimation,w
-  2101  02CE  1D03               	skipz
-  2102  02CF  2AD2               	goto	u725
-  2103  02D0  0845               	movf	_maxFrames,w
-  2104  02D1  0247               	subwf	_frame,w
-  2105  02D2                     u725:	
-  2106  02D2  1C03               	skipc
-  2107  02D3  2AD9               	goto	l881
-  2108                           
-  2109                           ;user.c: 191: frame = 0;
-  2110  02D4  1283               	bcf	3,5	;RP0=0, select bank0
-  2111  02D5  1303               	bcf	3,6	;RP1=0, select bank0
-  2112  02D6  01C7               	clrf	_frame
-  2113  02D7  01C8               	clrf	_frame+1
-  2114                           
-  2115                           ;user.c: 192: } else {
-  2116  02D8  0008               	return
-  2117  02D9                     l881:	
-  2118                           
-  2119                           ;user.c: 193: frame++;
-  2120  02D9  3001               	movlw	1
-  2121  02DA  1283               	bcf	3,5	;RP0=0, select bank0
-  2122  02DB  1303               	bcf	3,6	;RP1=0, select bank0
-  2123  02DC  07C7               	addwf	_frame,f
-  2124  02DD  1803               	skipnc
-  2125  02DE  0AC8               	incf	_frame+1,f
-  2126  02DF  3000               	movlw	0
-  2127  02E0  07C8               	addwf	_frame+1,f
-  2128  02E1  0008               	return
-  2129  02E2                     __end_of_AdvanceAnimation:	
-  2130                           
-  2131                           	psect	text9
-  2132  0527                     __ptext9:	
-  2133 ;; *************** function ___wmul *****************
-  2134 ;; Defined at:
-  2135 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c"
-  2136 ;; Parameters:    Size  Location     Type
-  2137 ;;  multiplier      2   10[BANK0 ] unsigned int 
-  2138 ;;  multiplicand    2   12[BANK0 ] unsigned int 
-  2139 ;; Auto vars:     Size  Location     Type
-  2140 ;;  product         2   14[BANK0 ] unsigned int 
-  2141 ;; Return value:  Size  Location     Type
-  2142 ;;                  2   10[BANK0 ] unsigned int 
-  2143 ;; Registers used:
-  2144 ;;		wreg, status,2, status,0
-  2145 ;; Tracked objects:
-  2146 ;;		On entry : 0/0
-  2147 ;;		On exit  : 0/0
-  2148 ;;		Unchanged: 0/0
-  2149 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  2150 ;;      Params:         0       4       0       0
-  2151 ;;      Locals:         0       2       0       0
-  2152 ;;      Temps:          0       0       0       0
-  2153 ;;      Totals:         0       6       0       0
-  2154 ;;Total ram usage:        6 bytes
-  2155 ;; Hardware stack levels used:    1
-  2156 ;; Hardware stack levels required when called:    3
-  2157 ;; This function calls:
-  2158 ;;		Nothing
-  2159 ;; This function is called by:
-  2160 ;;		_AdvanceAnimation
-  2161 ;; This function uses a non-reentrant model
-  2162 ;;
-  2163                           
-  2164                           
-  2165                           ;psect for function ___wmul
-  2166  0527                     ___wmul:	
-  2167                           
-  2168                           ;incstack = 0
-  2169                           ; Regs used in ___wmul: [wreg+status,2+status,0]
-  2170  0527  1283               	bcf	3,5	;RP0=0, select bank0
-  2171  0528  1303               	bcf	3,6	;RP1=0, select bank0
-  2172  0529  01AE               	clrf	___wmul@product
-  2173  052A  01AF               	clrf	___wmul@product+1
-  2174  052B                     l825:	
-  2175  052B  1C2A               	btfss	___wmul@multiplier,0
-  2176  052C  2D33               	goto	l203
-  2177  052D  082C               	movf	___wmul@multiplicand,w
-  2178  052E  07AE               	addwf	___wmul@product,f
-  2179  052F  1803               	skipnc
-  2180  0530  0AAF               	incf	___wmul@product+1,f
-  2181  0531  082D               	movf	___wmul@multiplicand+1,w
-  2182  0532  07AF               	addwf	___wmul@product+1,f
-  2183  0533                     l203:	
-  2184  0533  3001               	movlw	1
-  2185  0534                     u595:	
-  2186  0534  1003               	clrc
-  2187  0535  0DAC               	rlf	___wmul@multiplicand,f
-  2188  0536  0DAD               	rlf	___wmul@multiplicand+1,f
-  2189  0537  3EFF               	addlw	-1
-  2190  0538  1D03               	skipz
-  2191  0539  2D34               	goto	u595
-  2192  053A  3001               	movlw	1
-  2193  053B                     u605:	
-  2194  053B  1003               	clrc
-  2195  053C  0CAB               	rrf	___wmul@multiplier+1,f
-  2196  053D  0CAA               	rrf	___wmul@multiplier,f
-  2197  053E  3EFF               	addlw	-1
-  2198  053F  1D03               	skipz
-  2199  0540  2D3B               	goto	u605
-  2200  0541  082A               	movf	___wmul@multiplier,w
-  2201  0542  042B               	iorwf	___wmul@multiplier+1,w
-  2202  0543  1D03               	btfss	3,2
-  2203  0544  2D2B               	goto	l825
-  2204  0545  082F               	movf	___wmul@product+1,w
-  2205  0546  00AB               	movwf	?___wmul+1
-  2206  0547  082E               	movf	___wmul@product,w
-  2207  0548  00AA               	movwf	?___wmul
-  2208  0549  0008               	return
-  2209  054A                     __end_of___wmul:	
-  2210                           
-  2211                           	psect	text10
-  2212  0588                     __ptext10:	
-  2213 ;; *************** function _isr *****************
-  2214 ;; Defined at:
-  2215 ;;		line 24 in file "interrupts.c"
-  2216 ;; Parameters:    Size  Location     Type
-  2217 ;;		None
-  2218 ;; Auto vars:     Size  Location     Type
-  2219 ;;		None
-  2220 ;; Return value:  Size  Location     Type
-  2221 ;;                  1    wreg      void 
-  2222 ;; Registers used:
-  2223 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-  2224 ;; Tracked objects:
-  2225 ;;		On entry : 0/0
-  2226 ;;		On exit  : 0/0
-  2227 ;;		Unchanged: 0/0
-  2228 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  2229 ;;      Params:         0       0       0       0
-  2230 ;;      Locals:         0       0       0       0
-  2231 ;;      Temps:          0       4       0       0
-  2232 ;;      Totals:         0       4       0       0
-  2233 ;;Total ram usage:        4 bytes
-  2234 ;; Hardware stack levels used:    1
-  2235 ;; Hardware stack levels required when called:    2
-  2236 ;; This function calls:
-  2237 ;;		i1_AdvanceAnimation
-  2238 ;; This function is called by:
-  2239 ;;		Interrupt level 1
-  2240 ;; This function uses a non-reentrant model
-  2241 ;;
-  2242                           
-  2243                           
-  2244                           ;psect for function _isr
-  2245  0588                     _isr:	
-  2246                           
-  2247                           ;interrupts.c: 35: if(T0IF == 1)
-  2248  0588  1D0B               	btfss	11,2	;volatile
-  2249  0589  2D8E               	goto	i1l11
-  2250                           
-  2251                           ;interrupts.c: 36: {
-  2252                           ;interrupts.c: 37: AdvanceAnimation();
-  2253  058A  118A  22E2  118A   	fcall	i1_AdvanceAnimation
-  2254                           
-  2255                           ;interrupts.c: 38: T0IF = 0;
-  2256  058D  110B               	bcf	11,2	;volatile
-  2257  058E                     i1l11:	
-  2258                           ;interrupts.c: 40: else
-  2259                           ;interrupts.c: 41: {
-  2260                           
-  2261                           ;interrupts.c: 39: }
+  1934  0234  0848               	movf	_frame+1,w
+  1935  0235  3A80               	xorlw	128
+  1936  0236  00B0               	movwf	??_AdvanceAnimation
+  1937  0237  0846               	movf	_maxFrames+1,w
+  1938  0238  3A80               	xorlw	128
+  1939  0239  0230               	subwf	??_AdvanceAnimation,w
+  1940  023A  1D03               	skipz
+  1941  023B  2A3E               	goto	u665
+  1942  023C  0845               	movf	_maxFrames,w
+  1943  023D  0247               	subwf	_frame,w
+  1944  023E                     u665:	
+  1945  023E  1C03               	skipc
+  1946  023F  2A45               	goto	l855
+  1947                           
+  1948                           ;user.c: 182: frame = 0;
+  1949  0240  1283               	bcf	3,5	;RP0=0, select bank0
+  1950  0241  1303               	bcf	3,6	;RP1=0, select bank0
+  1951  0242  01C7               	clrf	_frame
+  1952  0243  01C8               	clrf	_frame+1
+  1953                           
+  1954                           ;user.c: 183: } else {
+  1955  0244  2A4D               	goto	l857
+  1956  0245                     l855:	
+  1957                           
+  1958                           ;user.c: 184: frame++;
+  1959  0245  3001               	movlw	1
+  1960  0246  1283               	bcf	3,5	;RP0=0, select bank0
+  1961  0247  1303               	bcf	3,6	;RP1=0, select bank0
+  1962  0248  07C7               	addwf	_frame,f
+  1963  0249  1803               	skipnc
+  1964  024A  0AC8               	incf	_frame+1,f
+  1965  024B  3000               	movlw	0
+  1966  024C  07C8               	addwf	_frame+1,f
+  1967  024D                     l857:	
+  1968                           
+  1969                           ;user.c: 185: }
+  1970                           ;user.c: 188: for(int y = 0;y<6;y++){
+  1971  024D  01BC               	clrf	AdvanceAnimation@y
+  1972  024E  01BD               	clrf	AdvanceAnimation@y+1
+  1973  024F                     L11:	
+  1974  024F  083D               	movf	AdvanceAnimation@y+1,w
+  1975  0250  3A80               	xorlw	128
+  1976  0251  00FF               	movwf	127
+  1977  0252  3080               	movlw	128
+  1978  0253  027F               	subwf	127,w
+  1979  0254  1D03               	skipz
+  1980  0255  2A58               	goto	u675
+  1981  0256  3006               	movlw	6
+  1982  0257  023C               	subwf	AdvanceAnimation@y,w
+  1983  0258                     u675:	
+  1984  0258  1803               	btfsc	3,0
+  1985  0259  0008               	return
+  1986                           
+  1987                           ;user.c: 191: for(int x =0,k = 7;x<8;x++,k--){
+  1988  025A  1283               	bcf	3,5	;RP0=0, select bank0
+  1989  025B  1303               	bcf	3,6	;RP1=0, select bank0
+  1990  025C  01BA               	clrf	AdvanceAnimation@x
+  1991  025D  01BB               	clrf	AdvanceAnimation@x+1
+  1992  025E  3007               	movlw	7
+  1993  025F  00B8               	movwf	AdvanceAnimation@k
+  1994  0260  3000               	movlw	0
+  1995  0261  00B9               	movwf	AdvanceAnimation@k+1
+  1996  0262  083B               	movf	AdvanceAnimation@x+1,w
+  1997  0263  3A80               	xorlw	128
+  1998  0264  00FF               	movwf	127
+  1999  0265  3080               	movlw	128
+  2000  0266  027F               	subwf	127,w
+  2001  0267  1D03               	skipz
+  2002  0268  2A6B               	goto	u685
+  2003  0269  3008               	movlw	8
+  2004  026A  023A               	subwf	AdvanceAnimation@x,w
+  2005  026B                     u685:	
+  2006  026B  1803               	btfsc	3,0
+  2007  026C  2ACC               	goto	l879
+  2008  026D                     l871:	
+  2009                           
+  2010                           ;user.c: 192: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
+  2011  026D  1283               	bcf	3,5	;RP0=0, select bank0
+  2012  026E  1303               	bcf	3,6	;RP1=0, select bank0
+  2013  026F  0848               	movf	_frame+1,w
+  2014  0270  00AB               	movwf	___wmul@multiplier+1
+  2015  0271  0847               	movf	_frame,w
+  2016  0272  00AA               	movwf	___wmul@multiplier
+  2017  0273  0844               	movf	_frameSize+1,w
+  2018  0274  00AD               	movwf	___wmul@multiplicand+1
+  2019  0275  0843               	movf	_frameSize,w
+  2020  0276  00AC               	movwf	___wmul@multiplicand
+  2021  0277  118A  250D  118A   	fcall	___wmul
+  2022  027A  1283               	bcf	3,5	;RP0=0, select bank0
+  2023  027B  1303               	bcf	3,6	;RP1=0, select bank0
+  2024  027C  083C               	movf	AdvanceAnimation@y,w
+  2025  027D  072A               	addwf	?___wmul,w
+  2026  027E  00B0               	movwf	??_AdvanceAnimation
+  2027  027F  083D               	movf	AdvanceAnimation@y+1,w
+  2028  0280  1803               	skipnc
+  2029  0281  0A3D               	incf	AdvanceAnimation@y+1,w
+  2030  0282  072B               	addwf	?___wmul+1,w
+  2031  0283  00B1               	movwf	??_AdvanceAnimation+1
+  2032  0284  1003               	clrc
+  2033  0285  0DB0               	rlf	??_AdvanceAnimation,f
+  2034  0286  0DB1               	rlf	??_AdvanceAnimation+1,f
+  2035  0287  3081               	movlw	high (_animation| (0+32768))
+  2036  0288  0731               	addwf	??_AdvanceAnimation+1,w
+  2037  0289  00FF               	movwf	127
+  2038  028A  3012               	movlw	low (_animation| (0+32768))
+  2039  028B  0730               	addwf	??_AdvanceAnimation,w
+  2040  028C  0084               	movwf	4
+  2041  028D  1803               	skipnc
+  2042  028E  0AFF               	incf	127,f
+  2043  028F  118A  2100  118A   	fcall	stringtab
+  2044  0292  00B2               	movwf	??_AdvanceAnimation+2
+  2045  0293  118A  2100  118A   	fcall	stringtab
+  2046  0296  00B3               	movwf	??_AdvanceAnimation+3
+  2047  0297  0A38               	incf	AdvanceAnimation@k,w
+  2048  0298  2A9C               	goto	u694
+  2049  0299                     u695:	
+  2050  0299  1003               	clrc
+  2051  029A  0CB3               	rrf	??_AdvanceAnimation+3,f
+  2052  029B  0CB2               	rrf	??_AdvanceAnimation+2,f
+  2053  029C                     u694:	
+  2054  029C  3EFF               	addlw	-1
+  2055  029D  1D03               	skipz
+  2056  029E  2A99               	goto	u695
+  2057  029F  0832               	movf	??_AdvanceAnimation+2,w
+  2058  02A0  3901               	andlw	1
+  2059  02A1  00B4               	movwf	??_AdvanceAnimation+4
+  2060  02A2  083C               	movf	AdvanceAnimation@y,w
+  2061  02A3  00B5               	movwf	??_AdvanceAnimation+5
+  2062  02A4  3003               	movlw	3
+  2063  02A5                     u705:	
+  2064  02A5  1003               	clrc
+  2065  02A6  0DB5               	rlf	??_AdvanceAnimation+5,f
+  2066  02A7  3EFF               	addlw	-1
+  2067  02A8  1D03               	skipz
+  2068  02A9  2AA5               	goto	u705
+  2069  02AA  30A0               	movlw	(low (_buf| 0))& (0+255)
+  2070  02AB  0735               	addwf	??_AdvanceAnimation+5,w
+  2071  02AC  00B6               	movwf	??_AdvanceAnimation+6
+  2072  02AD  083A               	movf	AdvanceAnimation@x,w
+  2073  02AE  0736               	addwf	??_AdvanceAnimation+6,w
+  2074  02AF  00B7               	movwf	??_AdvanceAnimation+7
+  2075  02B0  0837               	movf	??_AdvanceAnimation+7,w
+  2076  02B1  0084               	movwf	4
+  2077  02B2  0834               	movf	??_AdvanceAnimation+4,w
+  2078  02B3  1383               	bcf	3,7	;select IRP bank1
+  2079  02B4  0080               	movwf	0
+  2080  02B5  3001               	movlw	1
+  2081  02B6  07BA               	addwf	AdvanceAnimation@x,f
+  2082  02B7  1803               	skipnc
+  2083  02B8  0ABB               	incf	AdvanceAnimation@x+1,f
+  2084  02B9  3000               	movlw	0
+  2085  02BA  07BB               	addwf	AdvanceAnimation@x+1,f
+  2086  02BB  30FF               	movlw	255
+  2087  02BC  07B8               	addwf	AdvanceAnimation@k,f
+  2088  02BD  1803               	skipnc
+  2089  02BE  0AB9               	incf	AdvanceAnimation@k+1,f
+  2090  02BF  30FF               	movlw	255
+  2091  02C0  07B9               	addwf	AdvanceAnimation@k+1,f
+  2092  02C1  083B               	movf	AdvanceAnimation@x+1,w
+  2093  02C2  3A80               	xorlw	128
+  2094  02C3  00FF               	movwf	127
+  2095  02C4  3080               	movlw	128
+  2096  02C5  027F               	subwf	127,w
+  2097  02C6  1D03               	skipz
+  2098  02C7  2ACA               	goto	u715
+  2099  02C8  3008               	movlw	8
+  2100  02C9  023A               	subwf	AdvanceAnimation@x,w
+  2101  02CA                     u715:	
+  2102  02CA  1C03               	skipc
+  2103  02CB  2A6D               	goto	l871
+  2104  02CC                     l879:	
+  2105  02CC  3001               	movlw	1
+  2106  02CD  1283               	bcf	3,5	;RP0=0, select bank0
+  2107  02CE  1303               	bcf	3,6	;RP1=0, select bank0
+  2108  02CF  07BC               	addwf	AdvanceAnimation@y,f
+  2109  02D0  1803               	skipnc
+  2110  02D1  0ABD               	incf	AdvanceAnimation@y+1,f
+  2111  02D2  3000               	movlw	0
+  2112  02D3  07BD               	addwf	AdvanceAnimation@y+1,f
+  2113  02D4  2A4F               	goto	L11
+  2114  02D5                     __end_of_AdvanceAnimation:	
+  2115                           
+  2116                           	psect	text9
+  2117  050D                     __ptext9:	
+  2118 ;; *************** function ___wmul *****************
+  2119 ;; Defined at:
+  2120 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c"
+  2121 ;; Parameters:    Size  Location     Type
+  2122 ;;  multiplier      2   10[BANK0 ] unsigned int 
+  2123 ;;  multiplicand    2   12[BANK0 ] unsigned int 
+  2124 ;; Auto vars:     Size  Location     Type
+  2125 ;;  product         2   14[BANK0 ] unsigned int 
+  2126 ;; Return value:  Size  Location     Type
+  2127 ;;                  2   10[BANK0 ] unsigned int 
+  2128 ;; Registers used:
+  2129 ;;		wreg, status,2, status,0
+  2130 ;; Tracked objects:
+  2131 ;;		On entry : 0/0
+  2132 ;;		On exit  : 0/0
+  2133 ;;		Unchanged: 0/0
+  2134 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2135 ;;      Params:         0       4       0       0
+  2136 ;;      Locals:         0       2       0       0
+  2137 ;;      Temps:          0       0       0       0
+  2138 ;;      Totals:         0       6       0       0
+  2139 ;;Total ram usage:        6 bytes
+  2140 ;; Hardware stack levels used:    1
+  2141 ;; Hardware stack levels required when called:    3
+  2142 ;; This function calls:
+  2143 ;;		Nothing
+  2144 ;; This function is called by:
+  2145 ;;		_AdvanceAnimation
+  2146 ;; This function uses a non-reentrant model
+  2147 ;;
+  2148                           
+  2149                           
+  2150                           ;psect for function ___wmul
+  2151  050D                     ___wmul:	
+  2152                           
+  2153                           ;incstack = 0
+  2154                           ; Regs used in ___wmul: [wreg+status,2+status,0]
+  2155  050D  1283               	bcf	3,5	;RP0=0, select bank0
+  2156  050E  1303               	bcf	3,6	;RP1=0, select bank0
+  2157  050F  01AE               	clrf	___wmul@product
+  2158  0510  01AF               	clrf	___wmul@product+1
+  2159  0511                     l825:	
+  2160  0511  1C2A               	btfss	___wmul@multiplier,0
+  2161  0512  2D19               	goto	l203
+  2162  0513  082C               	movf	___wmul@multiplicand,w
+  2163  0514  07AE               	addwf	___wmul@product,f
+  2164  0515  1803               	skipnc
+  2165  0516  0AAF               	incf	___wmul@product+1,f
+  2166  0517  082D               	movf	___wmul@multiplicand+1,w
+  2167  0518  07AF               	addwf	___wmul@product+1,f
+  2168  0519                     l203:	
+  2169  0519  3001               	movlw	1
+  2170  051A                     u595:	
+  2171  051A  1003               	clrc
+  2172  051B  0DAC               	rlf	___wmul@multiplicand,f
+  2173  051C  0DAD               	rlf	___wmul@multiplicand+1,f
+  2174  051D  3EFF               	addlw	-1
+  2175  051E  1D03               	skipz
+  2176  051F  2D1A               	goto	u595
+  2177  0520  3001               	movlw	1
+  2178  0521                     u605:	
+  2179  0521  1003               	clrc
+  2180  0522  0CAB               	rrf	___wmul@multiplier+1,f
+  2181  0523  0CAA               	rrf	___wmul@multiplier,f
+  2182  0524  3EFF               	addlw	-1
+  2183  0525  1D03               	skipz
+  2184  0526  2D21               	goto	u605
+  2185  0527  082A               	movf	___wmul@multiplier,w
+  2186  0528  042B               	iorwf	___wmul@multiplier+1,w
+  2187  0529  1D03               	btfss	3,2
+  2188  052A  2D11               	goto	l825
+  2189  052B  082F               	movf	___wmul@product+1,w
+  2190  052C  00AB               	movwf	?___wmul+1
+  2191  052D  082E               	movf	___wmul@product,w
+  2192  052E  00AA               	movwf	?___wmul
+  2193  052F  0008               	return
+  2194  0530                     __end_of___wmul:	
+  2195                           
+  2196                           	psect	text10
+  2197  056E                     __ptext10:	
+  2198 ;; *************** function _isr *****************
+  2199 ;; Defined at:
+  2200 ;;		line 24 in file "interrupts.c"
+  2201 ;; Parameters:    Size  Location     Type
+  2202 ;;		None
+  2203 ;; Auto vars:     Size  Location     Type
+  2204 ;;		None
+  2205 ;; Return value:  Size  Location     Type
+  2206 ;;                  1    wreg      void 
+  2207 ;; Registers used:
+  2208 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  2209 ;; Tracked objects:
+  2210 ;;		On entry : 0/0
+  2211 ;;		On exit  : 0/0
+  2212 ;;		Unchanged: 0/0
+  2213 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2214 ;;      Params:         0       0       0       0
+  2215 ;;      Locals:         0       0       0       0
+  2216 ;;      Temps:          0       4       0       0
+  2217 ;;      Totals:         0       4       0       0
+  2218 ;;Total ram usage:        4 bytes
+  2219 ;; Hardware stack levels used:    1
+  2220 ;; Hardware stack levels required when called:    2
+  2221 ;; This function calls:
+  2222 ;;		i1_AdvanceAnimation
+  2223 ;; This function is called by:
+  2224 ;;		Interrupt level 1
+  2225 ;; This function uses a non-reentrant model
+  2226 ;;
+  2227                           
+  2228                           
+  2229                           ;psect for function _isr
+  2230  056E                     _isr:	
+  2231                           
+  2232                           ;interrupts.c: 35: if(T0IF == 1)
+  2233  056E  1D0B               	btfss	11,2	;volatile
+  2234  056F  2D74               	goto	i1l11
+  2235                           
+  2236                           ;interrupts.c: 36: {
+  2237                           ;interrupts.c: 37: AdvanceAnimation();
+  2238  0570  118A  22D5  118A   	fcall	i1_AdvanceAnimation
+  2239                           
+  2240                           ;interrupts.c: 38: T0IF = 0;
+  2241  0573  110B               	bcf	11,2	;volatile
+  2242  0574                     i1l11:	
+  2243                           ;interrupts.c: 40: else
+  2244                           ;interrupts.c: 41: {
+  2245                           
+  2246                           ;interrupts.c: 39: }
+  2247                           
+  2248  0574  1283               	bcf	3,5	;RP0=0, select bank0
+  2249  0575  1303               	bcf	3,6	;RP1=0, select bank0
+  2250  0576  0829               	movf	??_isr+3,w
+  2251  0577  00FF               	movwf	127
+  2252  0578  0828               	movf	??_isr+2,w
+  2253  0579  008A               	movwf	10
+  2254  057A  0827               	movf	??_isr+1,w
+  2255  057B  0084               	movwf	4
+  2256  057C  0E26               	swapf	??_isr^0,w
+  2257  057D  0083               	movwf	3
+  2258  057E  0EFE               	swapf	126,f
+  2259  057F  0E7E               	swapf	126,w
+  2260  0580  0009               	retfie
+  2261  0581                     __end_of_isr:	
   2262                           
-  2263  058E  1283               	bcf	3,5	;RP0=0, select bank0
-  2264  058F  1303               	bcf	3,6	;RP1=0, select bank0
-  2265  0590  0829               	movf	??_isr+3,w
-  2266  0591  00FF               	movwf	127
-  2267  0592  0828               	movf	??_isr+2,w
-  2268  0593  008A               	movwf	10
-  2269  0594  0827               	movf	??_isr+1,w
-  2270  0595  0084               	movwf	4
-  2271  0596  0E26               	swapf	??_isr^0,w
-  2272  0597  0083               	movwf	3
-  2273  0598  0EFE               	swapf	126,f
-  2274  0599  0E7E               	swapf	126,w
-  2275  059A  0009               	retfie
-  2276  059B                     __end_of_isr:	
-  2277                           
-  2278                           	psect	intentry
-  2279  0004                     __pintentry:	
-  2280                           ;incstack = 0
-  2281                           ; Regs used in _isr: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  2263                           	psect	intentry
+  2264  0004                     __pintentry:	
+  2265                           ;incstack = 0
+  2266                           ; Regs used in _isr: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  2267                           
+  2268  0004                     interrupt_function:	
+  2269  007E                     saved_w	set	btemp
+  2270  0004  00FE               	movwf	btemp
+  2271  0005  0E03               	swapf	3,w
+  2272  0006  1283               	bcf	3,5	;RP0=0, select bank0
+  2273  0007  1303               	bcf	3,6	;RP1=0, select bank0
+  2274  0008  00A6               	movwf	??_isr
+  2275  0009  0804               	movf	4,w
+  2276  000A  00A7               	movwf	??_isr+1
+  2277  000B  080A               	movf	10,w
+  2278  000C  00A8               	movwf	??_isr+2
+  2279  000D  087F               	movf	btemp+1,w
+  2280  000E  00A9               	movwf	??_isr+3
+  2281  000F  118A  2D6E         	ljmp	_isr
   2282                           
-  2283  0004                     interrupt_function:	
-  2284  007E                     saved_w	set	btemp
-  2285  0004  00FE               	movwf	btemp
-  2286  0005  0E03               	swapf	3,w
-  2287  0006  1283               	bcf	3,5	;RP0=0, select bank0
-  2288  0007  1303               	bcf	3,6	;RP1=0, select bank0
-  2289  0008  00A6               	movwf	??_isr
-  2290  0009  0804               	movf	4,w
-  2291  000A  00A7               	movwf	??_isr+1
-  2292  000B  080A               	movf	10,w
-  2293  000C  00A8               	movwf	??_isr+2
-  2294  000D  087F               	movf	btemp+1,w
-  2295  000E  00A9               	movwf	??_isr+3
-  2296  000F  118A  2D88         	ljmp	_isr
-  2297                           
-  2298                           	psect	text11
-  2299  02E2                     __ptext11:	
-  2300 ;; *************** function i1_AdvanceAnimation *****************
-  2301 ;; Defined at:
-  2302 ;;		line 180 in file "user.c"
-  2303 ;; Parameters:    Size  Location     Type
-  2304 ;;		None
-  2305 ;; Auto vars:     Size  Location     Type
-  2306 ;;  AdvanceAnima    2    4[BANK0 ] int 
-  2307 ;;  AdvanceAnima    2    2[BANK0 ] int 
-  2308 ;;  AdvanceAnima    2    0[BANK0 ] int 
-  2309 ;; Return value:  Size  Location     Type
-  2310 ;;                  1    wreg      void 
-  2311 ;; Registers used:
-  2312 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-  2313 ;; Tracked objects:
-  2314 ;;		On entry : 0/0
-  2315 ;;		On exit  : 0/0
-  2316 ;;		Unchanged: 0/0
-  2317 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  2318 ;;      Params:         0       0       0       0
-  2319 ;;      Locals:         0       6       0       0
-  2320 ;;      Temps:          8       0       0       0
-  2321 ;;      Totals:         8       6       0       0
-  2322 ;;Total ram usage:       14 bytes
-  2323 ;; Hardware stack levels used:    1
-  2324 ;; Hardware stack levels required when called:    1
-  2325 ;; This function calls:
-  2326 ;;		i1___wmul
-  2327 ;; This function is called by:
-  2328 ;;		_isr
-  2329 ;; This function uses a non-reentrant model
-  2330 ;;
-  2331                           
-  2332                           
-  2333                           ;psect for function i1_AdvanceAnimation
-  2334  02E2                     i1_AdvanceAnimation:	
-  2335                           
-  2336                           ;user.c: 182: for(int y = 0;y<6;y++){
-  2337                           
-  2338                           ;incstack = 0
-  2339                           ; Regs used in i1_AdvanceAnimation: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-  2340  02E2  1283               	bcf	3,5	;RP0=0, select bank0
-  2341  02E3  1303               	bcf	3,6	;RP1=0, select bank0
-  2342  02E4  01A4               	clrf	i1AdvanceAnimation@y
-  2343  02E5  01A5               	clrf	i1AdvanceAnimation@y+1
-  2344  02E6  0825               	movf	i1AdvanceAnimation@y+1,w
-  2345  02E7  3A80               	xorlw	128
-  2346  02E8  00FF               	movwf	127
-  2347  02E9  3080               	movlw	128
-  2348  02EA  027F               	subwf	127,w
-  2349  02EB  1D03               	skipz
-  2350  02EC  2AEF               	goto	u104_25
-  2351  02ED  3006               	movlw	6
-  2352  02EE  0224               	subwf	i1AdvanceAnimation@y,w
-  2353  02EF                     u104_25:	
-  2354  02EF  1803               	btfsc	3,0
-  2355  02F0  2B76               	goto	i1l1011
-  2356  02F1                     i1l991:	
-  2357                           
-  2358                           ;user.c: 184: for(int x =0,k = 7;x<8;x++,k--){
-  2359  02F1  1283               	bcf	3,5	;RP0=0, select bank0
-  2360  02F2  1303               	bcf	3,6	;RP1=0, select bank0
-  2361  02F3  01A2               	clrf	i1AdvanceAnimation@x
-  2362  02F4  01A3               	clrf	i1AdvanceAnimation@x+1
-  2363  02F5  3007               	movlw	7
-  2364  02F6  00A0               	movwf	i1AdvanceAnimation@k
-  2365  02F7  3000               	movlw	0
-  2366  02F8  00A1               	movwf	i1AdvanceAnimation@k+1
-  2367  02F9  0823               	movf	i1AdvanceAnimation@x+1,w
-  2368  02FA  3A80               	xorlw	128
-  2369  02FB  00FF               	movwf	127
-  2370  02FC  3080               	movlw	128
-  2371  02FD  027F               	subwf	127,w
-  2372  02FE  1D03               	skipz
-  2373  02FF  2B02               	goto	u105_25
-  2374  0300  3008               	movlw	8
-  2375  0301  0222               	subwf	i1AdvanceAnimation@x,w
-  2376  0302                     u105_25:	
-  2377  0302  1803               	btfsc	3,0
-  2378  0303  2B63               	goto	i1l1007
-  2379  0304                     i1l999:	
-  2380                           
-  2381                           ;user.c: 185: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
-  2382  0304  1283               	bcf	3,5	;RP0=0, select bank0
-  2383  0305  1303               	bcf	3,6	;RP1=0, select bank0
-  2384  0306  0848               	movf	_frame+1,w
-  2385  0307  00F1               	movwf	i1___wmul@multiplier+1
-  2386  0308  0847               	movf	_frame,w
-  2387  0309  00F0               	movwf	i1___wmul@multiplier
-  2388  030A  0844               	movf	_frameSize+1,w
-  2389  030B  00F3               	movwf	i1___wmul@multiplicand+1
-  2390  030C  0843               	movf	_frameSize,w
-  2391  030D  00F2               	movwf	i1___wmul@multiplicand
-  2392  030E  118A  254A  118A   	fcall	i1___wmul
-  2393  0311  1283               	bcf	3,5	;RP0=0, select bank0
-  2394  0312  1303               	bcf	3,6	;RP1=0, select bank0
-  2395  0313  0824               	movf	i1AdvanceAnimation@y,w
-  2396  0314  0770               	addwf	?i1___wmul,w
-  2397  0315  00F6               	movwf	??i1_AdvanceAnimation
-  2398  0316  0825               	movf	i1AdvanceAnimation@y+1,w
-  2399  0317  1803               	skipnc
-  2400  0318  0A25               	incf	i1AdvanceAnimation@y+1,w
-  2401  0319  0771               	addwf	?i1___wmul+1,w
-  2402  031A  00F7               	movwf	??i1_AdvanceAnimation+1
-  2403  031B  1003               	clrc
-  2404  031C  0DF6               	rlf	??i1_AdvanceAnimation,f
-  2405  031D  0DF7               	rlf	??i1_AdvanceAnimation+1,f
-  2406  031E  3081               	movlw	high (_animation| (0+32768))
-  2407  031F  0777               	addwf	??i1_AdvanceAnimation+1,w
-  2408  0320  00FF               	movwf	127
-  2409  0321  3012               	movlw	low (_animation| (0+32768))
-  2410  0322  0776               	addwf	??i1_AdvanceAnimation,w
-  2411  0323  0084               	movwf	4
-  2412  0324  1803               	skipnc
-  2413  0325  0AFF               	incf	127,f
-  2414  0326  118A  2100  118A   	fcall	stringtab
-  2415  0329  00F8               	movwf	??i1_AdvanceAnimation+2
-  2416  032A  118A  2100  118A   	fcall	stringtab
-  2417  032D  00F9               	movwf	??i1_AdvanceAnimation+3
-  2418  032E  0A20               	incf	i1AdvanceAnimation@k,w
-  2419  032F  2B33               	goto	u106_24
-  2420  0330                     u106_25:	
-  2421  0330  1003               	clrc
-  2422  0331  0CF9               	rrf	??i1_AdvanceAnimation+3,f
-  2423  0332  0CF8               	rrf	??i1_AdvanceAnimation+2,f
-  2424  0333                     u106_24:	
-  2425  0333  3EFF               	addlw	-1
-  2426  0334  1D03               	skipz
-  2427  0335  2B30               	goto	u106_25
-  2428  0336  0878               	movf	??i1_AdvanceAnimation+2,w
-  2429  0337  3901               	andlw	1
-  2430  0338  00FA               	movwf	??i1_AdvanceAnimation+4
-  2431  0339  0824               	movf	i1AdvanceAnimation@y,w
-  2432  033A  00FB               	movwf	??i1_AdvanceAnimation+5
-  2433  033B  3003               	movlw	3
-  2434  033C                     u107_25:	
-  2435  033C  1003               	clrc
-  2436  033D  0DFB               	rlf	??i1_AdvanceAnimation+5,f
-  2437  033E  3EFF               	addlw	-1
-  2438  033F  1D03               	skipz
-  2439  0340  2B3C               	goto	u107_25
-  2440  0341  30A0               	movlw	(low (_buf| 0))& (0+255)
-  2441  0342  077B               	addwf	??i1_AdvanceAnimation+5,w
-  2442  0343  00FC               	movwf	??i1_AdvanceAnimation+6
-  2443  0344  0822               	movf	i1AdvanceAnimation@x,w
-  2444  0345  077C               	addwf	??i1_AdvanceAnimation+6,w
-  2445  0346  00FD               	movwf	??i1_AdvanceAnimation+7
-  2446  0347  087D               	movf	??i1_AdvanceAnimation+7,w
-  2447  0348  0084               	movwf	4
-  2448  0349  087A               	movf	??i1_AdvanceAnimation+4,w
-  2449  034A  1383               	bcf	3,7	;select IRP bank1
-  2450  034B  0080               	movwf	0
-  2451  034C  3001               	movlw	1
-  2452  034D  07A2               	addwf	i1AdvanceAnimation@x,f
-  2453  034E  1803               	skipnc
-  2454  034F  0AA3               	incf	i1AdvanceAnimation@x+1,f
-  2455  0350  3000               	movlw	0
-  2456  0351  07A3               	addwf	i1AdvanceAnimation@x+1,f
-  2457  0352  30FF               	movlw	255
-  2458  0353  07A0               	addwf	i1AdvanceAnimation@k,f
-  2459  0354  1803               	skipnc
-  2460  0355  0AA1               	incf	i1AdvanceAnimation@k+1,f
-  2461  0356  30FF               	movlw	255
-  2462  0357  07A1               	addwf	i1AdvanceAnimation@k+1,f
-  2463  0358  0823               	movf	i1AdvanceAnimation@x+1,w
-  2464  0359  3A80               	xorlw	128
-  2465  035A  00FF               	movwf	127
-  2466  035B  3080               	movlw	128
-  2467  035C  027F               	subwf	127,w
-  2468  035D  1D03               	skipz
-  2469  035E  2B61               	goto	u108_25
-  2470  035F  3008               	movlw	8
-  2471  0360  0222               	subwf	i1AdvanceAnimation@x,w
-  2472  0361                     u108_25:	
-  2473  0361  1C03               	skipc
-  2474  0362  2B04               	goto	i1l999
-  2475  0363                     i1l1007:	
-  2476  0363  3001               	movlw	1
-  2477  0364  1283               	bcf	3,5	;RP0=0, select bank0
-  2478  0365  1303               	bcf	3,6	;RP1=0, select bank0
-  2479  0366  07A4               	addwf	i1AdvanceAnimation@y,f
-  2480  0367  1803               	skipnc
-  2481  0368  0AA5               	incf	i1AdvanceAnimation@y+1,f
-  2482  0369  3000               	movlw	0
-  2483  036A  07A5               	addwf	i1AdvanceAnimation@y+1,f
-  2484  036B  0825               	movf	i1AdvanceAnimation@y+1,w
-  2485  036C  3A80               	xorlw	128
-  2486  036D  00FF               	movwf	127
-  2487  036E  3080               	movlw	128
-  2488  036F  027F               	subwf	127,w
-  2489  0370  1D03               	skipz
-  2490  0371  2B74               	goto	u109_25
-  2491  0372  3006               	movlw	6
-  2492  0373  0224               	subwf	i1AdvanceAnimation@y,w
-  2493  0374                     u109_25:	
-  2494  0374  1C03               	skipc
-  2495  0375  2AF1               	goto	i1l991
-  2496  0376                     i1l1011:	
-  2497                           
-  2498                           ;user.c: 186: }
-  2499                           ;user.c: 188: }
-  2500                           ;user.c: 190: if(frame >= maxFrames){
-  2501  0376  1283               	bcf	3,5	;RP0=0, select bank0
-  2502  0377  1303               	bcf	3,6	;RP1=0, select bank0
-  2503  0378  0848               	movf	_frame+1,w
-  2504  0379  3A80               	xorlw	128
-  2505  037A  00F6               	movwf	??i1_AdvanceAnimation
-  2506  037B  0846               	movf	_maxFrames+1,w
-  2507  037C  3A80               	xorlw	128
-  2508  037D  0276               	subwf	??i1_AdvanceAnimation,w
-  2509  037E  1D03               	skipz
-  2510  037F  2B82               	goto	u110_25
-  2511  0380  0845               	movf	_maxFrames,w
-  2512  0381  0247               	subwf	_frame,w
-  2513  0382                     u110_25:	
-  2514  0382  1C03               	skipc
-  2515  0383  2B89               	goto	i1l1015
-  2516                           
-  2517                           ;user.c: 191: frame = 0;
-  2518  0384  1283               	bcf	3,5	;RP0=0, select bank0
-  2519  0385  1303               	bcf	3,6	;RP1=0, select bank0
-  2520  0386  01C7               	clrf	_frame
-  2521  0387  01C8               	clrf	_frame+1
-  2522                           
-  2523                           ;user.c: 192: } else {
-  2524  0388  0008               	return
-  2525  0389                     i1l1015:	
-  2526                           
-  2527                           ;user.c: 193: frame++;
-  2528  0389  3001               	movlw	1
-  2529  038A  1283               	bcf	3,5	;RP0=0, select bank0
-  2530  038B  1303               	bcf	3,6	;RP1=0, select bank0
-  2531  038C  07C7               	addwf	_frame,f
-  2532  038D  1803               	skipnc
-  2533  038E  0AC8               	incf	_frame+1,f
-  2534  038F  3000               	movlw	0
-  2535  0390  07C8               	addwf	_frame+1,f
-  2536  0391  0008               	return
-  2537  0392                     __end_ofi1_AdvanceAnimation:	
-  2538                           
-  2539                           	psect	text12
-  2540  054A                     __ptext12:	
-  2541 ;; *************** function i1___wmul *****************
-  2542 ;; Defined at:
-  2543 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c"
-  2544 ;; Parameters:    Size  Location     Type
-  2545 ;;  multiplier      2    0[COMMON] unsigned int 
-  2546 ;;  multiplicand    2    2[COMMON] unsigned int 
-  2547 ;; Auto vars:     Size  Location     Type
-  2548 ;;  __wmul          2    4[COMMON] unsigned int 
-  2549 ;; Return value:  Size  Location     Type
-  2550 ;;                  2    0[COMMON] unsigned int 
-  2551 ;; Registers used:
-  2552 ;;		wreg, status,2, status,0
-  2553 ;; Tracked objects:
-  2554 ;;		On entry : 0/0
-  2555 ;;		On exit  : 0/0
-  2556 ;;		Unchanged: 0/0
-  2557 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  2558 ;;      Params:         4       0       0       0
-  2559 ;;      Locals:         2       0       0       0
-  2560 ;;      Temps:          0       0       0       0
-  2561 ;;      Totals:         6       0       0       0
-  2562 ;;Total ram usage:        6 bytes
-  2563 ;; Hardware stack levels used:    1
-  2564 ;; This function calls:
-  2565 ;;		Nothing
-  2566 ;; This function is called by:
-  2567 ;;		i1_AdvanceAnimation
-  2568 ;; This function uses a non-reentrant model
-  2569 ;;
-  2570                           
-  2571                           
-  2572                           ;psect for function i1___wmul
-  2573  054A                     i1___wmul:	
-  2574                           
-  2575                           ;incstack = 0
-  2576                           ; Regs used in i1___wmul: [wreg+status,2+status,0]
-  2577  054A  01F4               	clrf	i1___wmul@product
-  2578  054B  01F5               	clrf	i1___wmul@product+1
-  2579  054C                     i1l839:	
-  2580  054C  1C70               	btfss	i1___wmul@multiplier,0
-  2581  054D  2D54               	goto	i1l203
-  2582  054E  0872               	movf	i1___wmul@multiplicand,w
-  2583  054F  07F4               	addwf	i1___wmul@product,f
-  2584  0550  1803               	skipnc
-  2585  0551  0AF5               	incf	i1___wmul@product+1,f
-  2586  0552  0873               	movf	i1___wmul@multiplicand+1,w
-  2587  0553  07F5               	addwf	i1___wmul@product+1,f
-  2588  0554                     i1l203:	
-  2589  0554  3001               	movlw	1
-  2590  0555                     u63_25:	
-  2591  0555  1003               	clrc
-  2592  0556  0DF2               	rlf	i1___wmul@multiplicand,f
-  2593  0557  0DF3               	rlf	i1___wmul@multiplicand+1,f
-  2594  0558  3EFF               	addlw	-1
-  2595  0559  1D03               	skipz
-  2596  055A  2D55               	goto	u63_25
-  2597  055B  3001               	movlw	1
-  2598  055C                     u64_25:	
-  2599  055C  1003               	clrc
-  2600  055D  0CF1               	rrf	i1___wmul@multiplier+1,f
-  2601  055E  0CF0               	rrf	i1___wmul@multiplier,f
-  2602  055F  3EFF               	addlw	-1
-  2603  0560  1D03               	skipz
-  2604  0561  2D5C               	goto	u64_25
-  2605  0562  0870               	movf	i1___wmul@multiplier,w
-  2606  0563  0471               	iorwf	i1___wmul@multiplier+1,w
-  2607  0564  1D03               	btfss	3,2
-  2608  0565  2D4C               	goto	i1l839
-  2609  0566  0875               	movf	i1___wmul@product+1,w
-  2610  0567  00F1               	movwf	?i1___wmul+1
-  2611  0568  0874               	movf	i1___wmul@product,w
-  2612  0569  00F0               	movwf	?i1___wmul
-  2613  056A  0008               	return
-  2614  056B                     __end_ofi1___wmul:	
-  2615  007E                     btemp	set	126	;btemp
-  2616  007E                     wtemp0	set	126
+  2283                           	psect	text11
+  2284  02D5                     __ptext11:	
+  2285 ;; *************** function i1_AdvanceAnimation *****************
+  2286 ;; Defined at:
+  2287 ;;		line 180 in file "user.c"
+  2288 ;; Parameters:    Size  Location     Type
+  2289 ;;		None
+  2290 ;; Auto vars:     Size  Location     Type
+  2291 ;;  AdvanceAnima    2    4[BANK0 ] int 
+  2292 ;;  AdvanceAnima    2    2[BANK0 ] int 
+  2293 ;;  AdvanceAnima    2    0[BANK0 ] int 
+  2294 ;; Return value:  Size  Location     Type
+  2295 ;;                  1    wreg      void 
+  2296 ;; Registers used:
+  2297 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  2298 ;; Tracked objects:
+  2299 ;;		On entry : 0/0
+  2300 ;;		On exit  : 0/0
+  2301 ;;		Unchanged: 0/0
+  2302 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2303 ;;      Params:         0       0       0       0
+  2304 ;;      Locals:         0       6       0       0
+  2305 ;;      Temps:          8       0       0       0
+  2306 ;;      Totals:         8       6       0       0
+  2307 ;;Total ram usage:       14 bytes
+  2308 ;; Hardware stack levels used:    1
+  2309 ;; Hardware stack levels required when called:    1
+  2310 ;; This function calls:
+  2311 ;;		i1___wmul
+  2312 ;; This function is called by:
+  2313 ;;		_isr
+  2314 ;; This function uses a non-reentrant model
+  2315 ;;
+  2316                           
+  2317                           
+  2318                           ;psect for function i1_AdvanceAnimation
+  2319  02D5                     i1_AdvanceAnimation:	
+  2320                           
+  2321                           ;user.c: 181: if(frame >= maxFrames){
+  2322                           
+  2323                           ;incstack = 0
+  2324                           ; Regs used in i1_AdvanceAnimation: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  2325  02D5  1283               	bcf	3,5	;RP0=0, select bank0
+  2326  02D6  1303               	bcf	3,6	;RP1=0, select bank0
+  2327  02D7  0848               	movf	_frame+1,w
+  2328  02D8  3A80               	xorlw	128
+  2329  02D9  00F6               	movwf	??i1_AdvanceAnimation
+  2330  02DA  0846               	movf	_maxFrames+1,w
+  2331  02DB  3A80               	xorlw	128
+  2332  02DC  0276               	subwf	??i1_AdvanceAnimation,w
+  2333  02DD  1D03               	skipz
+  2334  02DE  2AE1               	goto	u104_25
+  2335  02DF  0845               	movf	_maxFrames,w
+  2336  02E0  0247               	subwf	_frame,w
+  2337  02E1                     u104_25:	
+  2338  02E1  1C03               	skipc
+  2339  02E2  2AE8               	goto	i1l989
+  2340                           
+  2341                           ;user.c: 182: frame = 0;
+  2342  02E3  1283               	bcf	3,5	;RP0=0, select bank0
+  2343  02E4  1303               	bcf	3,6	;RP1=0, select bank0
+  2344  02E5  01C7               	clrf	_frame
+  2345  02E6  01C8               	clrf	_frame+1
+  2346                           
+  2347                           ;user.c: 183: } else {
+  2348  02E7  2AF0               	goto	i1l991
+  2349  02E8                     i1l989:	
+  2350                           
+  2351                           ;user.c: 184: frame++;
+  2352  02E8  3001               	movlw	1
+  2353  02E9  1283               	bcf	3,5	;RP0=0, select bank0
+  2354  02EA  1303               	bcf	3,6	;RP1=0, select bank0
+  2355  02EB  07C7               	addwf	_frame,f
+  2356  02EC  1803               	skipnc
+  2357  02ED  0AC8               	incf	_frame+1,f
+  2358  02EE  3000               	movlw	0
+  2359  02EF  07C8               	addwf	_frame+1,f
+  2360  02F0                     i1l991:	
+  2361                           
+  2362                           ;user.c: 185: }
+  2363                           ;user.c: 188: for(int y = 0;y<6;y++){
+  2364  02F0  01A4               	clrf	i1AdvanceAnimation@y
+  2365  02F1  01A5               	clrf	i1AdvanceAnimation@y+1
+  2366  02F2                     L12:	
+  2367  02F2  0825               	movf	i1AdvanceAnimation@y+1,w
+  2368  02F3  3A80               	xorlw	128
+  2369  02F4  00FF               	movwf	127
+  2370  02F5  3080               	movlw	128
+  2371  02F6  027F               	subwf	127,w
+  2372  02F7  1D03               	skipz
+  2373  02F8  2AFB               	goto	u105_25
+  2374  02F9  3006               	movlw	6
+  2375  02FA  0224               	subwf	i1AdvanceAnimation@y,w
+  2376  02FB                     u105_25:	
+  2377  02FB  1803               	btfsc	3,0
+  2378  02FC  0008               	return
+  2379                           
+  2380                           ;user.c: 191: for(int x =0,k = 7;x<8;x++,k--){
+  2381  02FD  1283               	bcf	3,5	;RP0=0, select bank0
+  2382  02FE  1303               	bcf	3,6	;RP1=0, select bank0
+  2383  02FF  01A2               	clrf	i1AdvanceAnimation@x
+  2384  0300  01A3               	clrf	i1AdvanceAnimation@x+1
+  2385  0301  3007               	movlw	7
+  2386  0302  00A0               	movwf	i1AdvanceAnimation@k
+  2387  0303  3000               	movlw	0
+  2388  0304  00A1               	movwf	i1AdvanceAnimation@k+1
+  2389  0305  0823               	movf	i1AdvanceAnimation@x+1,w
+  2390  0306  3A80               	xorlw	128
+  2391  0307  00FF               	movwf	127
+  2392  0308  3080               	movlw	128
+  2393  0309  027F               	subwf	127,w
+  2394  030A  1D03               	skipz
+  2395  030B  2B0E               	goto	u106_25
+  2396  030C  3008               	movlw	8
+  2397  030D  0222               	subwf	i1AdvanceAnimation@x,w
+  2398  030E                     u106_25:	
+  2399  030E  1803               	btfsc	3,0
+  2400  030F  2B6F               	goto	i1l1013
+  2401  0310                     i1l1005:	
+  2402                           
+  2403                           ;user.c: 192: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
+  2404  0310  1283               	bcf	3,5	;RP0=0, select bank0
+  2405  0311  1303               	bcf	3,6	;RP1=0, select bank0
+  2406  0312  0848               	movf	_frame+1,w
+  2407  0313  00F1               	movwf	i1___wmul@multiplier+1
+  2408  0314  0847               	movf	_frame,w
+  2409  0315  00F0               	movwf	i1___wmul@multiplier
+  2410  0316  0844               	movf	_frameSize+1,w
+  2411  0317  00F3               	movwf	i1___wmul@multiplicand+1
+  2412  0318  0843               	movf	_frameSize,w
+  2413  0319  00F2               	movwf	i1___wmul@multiplicand
+  2414  031A  118A  2530  118A   	fcall	i1___wmul
+  2415  031D  1283               	bcf	3,5	;RP0=0, select bank0
+  2416  031E  1303               	bcf	3,6	;RP1=0, select bank0
+  2417  031F  0824               	movf	i1AdvanceAnimation@y,w
+  2418  0320  0770               	addwf	?i1___wmul,w
+  2419  0321  00F6               	movwf	??i1_AdvanceAnimation
+  2420  0322  0825               	movf	i1AdvanceAnimation@y+1,w
+  2421  0323  1803               	skipnc
+  2422  0324  0A25               	incf	i1AdvanceAnimation@y+1,w
+  2423  0325  0771               	addwf	?i1___wmul+1,w
+  2424  0326  00F7               	movwf	??i1_AdvanceAnimation+1
+  2425  0327  1003               	clrc
+  2426  0328  0DF6               	rlf	??i1_AdvanceAnimation,f
+  2427  0329  0DF7               	rlf	??i1_AdvanceAnimation+1,f
+  2428  032A  3081               	movlw	high (_animation| (0+32768))
+  2429  032B  0777               	addwf	??i1_AdvanceAnimation+1,w
+  2430  032C  00FF               	movwf	127
+  2431  032D  3012               	movlw	low (_animation| (0+32768))
+  2432  032E  0776               	addwf	??i1_AdvanceAnimation,w
+  2433  032F  0084               	movwf	4
+  2434  0330  1803               	skipnc
+  2435  0331  0AFF               	incf	127,f
+  2436  0332  118A  2100  118A   	fcall	stringtab
+  2437  0335  00F8               	movwf	??i1_AdvanceAnimation+2
+  2438  0336  118A  2100  118A   	fcall	stringtab
+  2439  0339  00F9               	movwf	??i1_AdvanceAnimation+3
+  2440  033A  0A20               	incf	i1AdvanceAnimation@k,w
+  2441  033B  2B3F               	goto	u107_24
+  2442  033C                     u107_25:	
+  2443  033C  1003               	clrc
+  2444  033D  0CF9               	rrf	??i1_AdvanceAnimation+3,f
+  2445  033E  0CF8               	rrf	??i1_AdvanceAnimation+2,f
+  2446  033F                     u107_24:	
+  2447  033F  3EFF               	addlw	-1
+  2448  0340  1D03               	skipz
+  2449  0341  2B3C               	goto	u107_25
+  2450  0342  0878               	movf	??i1_AdvanceAnimation+2,w
+  2451  0343  3901               	andlw	1
+  2452  0344  00FA               	movwf	??i1_AdvanceAnimation+4
+  2453  0345  0824               	movf	i1AdvanceAnimation@y,w
+  2454  0346  00FB               	movwf	??i1_AdvanceAnimation+5
+  2455  0347  3003               	movlw	3
+  2456  0348                     u108_25:	
+  2457  0348  1003               	clrc
+  2458  0349  0DFB               	rlf	??i1_AdvanceAnimation+5,f
+  2459  034A  3EFF               	addlw	-1
+  2460  034B  1D03               	skipz
+  2461  034C  2B48               	goto	u108_25
+  2462  034D  30A0               	movlw	(low (_buf| 0))& (0+255)
+  2463  034E  077B               	addwf	??i1_AdvanceAnimation+5,w
+  2464  034F  00FC               	movwf	??i1_AdvanceAnimation+6
+  2465  0350  0822               	movf	i1AdvanceAnimation@x,w
+  2466  0351  077C               	addwf	??i1_AdvanceAnimation+6,w
+  2467  0352  00FD               	movwf	??i1_AdvanceAnimation+7
+  2468  0353  087D               	movf	??i1_AdvanceAnimation+7,w
+  2469  0354  0084               	movwf	4
+  2470  0355  087A               	movf	??i1_AdvanceAnimation+4,w
+  2471  0356  1383               	bcf	3,7	;select IRP bank1
+  2472  0357  0080               	movwf	0
+  2473  0358  3001               	movlw	1
+  2474  0359  07A2               	addwf	i1AdvanceAnimation@x,f
+  2475  035A  1803               	skipnc
+  2476  035B  0AA3               	incf	i1AdvanceAnimation@x+1,f
+  2477  035C  3000               	movlw	0
+  2478  035D  07A3               	addwf	i1AdvanceAnimation@x+1,f
+  2479  035E  30FF               	movlw	255
+  2480  035F  07A0               	addwf	i1AdvanceAnimation@k,f
+  2481  0360  1803               	skipnc
+  2482  0361  0AA1               	incf	i1AdvanceAnimation@k+1,f
+  2483  0362  30FF               	movlw	255
+  2484  0363  07A1               	addwf	i1AdvanceAnimation@k+1,f
+  2485  0364  0823               	movf	i1AdvanceAnimation@x+1,w
+  2486  0365  3A80               	xorlw	128
+  2487  0366  00FF               	movwf	127
+  2488  0367  3080               	movlw	128
+  2489  0368  027F               	subwf	127,w
+  2490  0369  1D03               	skipz
+  2491  036A  2B6D               	goto	u109_25
+  2492  036B  3008               	movlw	8
+  2493  036C  0222               	subwf	i1AdvanceAnimation@x,w
+  2494  036D                     u109_25:	
+  2495  036D  1C03               	skipc
+  2496  036E  2B10               	goto	i1l1005
+  2497  036F                     i1l1013:	
+  2498  036F  3001               	movlw	1
+  2499  0370  1283               	bcf	3,5	;RP0=0, select bank0
+  2500  0371  1303               	bcf	3,6	;RP1=0, select bank0
+  2501  0372  07A4               	addwf	i1AdvanceAnimation@y,f
+  2502  0373  1803               	skipnc
+  2503  0374  0AA5               	incf	i1AdvanceAnimation@y+1,f
+  2504  0375  3000               	movlw	0
+  2505  0376  07A5               	addwf	i1AdvanceAnimation@y+1,f
+  2506  0377  2AF2               	goto	L12
+  2507  0378                     __end_ofi1_AdvanceAnimation:	
+  2508                           
+  2509                           	psect	text12
+  2510  0530                     __ptext12:	
+  2511 ;; *************** function i1___wmul *****************
+  2512 ;; Defined at:
+  2513 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c"
+  2514 ;; Parameters:    Size  Location     Type
+  2515 ;;  multiplier      2    0[COMMON] unsigned int 
+  2516 ;;  multiplicand    2    2[COMMON] unsigned int 
+  2517 ;; Auto vars:     Size  Location     Type
+  2518 ;;  __wmul          2    4[COMMON] unsigned int 
+  2519 ;; Return value:  Size  Location     Type
+  2520 ;;                  2    0[COMMON] unsigned int 
+  2521 ;; Registers used:
+  2522 ;;		wreg, status,2, status,0
+  2523 ;; Tracked objects:
+  2524 ;;		On entry : 0/0
+  2525 ;;		On exit  : 0/0
+  2526 ;;		Unchanged: 0/0
+  2527 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2528 ;;      Params:         4       0       0       0
+  2529 ;;      Locals:         2       0       0       0
+  2530 ;;      Temps:          0       0       0       0
+  2531 ;;      Totals:         6       0       0       0
+  2532 ;;Total ram usage:        6 bytes
+  2533 ;; Hardware stack levels used:    1
+  2534 ;; This function calls:
+  2535 ;;		Nothing
+  2536 ;; This function is called by:
+  2537 ;;		i1_AdvanceAnimation
+  2538 ;; This function uses a non-reentrant model
+  2539 ;;
+  2540                           
+  2541                           
+  2542                           ;psect for function i1___wmul
+  2543  0530                     i1___wmul:	
+  2544                           
+  2545                           ;incstack = 0
+  2546                           ; Regs used in i1___wmul: [wreg+status,2+status,0]
+  2547  0530  01F4               	clrf	i1___wmul@product
+  2548  0531  01F5               	clrf	i1___wmul@product+1
+  2549  0532                     i1l839:	
+  2550  0532  1C70               	btfss	i1___wmul@multiplier,0
+  2551  0533  2D3A               	goto	i1l203
+  2552  0534  0872               	movf	i1___wmul@multiplicand,w
+  2553  0535  07F4               	addwf	i1___wmul@product,f
+  2554  0536  1803               	skipnc
+  2555  0537  0AF5               	incf	i1___wmul@product+1,f
+  2556  0538  0873               	movf	i1___wmul@multiplicand+1,w
+  2557  0539  07F5               	addwf	i1___wmul@product+1,f
+  2558  053A                     i1l203:	
+  2559  053A  3001               	movlw	1
+  2560  053B                     u63_25:	
+  2561  053B  1003               	clrc
+  2562  053C  0DF2               	rlf	i1___wmul@multiplicand,f
+  2563  053D  0DF3               	rlf	i1___wmul@multiplicand+1,f
+  2564  053E  3EFF               	addlw	-1
+  2565  053F  1D03               	skipz
+  2566  0540  2D3B               	goto	u63_25
+  2567  0541  3001               	movlw	1
+  2568  0542                     u64_25:	
+  2569  0542  1003               	clrc
+  2570  0543  0CF1               	rrf	i1___wmul@multiplier+1,f
+  2571  0544  0CF0               	rrf	i1___wmul@multiplier,f
+  2572  0545  3EFF               	addlw	-1
+  2573  0546  1D03               	skipz
+  2574  0547  2D42               	goto	u64_25
+  2575  0548  0870               	movf	i1___wmul@multiplier,w
+  2576  0549  0471               	iorwf	i1___wmul@multiplier+1,w
+  2577  054A  1D03               	btfss	3,2
+  2578  054B  2D32               	goto	i1l839
+  2579  054C  0875               	movf	i1___wmul@product+1,w
+  2580  054D  00F1               	movwf	?i1___wmul+1
+  2581  054E  0874               	movf	i1___wmul@product,w
+  2582  054F  00F0               	movwf	?i1___wmul
+  2583  0550  0008               	return
+  2584  0551                     __end_ofi1___wmul:	
+  2585  007E                     btemp	set	126	;btemp
+  2586  007E                     wtemp0	set	126
 
 
 Data Sizes:
@@ -2786,78 +2756,77 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.44 build -154322312 
-Symbol Table                                                                                   Tue Sep 25 10:34:15 2018
+Symbol Table                                                                                   Tue Sep 25 22:26:43 2018
 
-                           pc 0002                   __CFG_CP$OFF 0000                            l78 04D4  
-                          l79 04F3                            l95 0402                            fsr 0004  
-         ___wmul@multiplicand 002C              i1___wmul@product 0074                           l203 0533  
-                         l825 052B                           l921 042F                           l951 03BC  
-                         l943 039B                           l881 02D9                           l873 02B3  
-                         l865 0254                           l857 0241                           l929 047D  
-                         l961 03F8                           l955 03CC                           l947 03AB  
-                         l877 02C6                           l959 03DD                           l979 057D  
-               _InitAnimation 040D                  __CFG_CPD$OFF 0000                           u605 053B  
-                         u705 02B1                           u715 02C4                           u725 02D2  
-                         u735 04D2                           u665 023F                           u745 04F1  
-                         u595 0534                           u675 0252                           u755 041A  
-                         u915 03C3                           u835 03A3                           u684 0283  
-                         u685 0280                           u765 042D                           u774 044D  
-                         u695 028C                           u775 044A                           u785 0456  
-                         u795 047B                           u955 03D3                           u875 03B3  
-                         u990 03F5                           u985 03E0                           _buf 00A0  
-                         _isr 0588                           fsr0 0004                           indf 0000  
-                __CFG_IESO$ON 0000                          l1035 0499                          ?_isr 0070  
-                  _AdvanceRow 056B                          _T0IE 005D                          _T0IF 005A  
-                        u1035 0576                          u1125 04BC                          u1137 04A0  
-                        u1147 04DC                   main@counter 003F                          i1l11 058E  
-               __CFG_FCMEN$ON 0000                          _main 0486                          btemp 007E  
-                        start 0011                 __CFG_MCLRE$ON 0000               __end_of_InitApp 05BE  
-                       ??_isr 0026                ?_InitAnimation 0070                         ?_main 0070  
-               __CFG_WDTE$OFF 0000                         _ANSEL 0091                         i1l203 0554  
-                       i1l839 054C                         i1l991 02F1                         i1l999 0304  
-                       u63_25 0555                         u64_25 055C                         _TRISA 0085  
-                       _TRISC 0087           _ConfigureOscillator 05C4                         _frame 0047  
-              __CFG_BOREN$OFF 0000                         pclath 000A              __end_ofi1___wmul 056B  
-                       status 0003           i1___wmul@multiplier 0070                         wtemp0 007E  
-        ?_ConfigureOscillator 0070               __initialization 0013                 ?_ReadyDisplay 0070  
-                __end_of_main 04C2              PopulateColumns@i 002D                        ??_main 003E  
-               ClearDisplay@i 002B         __size_of_ClearDisplay 0035                   ?_AdvanceRow 0070  
-                      i1l1011 0376                        i1l1015 0389                        i1l1007 0363  
-                      u110_25 0382                        u104_25 02EF                        u105_25 0302  
-                      u106_24 0333                        u106_25 0330                        u107_25 033C  
-                      u108_25 0361                        u109_25 0374                     ??_InitApp 002A  
-       ??_ConfigureOscillator 002A                __CFG_PWRTE$OFF 0000                ??_ReadyDisplay 002A  
-                      ___wmul 0527               ??_InitAnimation 002A                  _ClearDisplay 04C2  
-                      saved_w 007E               _PopulateColumns 0392       __end_of__initialization 002C  
-           ?_AdvanceAnimation 0070            ??_AdvanceAnimation 0030                __pcstackCOMMON 0070  
-                __pidataBANK0 05BE                  __pidataBANK1 04F7           __size_of_AdvanceRow 001D  
-                   ?i1___wmul 0070             AdvanceAnimation@k 0038             AdvanceAnimation@x 003A  
-           AdvanceAnimation@y 003C                    __pbssBANK0 0047   __size_ofi1_AdvanceAnimation 00B0  
-                  __pmaintext 0486                       ?___wmul 002A                    __pintentry 0004  
-                  ??i1___wmul 0074       __end_of_PopulateColumns 040D          __end_of_ReadyDisplay 05B5  
-                  __stringtab 0100                       _InitApp 05B5             __end_of_animation 0232  
-             __size_of___wmul 0023                    _currentRow 0049                       __ptext1 05AB  
-                     __ptext2 0392                       __ptext3 05B5                       __ptext4 040D  
-                     __ptext5 05C4                       __ptext6 04C2                       __ptext7 056B  
-                     __ptext8 0232                       __ptext9 0527                  __size_of_isr 0013  
-                ??_AdvanceRow 002A          end_of_initialization 002C                  __pstringtext 0100  
-       i1___wmul@multiplicand 0072            __end_of_AdvanceRow 0588                     _PORTCbits 0007  
-            ?_PopulateColumns 0070   __end_of_ConfigureOscillator 05C5                __end_of___wmul 054A  
-   __size_of_AdvanceAnimation 00B0         __end_of_InitAnimation 0486         __size_of_ReadyDisplay 000A  
-         start_initialization 0013             __size_ofi1___wmul 0021                   __end_of_isr 059B  
-                _ReadyDisplay 05AB                      ??___wmul 002E                    init_fetch0 059B  
-                 __pdataBANK0 0041                   __pdataBANK1 00A0                InitAnimation@k 0032  
-              InitAnimation@x 0034                InitAnimation@y 0036                     ___latbits 0001  
-               __pcstackBANK0 0020    __end_ofi1_AdvanceAnimation 0392                      ?_InitApp 0070  
-                   _animation 0112           i1AdvanceAnimation@k 0020           i1AdvanceAnimation@x 0022  
-         i1AdvanceAnimation@y 0024                     _frameSize 0043                     _maxFrames 0045  
-           interrupt_function 0004                ___wmul@product 002E              _AdvanceAnimation 0232  
-                 __stringbase 0112                 ?_ClearDisplay 0070             ___wmul@multiplier 002A  
-                    i1___wmul 054A              __size_of_InitApp 0009                ??_ClearDisplay 002A  
-          __end_of__stringtab 0112                      __ptext10 0588                      __ptext11 02E2  
-                    __ptext12 054A      __size_of_PopulateColumns 007B                 __size_of_main 003C  
-__size_of_ConfigureOscillator 0001                      _rowCount 0041                      init_ram0 059F  
-                    intlevel1 0000        __size_of_InitAnimation 0079                     stringcode 010A  
-          i1_AdvanceAnimation 02E2           ?i1_AdvanceAnimation 0070                      stringtab 0100  
-          __CFG_FOSC$INTOSCIO 0000          ??i1_AdvanceAnimation 0076      __end_of_AdvanceAnimation 02E2  
-        __end_of_ClearDisplay 04F7             ??_PopulateColumns 002A  
+                           pc 0002                   __CFG_CP$OFF 0000                            l78 04BA  
+                          l79 04D9                            l95 03E8                            fsr 0004  
+         ___wmul@multiplicand 002C              i1___wmul@product 0074                           l203 0519  
+                         l825 0511                           l921 0415                           l871 026D  
+                         l855 0245                           l951 03A2                           l943 0381  
+                         l857 024D                           l929 0463                           l961 03DE  
+                         l955 03B2                           l947 0391                           l879 02CC  
+                         l959 03C3                           l979 0563                 _InitAnimation 03F3  
+                __CFG_CPD$OFF 0000                           u605 0521                           u705 02A5  
+                         u715 02CA                           u735 04B8                           u665 023E  
+                         u745 04D7                           u595 051A                           u675 0258  
+                         u755 0400                           u915 03A9                           u835 0389  
+                         u685 026B                           u765 0413                           u694 029C  
+                         u774 0433                           u695 0299                           u775 0430  
+                         u785 043C                           u795 0461                           u955 03B9  
+                         u875 0399                           u990 03DB                           u985 03C6  
+                         _buf 00A0                           _isr 056E                           fsr0 0004  
+                         indf 0000                  __CFG_IESO$ON 0000                          l1035 047F  
+                        ?_isr 0070                    _AdvanceRow 0551                          _T0IE 005D  
+                        _T0IF 005A                          u1035 055C                          u1125 04A2  
+                        u1137 0486                          u1147 04C2                   main@counter 003F  
+                        i1l11 0574                 __CFG_FCMEN$ON 0000                          _main 046C  
+                        btemp 007E                          start 0011                 __CFG_MCLRE$ON 0000  
+             __end_of_InitApp 05A4                         ??_isr 0026                ?_InitAnimation 0070  
+                       ?_main 0070                 __CFG_WDTE$OFF 0000                         _ANSEL 0091  
+                       i1l203 053A                         i1l839 0532                         i1l991 02F0  
+                       i1l989 02E8                         u63_25 053B                         u64_25 0542  
+                       _TRISA 0085                         _TRISC 0087           _ConfigureOscillator 05AA  
+                       _frame 0047                __CFG_BOREN$OFF 0000                         pclath 000A  
+            __end_ofi1___wmul 0551                         status 0003           i1___wmul@multiplier 0070  
+                       wtemp0 007E          ?_ConfigureOscillator 0070               __initialization 0013  
+               ?_ReadyDisplay 0070                  __end_of_main 04A8              PopulateColumns@i 002D  
+                      ??_main 003E                 ClearDisplay@i 002B         __size_of_ClearDisplay 0035  
+                 ?_AdvanceRow 0070                        i1l1013 036F                        i1l1005 0310  
+                      u104_25 02E1                        u105_25 02FB                        u106_25 030E  
+                      u107_24 033F                        u107_25 033C                        u108_25 0348  
+                      u109_25 036D                     ??_InitApp 002A         ??_ConfigureOscillator 002A  
+              __CFG_PWRTE$OFF 0000                ??_ReadyDisplay 002A                        ___wmul 050D  
+             ??_InitAnimation 002A                  _ClearDisplay 04A8                        saved_w 007E  
+             _PopulateColumns 0378       __end_of__initialization 002C             ?_AdvanceAnimation 0070  
+          ??_AdvanceAnimation 0030                __pcstackCOMMON 0070                  __pidataBANK0 05A4  
+                __pidataBANK1 04DD           __size_of_AdvanceRow 001D                     ?i1___wmul 0070  
+           AdvanceAnimation@k 0038             AdvanceAnimation@x 003A             AdvanceAnimation@y 003C  
+                  __pbssBANK0 0047   __size_ofi1_AdvanceAnimation 00A3                    __pmaintext 046C  
+                     ?___wmul 002A                    __pintentry 0004                    ??i1___wmul 0074  
+     __end_of_PopulateColumns 03F3          __end_of_ReadyDisplay 059B                    __stringtab 0100  
+                     _InitApp 059B             __end_of_animation 0232               __size_of___wmul 0023  
+                  _currentRow 0049                       __ptext1 0591                       __ptext2 0378  
+                     __ptext3 059B                       __ptext4 03F3                       __ptext5 05AA  
+                     __ptext6 04A8                       __ptext7 0551                       __ptext8 0232  
+                     __ptext9 050D                  __size_of_isr 0013                  ??_AdvanceRow 002A  
+        end_of_initialization 002C                  __pstringtext 0100         i1___wmul@multiplicand 0072  
+          __end_of_AdvanceRow 056E                     _PORTCbits 0007              ?_PopulateColumns 0070  
+ __end_of_ConfigureOscillator 05AB                __end_of___wmul 0530     __size_of_AdvanceAnimation 00A3  
+       __end_of_InitAnimation 046C         __size_of_ReadyDisplay 000A           start_initialization 0013  
+           __size_ofi1___wmul 0021                   __end_of_isr 0581                  _ReadyDisplay 0591  
+                    ??___wmul 002E                    init_fetch0 0581                   __pdataBANK0 0041  
+                 __pdataBANK1 00A0                InitAnimation@k 0032                InitAnimation@x 0034  
+              InitAnimation@y 0036                     ___latbits 0001                 __pcstackBANK0 0020  
+  __end_ofi1_AdvanceAnimation 0378                      ?_InitApp 0070                     _animation 0112  
+         i1AdvanceAnimation@k 0020           i1AdvanceAnimation@x 0022           i1AdvanceAnimation@y 0024  
+                   _frameSize 0043                     _maxFrames 0045             interrupt_function 0004  
+              ___wmul@product 002E              _AdvanceAnimation 0232                   __stringbase 0112  
+               ?_ClearDisplay 0070             ___wmul@multiplier 002A                      i1___wmul 0530  
+            __size_of_InitApp 0009                ??_ClearDisplay 002A            __end_of__stringtab 0112  
+                    __ptext10 056E                      __ptext11 02D5                      __ptext12 0530  
+    __size_of_PopulateColumns 007B                 __size_of_main 003C  __size_of_ConfigureOscillator 0001  
+                    _rowCount 0041                      init_ram0 0585                      intlevel1 0000  
+      __size_of_InitAnimation 0079                     stringcode 010A            i1_AdvanceAnimation 02D5  
+         ?i1_AdvanceAnimation 0070                      stringtab 0100            __CFG_FOSC$INTOSCIO 0000  
+        ??i1_AdvanceAnimation 0076      __end_of_AdvanceAnimation 02D5          __end_of_ClearDisplay 04DD  
+           ??_PopulateColumns 002A  

@@ -52,7 +52,7 @@ void main(void)
         
         counter++;
         
-        if(counter > 1000){
+        if(counter > 500){
             AdvanceAnimation();
             counter = 0;
         }

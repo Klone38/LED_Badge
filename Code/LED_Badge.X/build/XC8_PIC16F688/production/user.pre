@@ -1325,7 +1325,7 @@ bool buf[6][8] = {
 
 int frame = 0;
 int maxFrames = 24;
-int frameSize = 8;
+int frameSize = 6;
 
 # 42
 void InitApp(void)
@@ -1462,8 +1462,15 @@ currentRow = 0;
 }
 
 void AdvanceAnimation(){
+if(frame >= maxFrames){
+frame = 0;
+} else {
+frame++;
+}
+
 
 for(int y = 0;y<6;y++){
+
 
 for(int x =0,k = 7;x<8;x++,k--){
 buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
@@ -1471,11 +1478,7 @@ buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
 
 }
 
-if(frame >= maxFrames){
-frame = 0;
-} else {
-frame++;
-}
+
 }
 
 void PopulateColumns2()

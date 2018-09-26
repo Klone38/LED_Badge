@@ -186,11 +186,12 @@ void AdvanceAnimation(){
     
     
     for(int y = 0;y<6;y++){
+
         
             for(int x =0,k = 7;x<8;x++,k--){
                 buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
             }
-        
+
     }
     
     

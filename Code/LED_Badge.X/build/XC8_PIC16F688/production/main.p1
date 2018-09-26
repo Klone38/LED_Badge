@@ -951,9 +951,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 53: counter++;
 "53
 [e ++ _counter -> 1 `i ]
-[; ;main.c: 55: if(counter > 1000){
+[; ;main.c: 55: if(counter > 500){
 "55
-[e $ ! > _counter -> 1000 `i 90  ]
+[e $ ! > _counter -> 500 `i 90  ]
 {
 [; ;main.c: 56: AdvanceAnimation();
 "56

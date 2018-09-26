@@ -1161,9 +1161,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "31
 [v _frameSize `i ~T0 @X0 1 e ]
 [i _frameSize
--> 8 `i
+-> 6 `i
 ]
-[; ;user.c: 31: int frameSize = 8;
+[; ;user.c: 31: int frameSize = 6;
 "42
 [v _InitApp `(v ~T0 @X0 1 ef ]
 "43
@@ -1515,115 +1515,115 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;user.c: 180: void AdvanceAnimation(){
 [e :U _AdvanceAnimation ]
 [f ]
-[; ;user.c: 182: for(int y = 0;y<6;y++){
-"182
+[; ;user.c: 181: if(frame >= maxFrames){
+"181
+[e $ ! >= _frame _maxFrames 115  ]
 {
-[v _y `i ~T0 @X0 1 a ]
-[e = _y -> 0 `i ]
-[e $ < _y -> 6 `i 115  ]
+[; ;user.c: 182: frame = 0;
+"182
+[e = _frame -> 0 `i ]
+"183
+}
+[; ;user.c: 183: } else {
 [e $U 116  ]
 [e :U 115 ]
 {
-[; ;user.c: 184: for(int x =0,k = 7;x<8;x++,k--){
+[; ;user.c: 184: frame++;
 "184
+[e ++ _frame -> 1 `i ]
+"185
+}
+[e :U 116 ]
+[; ;user.c: 185: }
+[; ;user.c: 188: for(int y = 0;y<6;y++){
+"188
+{
+[v _y `i ~T0 @X0 1 a ]
+[e = _y -> 0 `i ]
+[e $ < _y -> 6 `i 117  ]
+[e $U 118  ]
+[e :U 117 ]
+{
+[; ;user.c: 191: for(int x =0,k = 7;x<8;x++,k--){
+"191
 {
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 0 `i ]
 [v _k `i ~T0 @X0 1 a ]
 [e = _k -> 7 `i ]
-[e $ < _x -> 8 `i 118  ]
-[e $U 119  ]
-[e :U 118 ]
+[e $ < _x -> 8 `i 120  ]
+[e $U 121  ]
+[e :U 120 ]
 {
-[; ;user.c: 185: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
-"185
-[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _animation * -> -> + * _frame _frameSize _y `ui `ux -> -> # *U &U _animation `ui `ux _k -> -> 1 `i `ui `uc ]
-"186
-}
-"184
-[e ; ++ _x -> 1 `i -- _k -> 1 `i ]
-[e $ < _x -> 8 `i 118  ]
-[e :U 119 ]
-"186
-}
-"188
-}
-"182
-[e ++ _y -> 1 `i ]
-[e $ < _y -> 6 `i 115  ]
-[e :U 116 ]
-"188
-}
-[; ;user.c: 186: }
-[; ;user.c: 188: }
-[; ;user.c: 190: if(frame >= maxFrames){
-"190
-[e $ ! >= _frame _maxFrames 121  ]
-{
-[; ;user.c: 191: frame = 0;
-"191
-[e = _frame -> 0 `i ]
+[; ;user.c: 192: buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
 "192
-}
-[; ;user.c: 192: } else {
-[e $U 122  ]
-[e :U 121 ]
-{
-[; ;user.c: 193: frame++;
+[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _animation * -> -> + * _frame _frameSize _y `ui `ux -> -> # *U &U _animation `ui `ux _k -> -> 1 `i `ui `uc ]
 "193
-[e ++ _frame -> 1 `i ]
-"194
 }
-[e :U 122 ]
-[; ;user.c: 194: }
-[; ;user.c: 195: }
+"191
+[e ; ++ _x -> 1 `i -- _k -> 1 `i ]
+[e $ < _x -> 8 `i 120  ]
+[e :U 121 ]
+"193
+}
 "195
+}
+"188
+[e ++ _y -> 1 `i ]
+[e $ < _y -> 6 `i 117  ]
+[e :U 118 ]
+"195
+}
+[; ;user.c: 193: }
+[; ;user.c: 195: }
+[; ;user.c: 198: }
+"198
 [e :UE 114 ]
 }
-"197
+"200
 [v _PopulateColumns2 `(v ~T0 @X0 1 ef ]
-"198
+"201
 {
-[; ;user.c: 197: void PopulateColumns2()
-[; ;user.c: 198: {
+[; ;user.c: 200: void PopulateColumns2()
+[; ;user.c: 201: {
 [e :U _PopulateColumns2 ]
 [f ]
-[; ;user.c: 199: PORTCbits.RC4 = 1;
-"199
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 202: for(int i =7;i==0;i--)
+[; ;user.c: 202: PORTCbits.RC4 = 1;
 "202
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 205: for(int i =7;i==0;i--)
+"205
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 7 `i ]
 [e $ == _i -> 0 `i 124  ]
 [e $U 125  ]
-"203
-[e :U 124 ]
-[; ;user.c: 203: {
-{
-[; ;user.c: 206: PORTCbits.RC0 = 0;
 "206
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[; ;user.c: 209: PORTCbits.RC2 = 1;
+[e :U 124 ]
+[; ;user.c: 206: {
+{
+[; ;user.c: 209: PORTCbits.RC0 = 0;
 "209
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[; ;user.c: 212: PORTCbits.RC2 = 1;
+"212
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 210: PORTCbits.RC2 = 0;
-"210
+[; ;user.c: 213: PORTCbits.RC2 = 0;
+"213
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"214
+"217
 }
-"202
+"205
 [e -- _i -> 1 `i ]
 [e $ == _i -> 0 `i 124  ]
 [e :U 125 ]
-"214
+"217
 }
-[; ;user.c: 214: }
-[; ;user.c: 218: PORTCbits.RC4 = 0;
-"218
+[; ;user.c: 217: }
+[; ;user.c: 221: PORTCbits.RC4 = 0;
+"221
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 219: }
-"219
+[; ;user.c: 222: }
+"222
 [e :UE 123 ]
 }
