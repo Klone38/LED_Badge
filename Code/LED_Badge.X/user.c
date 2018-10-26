@@ -130,13 +130,15 @@ uint8_t currentRow = 0;
 
 void PopulateColumns()
 {
-    ROW_EN = 1;     //Disable screen
+    
         
         // Populate the columns
         for(int i =7;i>=0;i--)
         {
             
-           
+            // Because i built the hardware wrong, columns 0-3 are reversed
+            // so column index order is 7 6 5 4 0 1 2 3
+            // this flips only that half so animations and display can be normal
             if(i==3)
             {
                COL_SEL = !buf[currentRow][0];
@@ -167,10 +169,10 @@ void PopulateColumns()
         }
         
         
-        // Enable screen
-        ROW_EN = 0;
+        
         
         currentRow++;
+        
         if(currentRow == 6){
             currentRow = 0;
         }
@@ -197,26 +199,4 @@ void AdvanceAnimation(){
     
 }
 
-void PopulateColumns2()
-{
-    ROW_EN = 1;     //Disable screen
-        
-        // Populate the columns
-        for(int i =7;i==0;i--)
-        {
-            
-           
-            COL_SEL = 0;
-            
-            
-            COL_CLK = 1;
-            COL_CLK = 0;
 
-            //__delay_us(100000); 
-            
-        }
-        
-        
-        // Enable screen
-        ROW_EN = 0;
-}

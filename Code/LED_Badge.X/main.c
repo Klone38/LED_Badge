@@ -39,9 +39,11 @@ void main(void)
     
     while(1)
     {
+        ROW_EN = 1;     //Disable screen
         
         PopulateColumns();
         
+        ROW_EN = 0;     // Enable screen
         // Display each row for this amount of time
         __delay_us(500); 
         
