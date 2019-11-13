@@ -32,7 +32,7 @@ void main(void)
     InitApp();
 
     ClearDisplay();
-    InitAnimation();
+    InitFrameAnimation();
     ReadyDisplay();
 
     int counter = 0;
@@ -55,7 +55,7 @@ void main(void)
         counter++;
         
         if(counter > 500){
-            AdvanceAnimation();
+            AdvanceAnimationFrame();
             counter = 0;
         }
         

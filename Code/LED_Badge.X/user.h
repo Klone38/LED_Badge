@@ -20,7 +20,9 @@
 
 void InitApp(void);         /* I/O and Peripheral Initialization */
 
-void InitAnimation(void);
+void InitFrameAnimation(void);
+
+void InitScrollAnimation(void);
 
 void ClearDisplay(void);
 
@@ -30,4 +32,6 @@ void ReadyDisplay(void);
 
 void PopulateColumns(void);
 
-void AdvanceAnimation(void);
+void AdvanceAnimationFrame(void);
+
+void AdvanceAnimationScroll(void);

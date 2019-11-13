@@ -26,9 +26,9 @@ bool buf[6][8] = {
     1,1,1,1,1,1,1,1
 };
 
-int frame = 0;
-int maxFrames = 24;
-int frameSize = 6;
+int currentFrame = 0; //Current frame for frame animations
+int scrollIndex = 0; //The index of the last used column for scroll animations
+const int frameSize = 6;
 
 
 
@@ -58,14 +58,18 @@ void InitApp(void)
     
 }
 
-void InitAnimation()
+void InitFrameAnimation()
 {
     
     for(int y = 0;y<6;y++){
         for(int x =0,k = 7;x<8;x++,k--){
-            buf[y][x] = (animation[y] >> k) & 1;
+            buf[y][x] = (frameAnimation[y] >> k) & 1;
         }
     }
+    
+}
+
+void InitScrollAnimation(){
     
 }
 
@@ -179,11 +183,11 @@ void PopulateColumns()
         
 }
 
-void AdvanceAnimation(){
-    if(frame >= maxFrames){
-        frame = 0;
+void AdvanceAnimationFrame(){
+    if(currentFrame >= maxFrames){
+        currentFrame = 0;
     } else {
-        frame++;
+        currentFrame++;
     }
     
     
@@ -191,11 +195,15 @@ void AdvanceAnimation(){
 
         
             for(int x =0,k = 7;x<8;x++,k--){
-                buf[y][x] = (animation[(frame*frameSize)+y] >> k) & 1;
+                buf[y][x] = (frameAnimation[(currentFrame*frameSize)+y] >> k) & 1;
             }
 
     }
     
+    
+}
+
+void AdvanceAnimationScroll(){
     
 }
 
