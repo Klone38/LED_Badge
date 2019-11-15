@@ -869,16 +869,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;user.h: 21: void InitApp(void);
 [; ;user.h: 23: void InitFrameAnimation(void);
-[; ;user.h: 25: void ClearDisplay(void);
-[; ;user.h: 27: void AdvanceRow(void);
-[; ;user.h: 29: void ReadyDisplay(void);
-[; ;user.h: 31: void PopulateColumns(void);
-[; ;user.h: 33: void AdvanceAnimationFrame(void);
-[; ;user.h: 35: void AdvanceAnimationScroll(void);
+[; ;user.h: 25: void InitScrollAnimation(void);
+[; ;user.h: 27: void ClearDisplay(void);
+[; ;user.h: 29: void AdvanceRow(void);
+[; ;user.h: 31: void ReadyDisplay(void);
+[; ;user.h: 33: void PopulateColumns(void);
+[; ;user.h: 35: void AdvanceAnimationFrame(void);
+[; ;user.h: 37: void AdvanceAnimationScroll(void);
 [v $root$_isr `(v ~T0 @X0 0 e ]
-[v F942 `(v ~T0 @X0 1 tf ]
+[v F944 `(v ~T0 @X0 1 tf ]
 "24 interrupts.c
-[v _isr `IF942 ~T0 @X0 1 e ]
+[v _isr `IF944 ~T0 @X0 1 e ]
 "25
 {
 [; ;interrupts.c: 24: void interrupt isr(void)

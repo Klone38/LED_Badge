@@ -19,20 +19,22 @@
 [v _main main `(v  1 e 1 0 ]
 "18 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
-"42 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+"47 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
 [v _InitApp InitApp `(v  1 e 1 0 ]
-"61
+"66
 [v _InitFrameAnimation InitFrameAnimation `(v  1 e 1 0 ]
-"72
+"84
 [v _ClearDisplay ClearDisplay `(v  1 e 1 0 ]
-"97
+"109
 [v _AdvanceRow AdvanceRow `(v  1 e 1 0 ]
-"114
+"126
 [v _ReadyDisplay ReadyDisplay `(v  1 e 1 0 ]
-"131
+"143
 [v _PopulateColumns PopulateColumns `(v  1 e 1 0 ]
-"182
+"190
 [v _AdvanceAnimationFrame AdvanceAnimationFrame `(v  1 e 1 0 ]
+"211
+[v _AdvanceAnimationScroll AdvanceAnimationScroll `(v  1 e 1 0 ]
 [s S46 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
@@ -53,19 +55,23 @@
 [v _T0IE T0IE `VEb  1 e 0 @93 ]
 "2226
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
-"23 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\data.h
-[v _frameAnimation frameAnimation `DC[64]ui  1 e 128 0 ]
-"20 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
-[v _buf buf `[6][8]uc  1 e 48 0 ]
-"29
-[v _frame frame `i  1 e 2 0 ]
-"30
+"22 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\data.h
 [v _maxFrames maxFrames `i  1 e 2 0 ]
-"31
-[v _frameSize frameSize `i  1 e 2 0 ]
-"95
+"24
+[v _animationLength animationLength `DCi  1 e 2 0 ]
+"25
+[v _frameAnimation frameAnimation `DC[64]ui  1 e 128 0 ]
+"25 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+[v _buf buf `[6][8]uc  1 e 48 0 ]
+"34
+[v _currentFrame currentFrame `i  1 e 2 0 ]
+"35
+[v _scrollIndex scrollIndex `i  1 e 2 0 ]
+"36
+[v _frameSize frameSize `DCi  1 e 2 0 ]
+"107
 [v _rowCount rowCount `i  1 e 2 0 ]
-"129
+"141
 [v _currentRow currentRow `uc  1 e 1 0 ]
 "26 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -74,59 +80,59 @@
 [v main@counter counter `i  1 a 2 20 ]
 "64
 } 0
-"114 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+"126 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
 [v _ReadyDisplay ReadyDisplay `(v  1 e 1 0 ]
 {
-"127
+"139
 } 0
-"131
+"143
 [v _PopulateColumns PopulateColumns `(v  1 e 1 0 ]
 {
-"136
+"148
 [v PopulateColumns@i i `i  1 a 2 0 ]
-"180
+"187
 } 0
-"61
+"66
 [v _InitFrameAnimation InitFrameAnimation `(v  1 e 1 0 ]
 {
-"65
+"70
 [v InitFrameAnimation@x x `i  1 a 2 9 ]
 [v InitFrameAnimation@k k `i  1 a 2 7 ]
-"64
+"69
 [v InitFrameAnimation@y y `i  1 a 2 11 ]
-"70
+"75
 } 0
-"42
+"47
 [v _InitApp InitApp `(v  1 e 1 0 ]
 {
-"59
+"64
 } 0
 "18 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
 {
 "25
 } 0
-"72 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
+"84 C:\Users\Karl\Desktop\LED_Badge\Code\LED_Badge.X\user.c
 [v _ClearDisplay ClearDisplay `(v  1 e 1 0 ]
 {
-"82
+"94
 [v ClearDisplay@i i `i  1 a 2 5 ]
-"93
+"105
 } 0
-"97
+"109
 [v _AdvanceRow AdvanceRow `(v  1 e 1 0 ]
 {
-"112
+"124
 } 0
-"182
+"190
 [v _AdvanceAnimationFrame AdvanceAnimationFrame `(v  1 e 1 0 ]
 {
-"193
+"201
 [v AdvanceAnimationFrame@x x `i  1 a 2 15 ]
 [v AdvanceAnimationFrame@k k `i  1 a 2 13 ]
-"190
+"198
 [v AdvanceAnimationFrame@y y `i  1 a 2 17 ]
-"200
+"208
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]

@@ -1287,6 +1287,8 @@ void InitApp(void);
 
 void InitFrameAnimation(void);
 
+void InitScrollAnimation(void);
+
 void ClearDisplay(void);
 
 void AdvanceRow(void);

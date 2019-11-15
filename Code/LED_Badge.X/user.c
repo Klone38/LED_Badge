@@ -16,6 +16,11 @@
 #include "data.h"
 
 
+// I could probably get better performance in my animation algorithms if i 
+//implement the buffer as an array of 6 fixed length circular queues, one for each row.
+//Now that i think about it, the hardware itself is made of shift registers which are like
+// fixed length read only queues and i should be able to just push directly in.
+//If i do that i wont need the bloat of a frame buffer but then could only do scroll animations
 
 bool buf[6][8] = {
     1,1,1,1,1,1,1,1,
@@ -70,6 +75,9 @@ void InitFrameAnimation()
 }
 
 void InitScrollAnimation(){
+    for(int i=0;i<8;i++){
+        AdvanceAnimationScroll();
+    }
     
 }
 
@@ -167,14 +175,9 @@ void PopulateColumns()
             
             COL_CLK = 1;
             COL_CLK = 0;
-
-            
             
         }
-        
-        
-        
-        
+      
         currentRow++;
         
         if(currentRow == 6){
@@ -183,6 +186,7 @@ void PopulateColumns()
         
 }
 
+// Updates the Frame Buffer to contain a whole new frame
 void AdvanceAnimationFrame(){
     if(currentFrame >= maxFrames){
         currentFrame = 0;
@@ -203,7 +207,21 @@ void AdvanceAnimationFrame(){
     
 }
 
+// Shifts the frame buffer one place to the left then places a whole new column on the right
 void AdvanceAnimationScroll(){
+    if(scrollIndex >= animationLength){
+        scrollIndex = 0;
+    }
+       
+    
+    
+    for(int y = 0,k=5;y < 6;y++,k--){
+        for(int x = 0;x <7;x++){
+                buf[y][x] = buf[y][x+1];
+        }
+        buf[y][7] = (frameAnimation[scrollIndex] >> k) & 1;
+    }
+     scrollIndex++;
     
 }
 

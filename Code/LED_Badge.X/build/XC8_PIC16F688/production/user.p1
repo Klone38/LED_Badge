@@ -7,7 +7,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "2224
 [v _T0IE `Vb ~T0 @X0 0 e@93 ]
-"220
+"37 user.h
+[v _AdvanceAnimationScroll `(v ~T0 @X0 0 ef ]
+"220 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f688.h
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S8 . RC0 RC1 RC2 RC3 RC4 RC5 ]
 "219
@@ -887,14 +889,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;user.h: 21: void InitApp(void);
 [; ;user.h: 23: void InitFrameAnimation(void);
-[; ;user.h: 25: void ClearDisplay(void);
-[; ;user.h: 27: void AdvanceRow(void);
-[; ;user.h: 29: void ReadyDisplay(void);
-[; ;user.h: 31: void PopulateColumns(void);
-[; ;user.h: 33: void AdvanceAnimationFrame(void);
-[; ;user.h: 35: void AdvanceAnimationScroll(void);
+[; ;user.h: 25: void InitScrollAnimation(void);
+[; ;user.h: 27: void ClearDisplay(void);
+[; ;user.h: 29: void AdvanceRow(void);
+[; ;user.h: 31: void ReadyDisplay(void);
+[; ;user.h: 33: void PopulateColumns(void);
+[; ;user.h: 35: void AdvanceAnimationFrame(void);
+[; ;user.h: 37: void AdvanceAnimationScroll(void);
 [; ;system.h: 20: void ConfigureOscillator(void);
-"23 data.h
+"22 data.h
+[v _maxFrames `i ~T0 @X0 1 e ]
+[i _maxFrames
+-> 24 `i
+]
+[; ;data.h: 22: int maxFrames = 24;
+"24
+[v _animationLength `Ci ~T0 @X0 1 e ]
+[i _animationLength
+-> 64 `i
+]
+[; ;data.h: 24: const int animationLength = 64;
+"25
 [v _frameAnimation `Cui ~T0 @X0 -> 0 `x e ]
 [i _frameAnimation
 :U ..
@@ -910,7 +925,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 15 `i `ui
 -> -> 4 `i `ui
 -> -> 8 `i `ui
-"24
+"26
 -> -> 0 `i `ui
 -> -> 6 `i `ui
 -> -> 9 `i `ui
@@ -927,7 +942,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 8 `i `ui
 -> -> 7 `i `ui
 -> -> 0 `i `ui
-"25
+"27
 -> -> 29 `i `ui
 -> -> 21 `i `ui
 -> -> 15 `i `ui
@@ -942,7 +957,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 -> -> 14 `i `ui
 -> -> 21 `i `ui
-"26
+"28
 -> -> 13 `i `ui
 -> -> 0 `i `ui
 -> -> 5 `i `ui
@@ -959,7 +974,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 29 `i `ui
 -> -> 0 `i `ui
 -> -> 2 `i `ui
-"27
+"29
 -> -> 25 `i `ui
 -> -> 1 `i `ui
 -> -> 1 `i `ui
@@ -968,71 +983,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 2 `i `ui
 ..
 ]
-[; ;data.h: 23: const unsigned int frameAnimation[] = {0, 29, 21, 23, 0, 15, 9, 9, 0, 15, 4, 8,
-[; ;data.h: 24: 0, 6, 9, 6, 0, 31, 0, 31, 0, 23, 0, 15, 4, 8, 7, 0,
-[; ;data.h: 25: 29, 21, 15, 0, 0, 0, 16, 16, 31, 16, 16, 0, 14, 21,
-[; ;data.h: 26: 13, 0, 5, 2, 5, 0, 8, 15, 8, 0, 0, 29, 0, 29, 0, 2,
-[; ;data.h: 27: 25, 1, 1, 1, 25, 2} ;
-[v F944 `uc ~T0 @X0 -> 8 `i t ]
-"20 user.c
-[v _buf `F944 ~T0 @X0 -> 6 `i e ]
+[; ;data.h: 25: const unsigned int frameAnimation[] = {0, 29, 21, 23, 0, 15, 9, 9, 0, 15, 4, 8,
+[; ;data.h: 26: 0, 6, 9, 6, 0, 31, 0, 31, 0, 23, 0, 15, 4, 8, 7, 0,
+[; ;data.h: 27: 29, 21, 15, 0, 0, 0, 16, 16, 31, 16, 16, 0, 14, 21,
+[; ;data.h: 28: 13, 0, 5, 2, 5, 0, 8, 15, 8, 0, 0, 29, 0, 29, 0, 2,
+[; ;data.h: 29: 25, 1, 1, 1, 25, 2} ;
+[v F948 `uc ~T0 @X0 -> 8 `i t ]
+"25 user.c
+[v _buf `F948 ~T0 @X0 -> 6 `i e ]
 [i _buf
 :U ..
-:U ..
-"21
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
-..
-:U ..
-"22
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
-..
-:U ..
-"23
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
-..
-:U ..
-"24
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
-..
-:U ..
-"25
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
-..
 :U ..
 "26
 -> -> 1 `i `uc
@@ -1042,71 +1002,126 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 -> -> 1 `i `uc
 -> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
 "27
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+"28
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+"29
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+"30
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+"31
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+"32
 -> -> 1 `i `uc
 ..
 ..
 ]
-[; ;user.c: 20: bool buf[6][8] = {
-[; ;user.c: 21: 1,1,1,1,1,1,1,1,
-[; ;user.c: 22: 1,1,1,1,1,1,1,1,
-[; ;user.c: 23: 1,1,1,1,1,1,1,1,
-[; ;user.c: 24: 1,1,1,1,1,1,1,1,
-[; ;user.c: 25: 1,1,1,1,1,1,1,1,
-[; ;user.c: 26: 1,1,1,1,1,1,1,1
-[; ;user.c: 27: };
-"29
-[v _frame `i ~T0 @X0 1 e ]
-[i _frame
+[; ;user.c: 25: bool buf[6][8] = {
+[; ;user.c: 26: 1,1,1,1,1,1,1,1,
+[; ;user.c: 27: 1,1,1,1,1,1,1,1,
+[; ;user.c: 28: 1,1,1,1,1,1,1,1,
+[; ;user.c: 29: 1,1,1,1,1,1,1,1,
+[; ;user.c: 30: 1,1,1,1,1,1,1,1,
+[; ;user.c: 31: 1,1,1,1,1,1,1,1
+[; ;user.c: 32: };
+"34
+[v _currentFrame `i ~T0 @X0 1 e ]
+[i _currentFrame
 -> 0 `i
 ]
-[; ;user.c: 29: int frame = 0;
-"30
-[v _maxFrames `i ~T0 @X0 1 e ]
-[i _maxFrames
--> 24 `i
+[; ;user.c: 34: int currentFrame = 0;
+"35
+[v _scrollIndex `i ~T0 @X0 1 e ]
+[i _scrollIndex
+-> 0 `i
 ]
-[; ;user.c: 30: int maxFrames = 24;
-"31
-[v _frameSize `i ~T0 @X0 1 e ]
+[; ;user.c: 35: int scrollIndex = 0;
+"36
+[v _frameSize `Ci ~T0 @X0 1 e ]
 [i _frameSize
 -> 6 `i
 ]
-[; ;user.c: 31: int frameSize = 6;
-"42
+[; ;user.c: 36: const int frameSize = 6;
+"47
 [v _InitApp `(v ~T0 @X0 1 ef ]
-"43
+"48
 {
-[; ;user.c: 42: void InitApp(void)
-[; ;user.c: 43: {
+[; ;user.c: 47: void InitApp(void)
+[; ;user.c: 48: {
 [e :U _InitApp ]
 [f ]
-[; ;user.c: 51: ANSEL = 0b00000000;
-"51
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;user.c: 53: TRISA = 0b11111111;
-"53
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;user.c: 54: TRISC = 0b11000000;
-"54
-[e = _TRISC -> -> 192 `i `uc ]
-[; ;user.c: 56: T0IE = 0;
+[; ;user.c: 56: ANSEL = 0b00000000;
 "56
-[e = _T0IE -> -> 0 `i `b ]
-[; ;user.c: 59: }
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;user.c: 58: TRISA = 0b11111111;
+"58
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;user.c: 59: TRISC = 0b11000000;
 "59
+[e = _TRISC -> -> 192 `i `uc ]
+[; ;user.c: 61: T0IE = 0;
+"61
+[e = _T0IE -> -> 0 `i `b ]
+[; ;user.c: 64: }
+"64
 [e :UE 86 ]
 }
-"61
+"66
 [v _InitFrameAnimation `(v ~T0 @X0 1 ef ]
-"62
+"67
 {
-[; ;user.c: 61: void InitFrameAnimation()
-[; ;user.c: 62: {
+[; ;user.c: 66: void InitFrameAnimation()
+[; ;user.c: 67: {
 [e :U _InitFrameAnimation ]
 [f ]
-[; ;user.c: 64: for(int y = 0;y<6;y++){
-"64
+[; ;user.c: 69: for(int y = 0;y<6;y++){
+"69
 {
 [v _y `i ~T0 @X0 1 a ]
 [e = _y -> 0 `i ]
@@ -1114,8 +1129,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 89  ]
 [e :U 88 ]
 {
-[; ;user.c: 65: for(int x =0,k = 7;x<8;x++,k--){
-"65
+[; ;user.c: 70: for(int x =0,k = 7;x<8;x++,k--){
+"70
 {
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 0 `i ]
@@ -1125,50 +1140,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 92  ]
 [e :U 91 ]
 {
-[; ;user.c: 66: buf[y][x] = (frameAnimation[y] >> k) & 1;
-"66
+[; ;user.c: 71: buf[y][x] = (frameAnimation[y] >> k) & 1;
+"71
 [e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _frameAnimation * -> -> _y `ui `ux -> -> # *U &U _frameAnimation `ui `ux _k -> -> 1 `i `ui `uc ]
-"67
+"72
 }
-"65
+"70
 [e ; ++ _x -> 1 `i -- _k -> 1 `i ]
 [e $ < _x -> 8 `i 91  ]
 [e :U 92 ]
-"67
+"72
 }
-"68
+"73
 }
-"64
+"69
 [e ++ _y -> 1 `i ]
 [e $ < _y -> 6 `i 88  ]
 [e :U 89 ]
-"68
+"73
 }
-[; ;user.c: 67: }
-[; ;user.c: 68: }
-[; ;user.c: 70: }
-"70
+[; ;user.c: 72: }
+[; ;user.c: 73: }
+[; ;user.c: 75: }
+"75
 [e :UE 87 ]
 }
-"72
-[v _ClearDisplay `(v ~T0 @X0 1 ef ]
-"73
-{
-[; ;user.c: 72: void ClearDisplay()
-[; ;user.c: 73: {
-[e :U _ClearDisplay ]
-[f ]
-[; ;user.c: 77: PORTCbits.RC4 = 1;
 "77
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 79: PORTCbits.RC1 = 0;
-"79
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[; ;user.c: 80: PORTCbits.RC0 = 1;
-"80
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[; ;user.c: 82: for(int i = 0;i<8;i++){
-"82
+[v _InitScrollAnimation `(v ~T0 @X0 1 ef ]
+{
+[; ;user.c: 77: void InitScrollAnimation(){
+[e :U _InitScrollAnimation ]
+[f ]
+[; ;user.c: 78: for(int i=0;i<8;i++){
+"78
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1176,320 +1180,420 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 96  ]
 [e :U 95 ]
 {
-[; ;user.c: 83: PORTCbits.RC3 = 1;
-"83
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 84: PORTCbits.RC2 = 1;
-"84
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 85: _delay((unsigned long)((10)*(8000000/4000000.0)));
-"85
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-[; ;user.c: 87: PORTCbits.RC3 = 0;
-"87
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 88: PORTCbits.RC2 = 0;
-"88
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"89
+[; ;user.c: 79: AdvanceAnimationScroll();
+"79
+[e ( _AdvanceAnimationScroll ..  ]
+"80
 }
-"82
+"78
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 8 `i 95  ]
 [e :U 96 ]
-"89
+"80
 }
-[; ;user.c: 89: }
-[; ;user.c: 91: PORTCbits.RC4 = 0;
-"91
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 93: }
-"93
+[; ;user.c: 80: }
+[; ;user.c: 82: }
+"82
 [e :UE 94 ]
 }
+"84
+[v _ClearDisplay `(v ~T0 @X0 1 ef ]
+"85
+{
+[; ;user.c: 84: void ClearDisplay()
+[; ;user.c: 85: {
+[e :U _ClearDisplay ]
+[f ]
+[; ;user.c: 89: PORTCbits.RC4 = 1;
+"89
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;user.c: 91: PORTCbits.RC1 = 0;
+"91
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 92: PORTCbits.RC0 = 1;
+"92
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[; ;user.c: 94: for(int i = 0;i<8;i++){
+"94
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 99  ]
+[e $U 100  ]
+[e :U 99 ]
+{
+[; ;user.c: 95: PORTCbits.RC3 = 1;
 "95
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 96: PORTCbits.RC2 = 1;
+"96
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 97: _delay((unsigned long)((10)*(8000000/4000000.0)));
+"97
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;user.c: 99: PORTCbits.RC3 = 0;
+"99
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 100: PORTCbits.RC2 = 0;
+"100
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"101
+}
+"94
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 99  ]
+[e :U 100 ]
+"101
+}
+[; ;user.c: 101: }
+[; ;user.c: 103: PORTCbits.RC4 = 0;
+"103
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;user.c: 105: }
+"105
+[e :UE 98 ]
+}
+"107
 [v _rowCount `i ~T0 @X0 1 e ]
 [i _rowCount
 -> 2 `i
 ]
-[; ;user.c: 95: int rowCount = 2;
-"97
+[; ;user.c: 107: int rowCount = 2;
+"109
 [v _AdvanceRow `(v ~T0 @X0 1 ef ]
-"98
+"110
 {
-[; ;user.c: 97: void AdvanceRow()
-[; ;user.c: 98: {
+[; ;user.c: 109: void AdvanceRow()
+[; ;user.c: 110: {
 [e :U _AdvanceRow ]
 [f ]
-[; ;user.c: 100: if(rowCount >= 6)
-"100
-[e $ ! >= _rowCount -> 6 `i 99  ]
-[; ;user.c: 101: {
-"101
-{
-[; ;user.c: 102: PORTCbits.RC1 = 1;
-"102
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-[; ;user.c: 104: rowCount = 0;
-"104
-[e = _rowCount -> 0 `i ]
-"105
-}
-[e :U 99 ]
-[; ;user.c: 105: }
-[; ;user.c: 107: PORTCbits.RC3 = 1;
-"107
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 108: PORTCbits.RC3 = 0;
-"108
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 110: rowCount++;
-"110
-[e ++ _rowCount -> 1 `i ]
-[; ;user.c: 112: }
+[; ;user.c: 112: if(rowCount >= 6)
 "112
-[e :UE 98 ]
-}
-"114
-[v _ReadyDisplay `(v ~T0 @X0 1 ef ]
-"115
+[e $ ! >= _rowCount -> 6 `i 103  ]
+[; ;user.c: 113: {
+"113
 {
-[; ;user.c: 114: void ReadyDisplay()
-[; ;user.c: 115: {
+[; ;user.c: 114: PORTCbits.RC1 = 1;
+"114
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 116: rowCount = 0;
+"116
+[e = _rowCount -> 0 `i ]
+"117
+}
+[e :U 103 ]
+[; ;user.c: 117: }
+[; ;user.c: 119: PORTCbits.RC3 = 1;
+"119
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;user.c: 120: PORTCbits.RC3 = 0;
+"120
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;user.c: 122: rowCount++;
+"122
+[e ++ _rowCount -> 1 `i ]
+[; ;user.c: 124: }
+"124
+[e :UE 102 ]
+}
+"126
+[v _ReadyDisplay `(v ~T0 @X0 1 ef ]
+"127
+{
+[; ;user.c: 126: void ReadyDisplay()
+[; ;user.c: 127: {
 [e :U _ReadyDisplay ]
 [f ]
-[; ;user.c: 116: PORTCbits.RC4 = 1;
-"116
+[; ;user.c: 128: PORTCbits.RC4 = 1;
+"128
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;user.c: 118: PORTCbits.RC1 = 1;
-"118
+[; ;user.c: 130: PORTCbits.RC1 = 1;
+"130
 [e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-[; ;user.c: 121: PORTCbits.RC3 = 1;
-"121
+[; ;user.c: 133: PORTCbits.RC3 = 1;
+"133
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 122: PORTCbits.RC3 = 0;
-"122
+[; ;user.c: 134: PORTCbits.RC3 = 0;
+"134
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 123: PORTCbits.RC3 = 1;
-"123
+[; ;user.c: 135: PORTCbits.RC3 = 1;
+"135
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;user.c: 124: PORTCbits.RC3 = 0;
-"124
+[; ;user.c: 136: PORTCbits.RC3 = 0;
+"136
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;user.c: 126: PORTCbits.RC4 = 0;
-"126
+[; ;user.c: 138: PORTCbits.RC4 = 0;
+"138
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-[; ;user.c: 127: }
-"127
-[e :UE 100 ]
+[; ;user.c: 139: }
+"139
+[e :UE 104 ]
 }
-"129
+"141
 [v _currentRow `uc ~T0 @X0 1 e ]
 [i _currentRow
 -> -> 0 `i `uc
 ]
-[; ;user.c: 129: uint8_t currentRow = 0;
-"131
+[; ;user.c: 141: uint8_t currentRow = 0;
+"143
 [v _PopulateColumns `(v ~T0 @X0 1 ef ]
-"132
+"144
 {
-[; ;user.c: 131: void PopulateColumns()
-[; ;user.c: 132: {
+[; ;user.c: 143: void PopulateColumns()
+[; ;user.c: 144: {
 [e :U _PopulateColumns ]
 [f ]
-[; ;user.c: 136: for(int i =7;i>=0;i--)
-"136
+[; ;user.c: 148: for(int i =7;i>=0;i--)
+"148
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 7 `i ]
-[e $ >= _i -> 0 `i 102  ]
-[e $U 103  ]
-"137
-[e :U 102 ]
-[; ;user.c: 137: {
-{
-[; ;user.c: 142: if(i==3)
-"142
-[e $ ! == _i -> 3 `i 105  ]
-[; ;user.c: 143: {
-"143
-{
-[; ;user.c: 144: PORTCbits.RC0 = !buf[currentRow][0];
-"144
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
-"145
-}
-[; ;user.c: 145: }
-[e $U 106  ]
-"146
-[e :U 105 ]
-[; ;user.c: 146: else if(i==2)
-[e $ ! == _i -> 2 `i 107  ]
-[; ;user.c: 147: {
-"147
-{
-[; ;user.c: 148: PORTCbits.RC0 = !buf[currentRow][1];
-"148
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+[e $ >= _i -> 0 `i 106  ]
+[e $U 107  ]
 "149
-}
-[; ;user.c: 149: }
-[e $U 108  ]
-"150
-[e :U 107 ]
-[; ;user.c: 150: else if(i==1)
-[e $ ! == _i -> 1 `i 109  ]
-[; ;user.c: 151: {
-"151
+[e :U 106 ]
+[; ;user.c: 149: {
 {
-[; ;user.c: 152: PORTCbits.RC0 = !buf[currentRow][2];
-"152
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
-"153
-}
-[; ;user.c: 153: }
-[e $U 110  ]
+[; ;user.c: 154: if(i==3)
 "154
-[e :U 109 ]
-[; ;user.c: 154: else if(i==0)
-[e $ ! == _i -> 0 `i 111  ]
+[e $ ! == _i -> 3 `i 109  ]
 [; ;user.c: 155: {
 "155
 {
-[; ;user.c: 156: PORTCbits.RC0 = !buf[currentRow][3];
+[; ;user.c: 156: PORTCbits.RC0 = !buf[currentRow][0];
 "156
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
 "157
 }
 [; ;user.c: 157: }
-[e $U 112  ]
+[e $U 110  ]
 "158
-[e :U 111 ]
-[; ;user.c: 158: else
+[e :U 109 ]
+[; ;user.c: 158: else if(i==2)
+[e $ ! == _i -> 2 `i 111  ]
 [; ;user.c: 159: {
 "159
 {
-[; ;user.c: 160: PORTCbits.RC0 = !buf[currentRow][i];
+[; ;user.c: 160: PORTCbits.RC0 = !buf[currentRow][1];
 "160
-[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
 "161
 }
-[e :U 112 ]
-[e :U 110 ]
-[e :U 108 ]
-[e :U 106 ]
 [; ;user.c: 161: }
-[; ;user.c: 164: PORTCbits.RC2 = 1;
+[e $U 112  ]
+"162
+[e :U 111 ]
+[; ;user.c: 162: else if(i==1)
+[e $ ! == _i -> 1 `i 113  ]
+[; ;user.c: 163: {
+"163
+{
+[; ;user.c: 164: PORTCbits.RC0 = !buf[currentRow][2];
 "164
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;user.c: 165: PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
 "165
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"169
 }
-"136
-[e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 102  ]
-[e :U 103 ]
+[; ;user.c: 165: }
+[e $U 114  ]
+"166
+[e :U 113 ]
+[; ;user.c: 166: else if(i==0)
+[e $ ! == _i -> 0 `i 115  ]
+[; ;user.c: 167: {
+"167
+{
+[; ;user.c: 168: PORTCbits.RC0 = !buf[currentRow][3];
+"168
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
 "169
 }
 [; ;user.c: 169: }
-[; ;user.c: 174: currentRow++;
-"174
-[e ++ _currentRow -> -> 1 `i `uc ]
-[; ;user.c: 176: if(currentRow == 6){
-"176
-[e $ ! == -> _currentRow `i -> 6 `i 113  ]
-{
-[; ;user.c: 177: currentRow = 0;
-"177
-[e = _currentRow -> -> 0 `i `uc ]
-"178
-}
-[e :U 113 ]
-[; ;user.c: 178: }
-[; ;user.c: 180: }
-"180
-[e :UE 101 ]
-}
-"182
-[v _AdvanceAnimationFrame `(v ~T0 @X0 1 ef ]
-{
-[; ;user.c: 182: void AdvanceAnimationFrame(){
-[e :U _AdvanceAnimationFrame ]
-[f ]
-[; ;user.c: 183: if(frame >= maxFrames){
-"183
-[e $ ! >= _frame _maxFrames 115  ]
-{
-[; ;user.c: 184: frame = 0;
-"184
-[e = _frame -> 0 `i ]
-"185
-}
-[; ;user.c: 185: } else {
 [e $U 116  ]
+"170
 [e :U 115 ]
+[; ;user.c: 170: else
+[; ;user.c: 171: {
+"171
 {
-[; ;user.c: 186: frame++;
-"186
-[e ++ _frame -> 1 `i ]
-"187
+[; ;user.c: 172: PORTCbits.RC0 = !buf[currentRow][i];
+"172
+[e = . . _PORTCbits 0 0 -> -> ! != -> *U + &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _i `ui `ux -> -> # *U &U *U + &U _buf * -> _currentRow `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i `i `uc ]
+"173
 }
 [e :U 116 ]
+[e :U 114 ]
+[e :U 112 ]
+[e :U 110 ]
+[; ;user.c: 173: }
+[; ;user.c: 176: PORTCbits.RC2 = 1;
+"176
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 177: PORTCbits.RC2 = 0;
+"177
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"179
+}
+"148
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 106  ]
+[e :U 107 ]
+"179
+}
+[; ;user.c: 179: }
+[; ;user.c: 181: currentRow++;
+"181
+[e ++ _currentRow -> -> 1 `i `uc ]
+[; ;user.c: 183: if(currentRow == 6){
+"183
+[e $ ! == -> _currentRow `i -> 6 `i 117  ]
+{
+[; ;user.c: 184: currentRow = 0;
+"184
+[e = _currentRow -> -> 0 `i `uc ]
+"185
+}
+[e :U 117 ]
+[; ;user.c: 185: }
 [; ;user.c: 187: }
-[; ;user.c: 190: for(int y = 0;y<6;y++){
+"187
+[e :UE 105 ]
+}
 "190
+[v _AdvanceAnimationFrame `(v ~T0 @X0 1 ef ]
+{
+[; ;user.c: 190: void AdvanceAnimationFrame(){
+[e :U _AdvanceAnimationFrame ]
+[f ]
+[; ;user.c: 191: if(currentFrame >= maxFrames){
+"191
+[e $ ! >= _currentFrame _maxFrames 119  ]
+{
+[; ;user.c: 192: currentFrame = 0;
+"192
+[e = _currentFrame -> 0 `i ]
+"193
+}
+[; ;user.c: 193: } else {
+[e $U 120  ]
+[e :U 119 ]
+{
+[; ;user.c: 194: currentFrame++;
+"194
+[e ++ _currentFrame -> 1 `i ]
+"195
+}
+[e :U 120 ]
+[; ;user.c: 195: }
+[; ;user.c: 198: for(int y = 0;y<6;y++){
+"198
 {
 [v _y `i ~T0 @X0 1 a ]
 [e = _y -> 0 `i ]
-[e $ < _y -> 6 `i 117  ]
-[e $U 118  ]
-[e :U 117 ]
+[e $ < _y -> 6 `i 121  ]
+[e $U 122  ]
+[e :U 121 ]
 {
-[; ;user.c: 193: for(int x =0,k = 7;x<8;x++,k--){
-"193
+[; ;user.c: 201: for(int x =0,k = 7;x<8;x++,k--){
+"201
 {
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 0 `i ]
 [v _k `i ~T0 @X0 1 a ]
 [e = _k -> 7 `i ]
-[e $ < _x -> 8 `i 120  ]
-[e $U 121  ]
-[e :U 120 ]
+[e $ < _x -> 8 `i 124  ]
+[e $U 125  ]
+[e :U 124 ]
 {
-[; ;user.c: 194: buf[y][x] = (frameAnimation[(frame*frameSize)+y] >> k) & 1;
-"194
-[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _frameAnimation * -> -> + * _frame _frameSize _y `ui `ux -> -> # *U &U _frameAnimation `ui `ux _k -> -> 1 `i `ui `uc ]
-"195
-}
-"193
-[e ; ++ _x -> 1 `i -- _k -> 1 `i ]
-[e $ < _x -> 8 `i 120  ]
-[e :U 121 ]
-"195
-}
-"197
-}
-"190
-[e ++ _y -> 1 `i ]
-[e $ < _y -> 6 `i 117  ]
-[e :U 118 ]
-"197
-}
-[; ;user.c: 195: }
-[; ;user.c: 197: }
-[; ;user.c: 200: }
-"200
-[e :UE 114 ]
-}
+[; ;user.c: 202: buf[y][x] = (frameAnimation[(currentFrame*frameSize)+y] >> k) & 1;
 "202
+[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _frameAnimation * -> -> + * _currentFrame _frameSize _y `ui `ux -> -> # *U &U _frameAnimation `ui `ux _k -> -> 1 `i `ui `uc ]
+"203
+}
+"201
+[e ; ++ _x -> 1 `i -- _k -> 1 `i ]
+[e $ < _x -> 8 `i 124  ]
+[e :U 125 ]
+"203
+}
+"205
+}
+"198
+[e ++ _y -> 1 `i ]
+[e $ < _y -> 6 `i 121  ]
+[e :U 122 ]
+"205
+}
+[; ;user.c: 203: }
+[; ;user.c: 205: }
+[; ;user.c: 208: }
+"208
+[e :UE 118 ]
+}
+"211
 [v _AdvanceAnimationScroll `(v ~T0 @X0 1 ef ]
 {
-[; ;user.c: 202: void AdvanceAnimationScroll(){
+[; ;user.c: 211: void AdvanceAnimationScroll(){
 [e :U _AdvanceAnimationScroll ]
 [f ]
-[; ;user.c: 204: }
-"204
-[e :UE 123 ]
+[; ;user.c: 212: if(scrollIndex >= animationLength){
+"212
+[e $ ! >= _scrollIndex _animationLength 128  ]
+{
+[; ;user.c: 213: scrollIndex = 0;
+"213
+[e = _scrollIndex -> 0 `i ]
+"214
+}
+[e :U 128 ]
+[; ;user.c: 214: }
+[; ;user.c: 218: for(int y = 0,k=5;y < 6;y++,k--){
+"218
+{
+[v _y `i ~T0 @X0 1 a ]
+[e = _y -> 0 `i ]
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 5 `i ]
+[e $ < _y -> 6 `i 129  ]
+[e $U 130  ]
+[e :U 129 ]
+{
+[; ;user.c: 219: for(int x = 0;x <7;x++){
+"219
+{
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+[e $ < _x -> 7 `i 132  ]
+[e $U 133  ]
+[e :U 132 ]
+{
+[; ;user.c: 220: buf[y][x] = buf[y][x+1];
+"220
+[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> _x `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> + _x -> 1 `i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux ]
+"221
+}
+"219
+[e ++ _x -> 1 `i ]
+[e $ < _x -> 7 `i 132  ]
+[e :U 133 ]
+"221
+}
+[; ;user.c: 221: }
+[; ;user.c: 222: buf[y][7] = (frameAnimation[scrollIndex] >> k) & 1;
+"222
+[e = *U + &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux * -> -> -> 7 `i `ui `ux -> -> # *U &U *U + &U _buf * -> -> _y `ui `ux -> * -> # *U &U *U &U _buf `ui -> -> 8 `i `ui `ux `ui `ux -> & >> *U + &U _frameAnimation * -> -> _scrollIndex `ui `ux -> -> # *U &U _frameAnimation `ui `ux _k -> -> 1 `i `ui `uc ]
+"223
+}
+"218
+[e ; ++ _y -> 1 `i -- _k -> 1 `i ]
+[e $ < _y -> 6 `i 129  ]
+[e :U 130 ]
+"223
+}
+[; ;user.c: 223: }
+[; ;user.c: 224: scrollIndex++;
+"224
+[e ++ _scrollIndex -> 1 `i ]
+[; ;user.c: 226: }
+"226
+[e :UE 127 ]
 }

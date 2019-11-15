@@ -1287,6 +1287,8 @@ void InitApp(void);
 
 void InitFrameAnimation(void);
 
+void InitScrollAnimation(void);
+
 void ClearDisplay(void);
 
 void AdvanceRow(void);
@@ -1302,14 +1304,17 @@ void AdvanceAnimationScroll(void);
 # 20 "system.h"
 void ConfigureOscillator(void);
 
-# 23 "data.h"
+# 22 "data.h"
+int maxFrames = 24;
+
+const int animationLength = 64;
 const unsigned int frameAnimation[] = {0, 29, 21, 23, 0, 15, 9, 9, 0, 15, 4, 8,
 0, 6, 9, 6, 0, 31, 0, 31, 0, 23, 0, 15, 4, 8, 7, 0,
 29, 21, 15, 0, 0, 0, 16, 16, 31, 16, 16, 0, 14, 21,
 13, 0, 5, 2, 5, 0, 8, 15, 8, 0, 0, 29, 0, 29, 0, 2,
 25, 1, 1, 1, 25, 2} ;
 
-# 20 "user.c"
+# 25 "user.c"
 bool buf[6][8] = {
 1,1,1,1,1,1,1,1,
 1,1,1,1,1,1,1,1,
@@ -1319,15 +1324,15 @@ bool buf[6][8] = {
 1,1,1,1,1,1,1,1
 };
 
-int frame = 0;
-int maxFrames = 24;
-int frameSize = 6;
+int currentFrame = 0;
+int scrollIndex = 0;
+const int frameSize = 6;
 
-# 42
+# 47
 void InitApp(void)
 {
 
-# 51
+# 56
 ANSEL = 0b00000000;
 
 TRISA = 0b11111111;
@@ -1345,6 +1350,13 @@ for(int y = 0;y<6;y++){
 for(int x =0,k = 7;x<8;x++,k--){
 buf[y][x] = (frameAnimation[y] >> k) & 1;
 }
+}
+
+}
+
+void InitScrollAnimation(){
+for(int i=0;i<8;i++){
+AdvanceAnimationScroll();
 }
 
 }
@@ -1444,12 +1456,7 @@ PORTCbits.RC0 = !buf[currentRow][i];
 PORTCbits.RC2 = 1;
 PORTCbits.RC2 = 0;
 
-
-
 }
-
-
-
 
 currentRow++;
 
@@ -1459,11 +1466,12 @@ currentRow = 0;
 
 }
 
+
 void AdvanceAnimationFrame(){
-if(frame >= maxFrames){
-frame = 0;
+if(currentFrame >= maxFrames){
+currentFrame = 0;
 } else {
-frame++;
+currentFrame++;
 }
 
 
@@ -1471,15 +1479,29 @@ for(int y = 0;y<6;y++){
 
 
 for(int x =0,k = 7;x<8;x++,k--){
-buf[y][x] = (frameAnimation[(frame*frameSize)+y] >> k) & 1;
+buf[y][x] = (frameAnimation[(currentFrame*frameSize)+y] >> k) & 1;
 }
 
 }
 
 
 }
+
 
 void AdvanceAnimationScroll(){
+if(scrollIndex >= animationLength){
+scrollIndex = 0;
+}
+
+
+
+for(int y = 0,k=5;y < 6;y++,k--){
+for(int x = 0;x <7;x++){
+buf[y][x] = buf[y][x+1];
+}
+buf[y][7] = (frameAnimation[scrollIndex] >> k) & 1;
+}
+scrollIndex++;
 
 }
 
